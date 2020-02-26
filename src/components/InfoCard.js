@@ -2,7 +2,7 @@ import React from "react";
 
 const InfoCard = props => (
     <div className="infocard">
-        <img src={props.image}></img>
+        <img className="infocardimg" src={props.image}></img>
     </div>
 );
 
