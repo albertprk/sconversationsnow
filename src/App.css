@@ -67,6 +67,25 @@ body {
 }
 
 .info {
-  margin-top:650px;
+  margin-top:600px;
   text-align:center;
+}
+
+.infotext {
+  margin-bottom:30px;
+  font-size:25px;
+  color:white;
+  font-weight:bold;
+}
+
+.chatbutton {
+  margin-top:28px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:30px;
+  width:85px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:12px;
 }
