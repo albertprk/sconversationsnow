@@ -181,7 +181,7 @@
     left: 1195px;
     top: 416px;
     
-    background: url(facebook_circle-512Fb.png);
+    background: url("./images/facebook_circle-512Fb.png");
     }
     
     .google {
@@ -213,6 +213,6 @@
     left: 1201px;
     top: 337px;
     
-    background: url(new-google-favicon-512@2.png);
+    background: url("./images/new-google-favicon-512.png");
     }
     
