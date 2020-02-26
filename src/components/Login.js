@@ -13,10 +13,15 @@ const Login = props => (
         <div className = "rectangle_2"/>  
         <div className = "facebookCircle_512"/>           
         <div className = "logInWithFacebook">Log in with Facebook</div>
+        
         <div className = "rectangle_2_1 ">     
         </div>
         <div className = "logInWithEmail">Log in with Email</div>
-        <div className = "rectangle_2_2 "/>     
+        <div className = "rectangle_2_2 "/>    
+
+        <div className="dontHaveAnAccount">Don't have an account?  </div> 
+        
+        
         
 
 
