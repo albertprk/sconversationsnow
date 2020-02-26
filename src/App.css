@@ -1,6 +1,6 @@
 body {
   background: url("./images/landingbg.png") repeat-x;
-  min-height:2000px;
+  min-height:2300px;
 }
 
 .App {
@@ -66,10 +66,24 @@ body {
   margin-right:13px;
 }
 
+.infocardimg {
+  display: block;
+  padding-top:28px;
+  margin:auto;
+  width:200px;
+  height:200px;
+}
+
 .info {
-  margin-top:600px;
+  margin-top:200px;
   text-align:center;
 }
+
+.info2 {
+  margin-top:300px;
+  text-align:center;
+}
+
 
 .infotext {
   margin-bottom:30px;
@@ -82,10 +96,50 @@ body {
   margin-top:28px;
   background-color:#E9A800;
   border-radius: 30px;
-  height:30px;
-  width:85px;
+  height:45px;
+  width:105px;
   border:none;
   font-weight:bold;
   color:white;
-  font-size:12px;
+  font-size:15px;
+}
+
+.helpbutton {
+  margin-top:35px;
+  margin-right:40px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+  float:right;
+}
+
+.mentorbutton {
+  margin-top:28px;
+  background-color:#4200AD;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+}
+
+.plant {
+  margin-top:-70px;
+  margin-left:-1px;
+  height:400px;
+  width:250px;
+}
+
+.person {
+  height:338px;
+  width:741px;
+  margin-top:12px;
+  margin-left:200px;
 }
