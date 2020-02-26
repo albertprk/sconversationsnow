@@ -1,3 +1,8 @@
+body {
+  background: url("./images/landingbg.png") repeat-x;
+  min-height:2000px;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +19,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +39,34 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.landingtext {
+  font-size:70px;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top:130px;
+}
+
+.landingbg {
+  background-color:#D3D4EF;
+  height:500px;
+  margin-bottom:500px;
+}
+
+.infocard {
+  display:inline-block;
+  width:250px;
+  height:250px;
+  background:white;
+  margin:auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right:13px;
+}
+
+.info {
+  margin-top:650px;
+  text-align:center;
 }
