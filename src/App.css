@@ -104,6 +104,10 @@ body {
   font-size:15px;
 }
 
+.chatbutton:hover {
+  cursor:pointer;
+}
+
 .helpbutton {
   margin-top:35px;
   margin-right:40px;
@@ -118,6 +122,10 @@ body {
   float:right;
 }
 
+.helpbutton:hover {
+  cursor:pointer;
+}
+
 .mentorbutton {
   margin-top:28px;
   background-color:#4200AD;
@@ -128,6 +136,10 @@ body {
   font-weight:bold;
   color:white;
   font-size:15px;
+}
+
+.mentorbutton:hover {
+  cursor:pointer;
 }
 
 .plant {
