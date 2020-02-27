@@ -5,8 +5,8 @@ import talkstudents from "../images/talkstudents.png"
 import laptop from "../images/laptop.png"
 import check from "../images/check.png"
 import mentor from "../images/mentor.png"
-import plant from "../images/plant.png"
-import person from "../images/person.png"
+import plant from "../images/plant.svg"
+import person from "../images/person.svg"
 
 const Landing = props => (
     <div className="landingbg">
