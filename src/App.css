@@ -1,3 +1,8 @@
+body {
+  background: url("./images/landingbg.png") repeat-x;
+  min-height:2300px;
+}
+
 .App {
   text-align: center;
 }
@@ -14,7 +19,6 @@
 }
 
 .App-header {
-  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -35,4 +39,119 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.landingtext {
+  font-size:70px;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top:130px;
+}
+
+.landingbg {
+  background-color:#D3D4EF;
+  height:500px;
+  margin-bottom:500px;
+}
+
+.infocard {
+  display:inline-block;
+  width:250px;
+  height:250px;
+  background:white;
+  margin:auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right:13px;
+}
+
+.infocardimg {
+  display: block;
+  padding-top:28px;
+  margin:auto;
+  width:200px;
+  height:200px;
+}
+
+.info {
+  margin-top:200px;
+  text-align:center;
+}
+
+.info2 {
+  margin-top:300px;
+  text-align:center;
+}
+
+
+.infotext {
+  margin-bottom:30px;
+  font-size:25px;
+  color:white;
+  font-weight:bold;
+}
+
+.chatbutton {
+  margin-top:28px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+}
+
+.chatbutton:hover {
+  cursor:pointer;
+}
+
+.helpbutton {
+  margin-top:35px;
+  margin-right:40px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+  float:right;
+}
+
+.helpbutton:hover {
+  cursor:pointer;
+}
+
+.mentorbutton {
+  margin-top:28px;
+  background-color:#4200AD;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+}
+
+.mentorbutton:hover {
+  cursor:pointer;
+}
+
+.plant {
+  margin-top:-70px;
+  margin-left:-1px;
+  height:400px;
+  width:250px;
+}
+
+.person {
+  height:338px;
+  width:741px;
+  margin-top:-70px;
+  margin-left:200px;
 }
