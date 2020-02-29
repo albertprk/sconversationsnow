@@ -1,6 +1,5 @@
 import React from "react";
-
-
+import './Login.css';
 
 const Login = props => (
     <div className="logIn">
@@ -19,7 +18,9 @@ const Login = props => (
         <div className = "logInWithEmail">Log in with Email</div>
         <div className = "rectangle_2_2 "/>    
 
-        <div className="dontHaveAnAccount">Don't have an account?  </div> 
+        <div className="dontHaveAnAccount">
+            Don't have an account? <span className="sign-up-button">Sign Up</span>
+        </div> 
         
         
         
