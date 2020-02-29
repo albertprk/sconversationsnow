@@ -18,7 +18,7 @@ const Landing = props => (
             <p className="infotext">It's that simple</p>
             <InfoCard image={choosegroup}/> <InfoCard image={talkstudents} />
             <br/>
-            <button className="chatbutton">Let's Chat</button>
+            <a href="./login"><button className="chatbutton">Let's Chat</button></a>
         </div>
         <div className="info2">
             <p className="infotext">Want to become a student mentor?</p>
