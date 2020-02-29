@@ -12,6 +12,7 @@ const Login = props => (
         <div className = "rectangle_2"/>  
         <div className = "facebookCircle_512"/>           
         <div className = "logInWithFacebook">Log in with Facebook</div>
+        <div className = "or"> or </div>
         
         <div className = "rectangle_2_1 ">     
         </div>

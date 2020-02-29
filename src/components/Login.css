@@ -154,7 +154,7 @@
     
     }
     
-    /* or 
+    .or {
     
     position: absolute;
     width: 17px;
@@ -169,7 +169,8 @@
     line-height: 21px;
     /* identical to box height */
     
-    /*color: #000000;*/
+    color: #000000;
+    }
     
     
     
