@@ -26,17 +26,16 @@
     .welcomeBack {
     
     position: absolute;
-    left: 0;
+    left: 6%;
     top: 25%;
     width: 50%;
-    text-align: center;    
+    text-align: left;    
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 10vw;
     line-height: 130%;
-    /* or 187px */
     
     color: #FFFFFF;
     }
@@ -46,8 +45,8 @@
     position: absolute;
     width: 329px;
     height: 58px;
-    left: 919px;
-    top: 325px;
+    right: 10%;
+    top: 25%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -82,8 +81,8 @@
     position: absolute;
     width: 167px;
     height: 26px;
-    left: 944px;
-    top: 339px;
+    right: 20%;
+    top: 28%;
 
     
     
