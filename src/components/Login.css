@@ -1,23 +1,24 @@
 
 .logIn {
 
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
     background: #FFFFFF;
     
     }
     
     .rectangle {
-    
-    position: absolute;
-    width: 734px;
-    height: 1054px;
-    left: 0px;
-    top: -15px;
-    
+    flex: 1;    
     background: #4200AD;
+    }
+
+    .rectangleRight {
+        flex: 1;
+        background: #FFFFFF;
     }
 
     
@@ -25,17 +26,16 @@
     .welcomeBack {
     
     position: absolute;
-    width: 633px;
-    height: 374px;
-    left: 101px;
-    top: 325px;
+    left: 6%;
+    top: 25%;
+    width: 50%;
+    text-align: left;    
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 144px;
+    font-size: 10vw;
     line-height: 130%;
-    /* or 187px */
     
     color: #FFFFFF;
     }
@@ -45,8 +45,8 @@
     position: absolute;
     width: 329px;
     height: 58px;
-    left: 919px;
-    top: 325px;
+    right: 10%;
+    top: 25%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -81,8 +81,8 @@
     position: absolute;
     width: 167px;
     height: 26px;
-    left: 944px;
-    top: 339px;
+    right: 20%;
+    top: 28%;
 
     
     
@@ -131,7 +131,6 @@
     line-height: 130%;
     /* or 23px */
     
- 
     color: #000000;
     }
     
@@ -154,39 +153,24 @@
     color: #4200AD;
     
     }
-
-    .signup{
-               
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 130%;
-        /* identical to box height, or 26px */
-        
-        color: #4200AD;
-
-    }
     
-    .orElement {
+    .or {
+    
     position: absolute;
     width: 17px;
     height: 21px;
     left: 944px;
     top: 515px;
-
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 130%;
+    line-height: 21px;
     /* identical to box height */
     
     color: #000000;
     }
-    
-    
     
     
     
@@ -198,7 +182,7 @@
     left: 1195px;
     top: 416px;
     
-    background: url(facebook_circle-512.png);
+    background: url("../images/facebook_circle-512Fb.png");
     }
     
     .google {
@@ -230,6 +214,11 @@
     left: 1201px;
     top: 337px;
     
-    background: url(new-google-favicon-512.png);
+    background: url("../images/new-google-favicon-512.png");
+    }
+
+    .sign-up-button {
+        font-weight: bold;
+        color: #4200AD;    
     }
     

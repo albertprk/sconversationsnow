@@ -131,6 +131,7 @@
     line-height: 130%;
     /* or 23px */
     
+ 
     color: #000000;
     }
     
@@ -153,23 +154,39 @@
     color: #4200AD;
     
     }
+
+    .signup{
+               
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 130%;
+        /* identical to box height, or 26px */
+        
+        color: #4200AD;
+
+    }
     
-    /* or 
-    
+    .orElement {
     position: absolute;
     width: 17px;
     height: 21px;
     left: 944px;
     top: 515px;
+
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
-    line-height: 21px;
+    line-height: 130%;
     /* identical to box height */
     
-    /*color: #000000;*/
+    color: #000000;
+    }
+    
+    
     
     
     
@@ -181,7 +198,7 @@
     left: 1195px;
     top: 416px;
     
-    background: url("./images/facebook_circle-512Fb.png");
+    background: url(facebook_circle-512.png);
     }
     
     .google {
@@ -213,6 +230,6 @@
     left: 1201px;
     top: 337px;
     
-    background: url("./images/new-google-favicon-512.png");
+    background: url(new-google-favicon-512.png);
     }
     
