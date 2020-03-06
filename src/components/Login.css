@@ -66,11 +66,11 @@
     
     .rectangle_2_2 {
     
-    position: absolute;
+    position: fixed;
     width: 329px;
     height: 58px;
-    left: 919px;
-    top: 570px;
+    right: 10%;
+    top: 64%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -81,7 +81,7 @@
     position: fixed;
     width: 167px;
     height: 26px;
-    right: 20%;
+    left: 69%;
     top: 28%;
 
     
@@ -102,7 +102,7 @@
     position: fixed;
     width: 191px;
     height: 26px;
-    right: 18.5%;
+    left: 69%;
     top: 41%;
     
     font-family: Roboto;
@@ -140,8 +140,8 @@
     position: absolute;
     width: 161px;
     height: 26px;
-    left: 944px;
-    top: 584px;
+    left: 69%;
+    top: 67%;
     
     font-family: Roboto;
     font-style: normal;
@@ -156,11 +156,11 @@
     
     .or {
     
-    position: absolute;
+    position: fixed;
     width: 17px;
     height: 21px;
-    left: 944px;
-    top: 515px;
+    left: 69%;
+    top: 55%;
     
     font-family: Roboto;
     font-style: normal;
