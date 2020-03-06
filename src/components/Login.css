@@ -1,23 +1,24 @@
 
 .logIn {
 
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
     background: #FFFFFF;
     
     }
     
     .rectangle {
-    
-    position: absolute;
-    width: 734px;
-    height: 1054px;
-    left: 0px;
-    top: -15px;
-    
+    flex: 1;    
     background: #4200AD;
+    }
+
+    .rectangleRight {
+        flex: 1;
+        background: #FFFFFF;
     }
 
     
@@ -25,10 +26,10 @@
     .welcomeBack {
     
     position: absolute;
-    width: 633px;
-    height: 374px;
-    left: 101px;
-    top: 325px;
+    left: 0;
+    top: 25%;
+    width: 50%;
+    text-align: center;    
     
     font-family: Roboto;
     font-style: normal;

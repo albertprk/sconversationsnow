@@ -7,6 +7,7 @@ const Login = props => (
         <div className="rectangle">
             <div className = "welcomeBack">Welcome<br></br>Back</div>
         </div>
+        <div className="rectangleRight">
         <div className = "newGoogleFavicon_512"/>
         <div className = "logInWithGoogle">Log in with Google</div>
         <div className = "rectangle_2"/>  
@@ -22,6 +23,7 @@ const Login = props => (
         <div className="dontHaveAnAccount">
             Don't have an account? <span className="sign-up-button">Sign Up</span>
         </div> 
+        </div>
         
         
         
