@@ -54,11 +54,11 @@
     }
     .rectangle_2_1 {
     
-    position: absolute;
+    position: fixed;
     width: 329px;
     height: 58px;
-    left: 919px;
-    top: 410px;
+    right: 10%;
+    top: 38%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -78,7 +78,7 @@
     }
     .logInWithGoogle {
     
-    position: absolute;
+    position: fixed;
     width: 167px;
     height: 26px;
     right: 20%;
@@ -99,11 +99,11 @@
     
     .logInWithFacebook {
     
-    position: absolute;
+    position: fixed;
     width: 191px;
     height: 26px;
-    left: 944px;
-    top: 425px;
+    right: 18.5%;
+    top: 41%;
     
     font-family: Roboto;
     font-style: normal;
@@ -176,11 +176,11 @@
     
     .facebookCircle_512 {
     
-    position: absolute;
+    position: fixed;
     width: 47px;
     height: 47px;
-    left: 1195px;
-    top: 416px;
+    right: 11.5%;
+    top: 39%;
     
     background: url("../images/facebook_circle-512Fb.png");
     }
@@ -208,7 +208,7 @@
     }
     .newGoogleFavicon_512 {
     
-    position: absolute;
+    position: fixed;
     width: 35px;
     height: 35px;
     right: 12%;
