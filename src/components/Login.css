@@ -43,8 +43,8 @@
     .rectangle_2 {
     
     position: absolute;
-    width: 329px;
-    height: 58px;
+    width: 26vw;
+    height: 4.5vw;
     right: 10%;
     top: 25%;
     
@@ -55,8 +55,8 @@
     .rectangle_2_1 {
     
     position: fixed;
-    width: 329px;
-    height: 58px;
+    width: 26vw;
+    height: 4.5vw;
     right: 10%;
     top: 38%;
     
@@ -67,8 +67,8 @@
     .rectangle_2_2 {
     
     position: fixed;
-    width: 329px;
-    height: 58px;
+    width: 26vw;
+    height: 4.5vw;
     right: 10%;
     top: 64%;
     
@@ -81,7 +81,7 @@
     position: fixed;
     width: 167px;
     height: 26px;
-    left: 69%;
+    left: 66%;
     top: 28%;
 
     
@@ -89,7 +89,7 @@
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
@@ -102,13 +102,13 @@
     position: fixed;
     width: 191px;
     height: 26px;
-    left: 69%;
+    left: 66%;
     top: 41%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
@@ -118,16 +118,16 @@
     
     .dontHaveAnAccount {
     
-    position: absolute;
+    position: fixed;
     width: 271px;
     height: 31px;
-    left: 961px;
-    top: 825px;
+    left: 66%;
+    top: 85%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* or 23px */
     
@@ -140,13 +140,13 @@
     position: absolute;
     width: 161px;
     height: 26px;
-    left: 69%;
+    left: 66%;
     top: 67%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
@@ -159,13 +159,13 @@
     position: fixed;
     width: 17px;
     height: 21px;
-    left: 69%;
+    left: 66%;
     top: 55%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.5vw;
     line-height: 21px;
     /* identical to box height */
     
