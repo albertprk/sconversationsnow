@@ -1,23 +1,24 @@
 
 .logIn {
 
-    position: relative;
-    width: 1440px;
-    height: 1024px;
-    
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
     background: #FFFFFF;
     
     }
     
     .rectangle {
-    
-    position: absolute;
-    width: 734px;
-    height: 1054px;
-    left: 0px;
-    top: -15px;
-    
+    flex: 1;    
     background: #4200AD;
+    }
+
+    .rectangleRight {
+        flex: 1;
+        background: #FFFFFF;
     }
 
     
@@ -25,17 +26,16 @@
     .welcomeBack {
     
     position: absolute;
-    width: 633px;
-    height: 374px;
-    left: 101px;
-    top: 325px;
+    left: 6%;
+    top: 25%;
+    width: 50%;
+    text-align: left;    
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 144px;
+    font-size: 10vw;
     line-height: 130%;
-    /* or 187px */
     
     color: #FFFFFF;
     }
@@ -43,10 +43,10 @@
     .rectangle_2 {
     
     position: absolute;
-    width: 329px;
-    height: 58px;
-    left: 919px;
-    top: 325px;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 25%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -54,11 +54,11 @@
     }
     .rectangle_2_1 {
     
-    position: absolute;
-    width: 329px;
-    height: 58px;
-    left: 919px;
-    top: 410px;
+    position: fixed;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 38%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -66,11 +66,11 @@
     
     .rectangle_2_2 {
     
-    position: absolute;
-    width: 329px;
-    height: 58px;
-    left: 919px;
-    top: 570px;
+    position: fixed;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 64%;
     
     border: 3px solid #4200AD;
     border-radius: 50px;
@@ -78,18 +78,18 @@
     }
     .logInWithGoogle {
     
-    position: absolute;
+    position: fixed;
     width: 167px;
     height: 26px;
-    left: 944px;
-    top: 339px;
+    left: 66%;
+    top: 28%;
 
     
     
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
@@ -99,16 +99,16 @@
     
     .logInWithFacebook {
     
-    position: absolute;
+    position: fixed;
     width: 191px;
     height: 26px;
-    left: 944px;
-    top: 425px;
+    left: 66%;
+    top: 41%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
@@ -118,20 +118,19 @@
     
     .dontHaveAnAccount {
     
-    position: absolute;
+    position: fixed;
     width: 271px;
     height: 31px;
-    left: 961px;
-    top: 825px;
+    left: 66%;
+    top: 85%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* or 23px */
     
- 
     color: #000000;
     }
     
@@ -141,46 +140,33 @@
     position: absolute;
     width: 161px;
     height: 26px;
-    left: 944px;
-    top: 584px;
+    left: 66%;
+    top: 67%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.5vw;
     line-height: 130%;
     /* identical to box height, or 26px */
     
     color: #4200AD;
     
     }
-
-    .signup{
-               
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 20px;
-        line-height: 130%;
-        /* identical to box height, or 26px */
-        
-        color: #4200AD;
-
-    }
     
-    .orElement {
-    position: absolute;
+    .or {
+    
+    position: fixed;
     width: 17px;
     height: 21px;
-    left: 944px;
-    top: 515px;
-
+    left: 66%;
+    top: 55%;
     
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 1.5vw;
+    line-height: 21px;
     /* identical to box height */
     
     color: #000000;
@@ -188,17 +174,15 @@
     
     
     
-    
-    
     .facebookCircle_512 {
     
-    position: absolute;
+    position: fixed;
     width: 47px;
     height: 47px;
-    left: 1195px;
-    top: 416px;
+    right: 11.5%;
+    top: 39%;
     
-    background: url(facebook_circle-512.png);
+    background: url("../images/facebook_circle-512Fb.png");
     }
     
     .google {
@@ -224,12 +208,17 @@
     }
     .newGoogleFavicon_512 {
     
-    position: absolute;
+    position: fixed;
     width: 35px;
     height: 35px;
-    left: 1201px;
-    top: 337px;
+    right: 12%;
+    top: 27%;
     
-    background: url(new-google-favicon-512.png);
+    background: url("../images/new-google-favicon-512.png");
+    }
+
+    .sign-up-button {
+        font-weight: bold;
+        color: #4200AD;    
     }
     
