@@ -66,6 +66,19 @@ body {
   margin-right:13px;
 }
 
+.infocardtext {
+  display:inline-block;
+  width:250px;
+  height:70px;
+  background:none;
+  margin:auto;
+  border-radius:15px;
+  margin-right:13px;
+  color:white;
+  font-size:90%;
+  margin-top:20px;
+}
+
 .infocardimg {
   display: block;
   padding-top:28px;
