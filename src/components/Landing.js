@@ -1,6 +1,7 @@
 import React from "react";
 import InfoCard from "./InfoCard.js";
 import SubText from "./SubText";
+import Choice from "./Choice.js";
 import choosegroup from "../images/choosegroup.png"
 import talkstudents from "../images/talkstudents.png"
 import laptop from "../images/laptop.png"
@@ -24,7 +25,7 @@ const Landing = props => (
             <SubText headertext={"Talk with other students \n" +
             "\n"} subtext={"Each group has mentors who are trained to provide support"} />
             <br/>
-            <a href="./login"><button className="chatbutton">Let's Chat</button></a>
+            <a href="./choice"><button className="chatbutton">Let's Chat</button></a>
         </div>
         <div className="info2">
             <p className="infotext">Want to become a student mentor?</p>
