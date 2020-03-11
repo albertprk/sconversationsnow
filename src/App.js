@@ -3,6 +3,7 @@ import './App.css';
 import Landing from './components/Landing'
 import Login from './components/Login'
 import { Route, Switch } from 'react-router-dom';
+import Choice from "./components/Choice";
 
 class App extends Component {
   render() {
@@ -11,6 +12,7 @@ class App extends Component {
           <Switch>
             <Route path="/" exact component={Landing} />
             <Route path="/login" component={Login} />
+            <Route path="/choice" component={Choice} />
           </Switch>
         </div>
     );
