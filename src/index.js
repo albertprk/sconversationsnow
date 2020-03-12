@@ -7,8 +7,9 @@ import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
     <BrowserRouter>
-        <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js"></script>
-        <App />
+        <script src="https://unpkg.com/react-router-dom/umd/react-router-dom.min.js">
+            <App />
+        </script>
     </BrowserRouter>, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
