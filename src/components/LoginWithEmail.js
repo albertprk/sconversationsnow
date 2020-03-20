@@ -13,11 +13,10 @@ const logInWithEmail = props => (
             <input type="text" placeholder="Email" name="email" required/>
                 </form>
             </div>
-
         <div className="emailLine"/>
-        <div className="passwordInput">
-            <form action="#">
-            <input type="password" placeholder="Password" name="passcode" required/>
+            <div className="passwordInput">
+                <form action="#">
+                    <input type="password" placeholder="Password" name="passcode" required/>
                 </form>
             </div>
         <div className="passwordLine"/>     

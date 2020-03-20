@@ -71,22 +71,22 @@
 
     .emailLine {
 
-    position: absolute;
-    width: 295px;
-    height: 0px;
-    left: 931px;
-    top: 398px;
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 38%;
 
     border: 1px solid #000000;
     transform: rotate(0.19deg);
     }
 
     .passwordInput {
-    position: absolute;
-    width: 295px;
-    height: 0px;
-    left: 931px;
-    top: 495px;
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 45%;
     
     font-family: Roboto;
     font-style: normal;
@@ -99,11 +99,11 @@
     
 
     .emailInput {
-    position: absolute;
-    width: 45px;
-    height: 23px;
-    left: 935px;
-    top: 375px;
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 33%;
 
     font-family: Roboto;
     font-style: normal;
@@ -122,11 +122,11 @@
    }
 
     .passwordLine {
-    position: absolute;
-    width: 295px;
-    height: 0px;
-    left: 931px;
-    top: 495px;
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 50%;
 
     border: 1px solid #000000;
     transform: rotate(0.19deg);
