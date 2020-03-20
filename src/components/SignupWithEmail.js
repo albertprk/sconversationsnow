@@ -17,6 +17,7 @@ const SignupWithEmail = props => (
                      <input type="text" placeholder="Nickname" name="Nickname" required/>
         
                 </div>
+                <div className = "nickLine"/>
 
                 <div className="emailInput">
             
@@ -37,6 +38,7 @@ const SignupWithEmail = props => (
                     <input type="number" placeholder="Student ID" name="StudentID" required/>
 
                 </div> 
+                <div className = "studentIdLine"/>
             
             </form>  
 

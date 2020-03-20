@@ -136,7 +136,7 @@
     width: 26vw;
     height: 0px;
     right: 10%;
-    top: 60%;
+    top: 55%;
 
     font-family: Roboto;
     font-style: normal;
@@ -169,5 +169,29 @@
     .sign-up-button {
         font-weight: bold;
         color: #4200AD;    
+    }
+
+    
+    .nickLine {
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 28%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+    }
+
+
+    .studentIdLine {
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 60%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
     }
     
