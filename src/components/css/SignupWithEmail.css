@@ -194,4 +194,25 @@
     border: 1px solid #000000;
     transform: rotate(0.19deg);
     }
+
+
+    
+    .signupButton {
+        position: absolute;
+        width: 10vw;
+        height: 38px;
+        right: 10%;
+        top: 67%;
+    
+        font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 1.8vw;
+            color: white;
+            text-align: center;
+            line-height: 140%;
+    
+        background: #E9A800;
+        border-radius: 50px;
+        }
     

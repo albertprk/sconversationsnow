@@ -39,6 +39,7 @@ const SignupWithEmail = props => (
 
                 </div> 
                 <div className = "studentIdLine"/>
+                <input type="submit" class="signupButton" value="Sign up"/>
             
             </form>  
 
