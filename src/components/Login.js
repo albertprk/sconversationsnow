@@ -26,8 +26,8 @@ const Login = props => (
             </div> 
         </div>
 
-        <div className = "logInWithEmail">Log in with e-mail</div>
-            <div className = "rectangle_2_2 "/>    
+        <div className = "logInWithEmail" >Log in with e-mail</div>
+        <a href = "./loginWithEmail"><div className = "rectangle_2_2 "/></a>
    
 
        
