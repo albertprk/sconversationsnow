@@ -17,6 +17,7 @@ const Signup = props => (
             <div className = "signUpWithFacebook">Sign up with Facebook</div>
             <div className = "or"> or </div>
         
+            <div className = "signUpWithEmail">Sign up with e-mail</div>
             <div className = "rectangle_2_1SignUp ">     
             </div>
             
@@ -26,8 +27,8 @@ const Signup = props => (
                 Already have an account? <a href="./login"><span className="sign-in-button">Log In</span></a>
             </div> 
         </div>
-        <div className = "signUpWithEmail">Sign up with Email</div>
-        <div className = "rectangle_2_2SignUp "/>    
+        
+       
 
        
     </div>
