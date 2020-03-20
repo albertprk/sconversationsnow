@@ -81,6 +81,26 @@
     transform: rotate(0.19deg);
     }
 
+
+    .loginButton {
+    position: absolute;
+    width: 10vw;
+    height: 38px;
+    right: 10%;
+    top: 60%;
+
+    font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8vw;
+        color: white;
+        text-align: center;
+        line-height: 140%;
+
+    background: #4200AD;
+    border-radius: 50px;
+    }
+
     .passwordInput {
         position: fixed;
         width: 26vw;

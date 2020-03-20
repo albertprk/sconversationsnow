@@ -19,7 +19,8 @@ const logInWithEmail = props => (
                     <input type="password" placeholder="Password" name="passcode" required/>
                 </form>
             </div>
-        <div className="passwordLine"/>     
+        <div className="passwordLine"/> 
+        <div className="loginButton">Log in</div>    
 
         <div className="dontHaveAnAccount">
             Don't have an account? <a href = "./signup"><span className="sign-up-button">Sign Up</span></a>
