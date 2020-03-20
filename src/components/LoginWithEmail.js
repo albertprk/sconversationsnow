@@ -8,20 +8,17 @@ const logInWithEmail = props => (
         <div className = "welcomeBack">Welcome<br></br>Back</div>
     </div>
     <div className="rectangleRight">
+    <form action="#">
         <div className="emailInput">
-            <form action="#">
             <input type="text" placeholder="Email" name="email" required/>
-                </form>
-            </div>
+        </div>
         <div className="emailLine"/>
-            <div className="passwordInput">
-                <form action="#">
-                    <input type="password" placeholder="Password" name="passcode" required/>
-                </form>
-            </div>
+        <div className="passwordInput">
+            <input type="password" placeholder="Password" name="passcode" required/>
+        </div>
         <div className="passwordLine"/> 
-        <div className="loginButton">Log in</div>    
-
+        <input type="submit" class="loginButton" value="Log in"/>
+    </form>
         <div className="dontHaveAnAccount">
             Don't have an account? <a href = "./signup"><span className="sign-up-button">Sign Up</span></a>
         </div> 
