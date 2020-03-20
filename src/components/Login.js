@@ -23,13 +23,13 @@ const Login = props => (
             <div className = "rectangle_2_2 "/>    
 
             <div className="dontHaveAnAccount">
-                Don't have an account? <span className="sign-up-button">Sign Up</span>
+                Don't have an account? <a href = "./signup"><span className="sign-up-button">Sign Up</span></a>
             </div> 
         </div>
         <div className = "logInWithEmail">Log in with Email</div>
         <div className = "rectangle_2_2 "/>    
 
-        <div className="dontHaveAnAccount">Don't have an account?  </div>
+       
     </div>
 );
 
