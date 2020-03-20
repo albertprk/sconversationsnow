@@ -21,36 +21,48 @@
         background: #FFFFFF;
     }
 
-    
+    .rectangleChoiceRight {
+        flex: 1;
+        background: #E9A800;
+    }
     
     .welcomeBack {
-    
     position: absolute;
-    left: 6%;
+    left: 0%;
     top: 25%;
     width: 50%;
-    text-align: left;    
-    
+    text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 10vw;
     line-height: 130%;
-    
     color: #FFFFFF;
     }
+
+
+.becomeMentor {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    line-height: 130%;
+    color: #FFFFFF;
+}
     
     .rectangle_2 {
-    
     position: absolute;
     width: 26vw;
     height: 4.5vw;
     right: 10%;
     top: 25%;
-    
     border: 3px solid #4200AD;
     border-radius: 50px;
-    
     }
     .rectangle_2_1 {
     
@@ -182,7 +194,7 @@
     right: 11.5%;
     top: 39%;
     
-    background: url("../images/facebook_circle-512Fb.png");
+    background: url("../../images/facebook_circle-512Fb.png");
     }
     
     .google {
@@ -214,7 +226,7 @@
     right: 12%;
     top: 27%;
     
-    background: url("../images/new-google-favicon-512.png");
+    background: url("../../images/new-google-favicon-512.png");
     }
 
     .sign-up-button {
