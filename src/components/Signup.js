@@ -25,7 +25,7 @@ const Signup = props => (
             </div> 
         </div>
 
-        <div className = "signUpWithEmail">Sign up with e-mail</div>
+        <a href = "signupwithemail"><div className = "signUpWithEmail">Sign up with e-mail</div></a>
             <div className = "rectangle_2_1SignUp "></div>
         
        
