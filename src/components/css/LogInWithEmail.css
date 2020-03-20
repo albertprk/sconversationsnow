@@ -40,6 +40,23 @@
     color: #FFFFFF;
     }
 
+    .forgotYourPassword {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: -6%;
+    top: 51%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1vw;
+    line-height: 130%;
+
+
+    color: #000000;
+    }
+
     .dontHaveAnAccountEmail {
     
     position: fixed;
