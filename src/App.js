@@ -5,6 +5,7 @@ import Login from './components/Login'
 import { Route, Switch } from 'react-router-dom';
 import Choice from "./components/Choice";
 import Signup from "./components/Signup";
+import logInWithEmail from './components/LoginWithEmail';
 
 class App extends Component {
   render() {
@@ -15,6 +16,7 @@ class App extends Component {
             <Route path="/login" component={Login} />
             <Route path="/choice" component={Choice} />
             <Route path="/signup" component={Signup} />
+            <Route path="/loginWithEmail" component={logInWithEmail} />
           </Switch>
         </div>
     );
