@@ -1,5 +1,5 @@
 
-.logIn {
+.signUp {
 
     position: fixed;
     right: 0;
@@ -11,22 +11,22 @@
     
     }
     
-    .rectangle {
+    .rectangleSignUp {
     flex: 1;    
-    background: #4200AD;
+    background: #E9A800;
     }
 
-    .rectangleRight {
+    .rectangleRightSignUp {
         flex: 1;
         background: #FFFFFF;
     }
 
-    .rectangleChoiceRight {
+    .rectangleChoiceRightSignUp {
         flex: 1;
-        background: #4200AD;
+        background: #E9A800;
     }
     
-    .welcomeBack {
+    .niceToMeetYou {
     position: absolute;
     left: 0%;
     top: 25%;
@@ -55,16 +55,16 @@
     color: #FFFFFF;
 }
     
-    .rectangle_2 {
+    .rectangle_2SignUp {
     position: absolute;
     width: 26vw;
     height: 4.5vw;
     right: 10%;
     top: 25%;
-    border: 3px solid #4200AD;
+    border: 3px solid #E9A800;
     border-radius: 50px;
     }
-    .rectangle_2_1 {
+    .rectangle_2_1SignUp {
     
     position: fixed;
     width: 26vw;
@@ -72,11 +72,11 @@
     right: 10%;
     top: 38%;
     
-    border: 3px solid #4200AD;
+    border: 3px solid #E9A800;
     border-radius: 50px;
     }
     
-    .rectangle_2_2 {
+    .rectangle_2_2SignUp {
     
     position: fixed;
     width: 26vw;
@@ -84,11 +84,11 @@
     right: 10%;
     top: 64%;
     
-    border: 3px solid #4200AD;
+    border: 3px solid #E9A800;
     border-radius: 50px;
     
     }
-    .logInWithGoogle {
+    .signUpWithGoogle {
     
     position: fixed;
     width: 167px;
@@ -105,11 +105,11 @@
     line-height: 130%;
     /* identical to box height, or 26px */
     
-    color: #4200AD;
+    color: #E9A800;
     }
     
     
-    .logInWithFacebook {
+    .signUpWithFacebook {
     
     position: fixed;
     width: 191px;
@@ -124,11 +124,11 @@
     line-height: 130%;
     /* identical to box height, or 26px */
     
-    color: #4200AD;
+    color: #E9A800;
     }
     
     
-    .dontHaveAnAccount {
+    .alreadyHaveAnAccount {
     
     position: fixed;
     width: 271px;
@@ -147,7 +147,7 @@
     }
     
     
-    .logInWithEmail {
+    .signUpWithEmail {
     
     position: absolute;
     width: 161px;
@@ -162,7 +162,7 @@
     line-height: 130%;
     /* identical to box height, or 26px */
     
-    color: #4200AD;
+    color: #E9A800;
     
     }
     
@@ -229,8 +229,8 @@
     background: url("../../images/new-google-favicon-512.png");
     }
 
-    .sign-up-button {
+    .sign-in-button {
         font-weight: bold;
-        color: #4200AD;    
+        color: #E9A800;    
     }
     
