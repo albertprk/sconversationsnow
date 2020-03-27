@@ -1,0 +1,176 @@
+
+.logInWithEmaill {
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    background: #FFFFFF;
+    
+    }
+    
+    .rectangleEmail {
+    flex: 1;    
+    background: #4200AD;
+    }
+
+    .rectangleRightEmail {
+        flex: 1;
+        background: #FFFFFF;
+    }
+
+    .rectangleChoiceRight {
+        flex: 1;
+        background: #E9A800;
+    }
+    
+    .welcomeBackEmail {
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    line-height: 130%;
+    color: #FFFFFF;
+    }
+
+    .forgotYourPassword {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: -6%;
+    top: 53%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.1vw;
+    line-height: 130%;
+
+
+    color: #000000;
+    }
+
+    .dontHaveAnAccountEmail {
+    
+    position: fixed;
+    width: 271px;
+    height: 31px;
+    left: 66%;
+    top: 85%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* or 23px */
+    
+    color: #000000;
+    }
+    .ellipse {
+    
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1195px;
+    top: 331px;
+    
+    background: #FFFFFF;
+    
+    }
+
+    .emailLine {
+
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 38%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+    }
+
+
+    .loginButton {
+    position: absolute;
+    width: 10vw;
+    height: 38px;
+    right: 10%;
+    top: 60%;
+
+    font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 1.8vw;
+        color: white;
+        text-align: center;
+        line-height: 140%;
+
+    background: #4200AD;
+    border-radius: 50px;
+    }
+
+    .passwordInput {
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 45%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+    
+    color: #8D8D8D;
+    }
+    
+
+    .emailInput {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 33%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #8D8D8D;
+   }
+
+   input {
+       border: none;
+       background: transparent;
+       font-size: 2vw;
+       color: black;
+   }
+
+    .passwordLine {
+        position: fixed;
+        width: 26vw;
+        height: 0px;
+        right: 10%;
+        top: 50%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+    }
+
+    .sign-up-button {
+        font-weight: bold;
+        color: #4200AD;    
+    }
+    
