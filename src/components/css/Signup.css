@@ -1,0 +1,236 @@
+
+.signUp {
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    background: #FFFFFF;
+    
+    }
+    
+    .rectangleSignUp {
+    flex: 1;    
+    background: #E9A800;
+    }
+
+    .rectangleRightSignUp {
+        flex: 1;
+        background: #FFFFFF;
+    }
+
+    .rectangleChoiceRightSignUp {
+        flex: 1;
+        background: #E9A800;
+    }
+    
+    .niceToMeetYou {
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    line-height: 130%;
+    color: #FFFFFF;
+    }
+
+
+.becomeMentor {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+    
+    .rectangle_2SignUp {
+    position: absolute;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 25%;
+    border: 3px solid #E9A800;
+    border-radius: 50px;
+    }
+    .rectangle_2_1SignUp {
+    
+    position: fixed;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 38%;
+    
+    border: 3px solid #E9A800;
+    border-radius: 50px;
+    }
+    
+    .rectangle_2_2SignUp {
+    
+    position: fixed;
+    width: 26vw;
+    height: 4.5vw;
+    right: 10%;
+    top: 64%;
+    
+    border: 3px solid #E9A800;
+    border-radius: 50px;
+    
+    }
+    .signUpWithGoogle {
+    
+    position: fixed;
+    width: 167px;
+    height: 26px;
+    left: 66%;
+    top: 28%;
+
+    
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+    
+    color: #E9A800;
+    }
+    
+    
+    .signUpWithFacebook {
+    
+    position: fixed;
+    width: 191px;
+    height: 26px;
+    left: 66%;
+    top: 41%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+    
+    color: #E9A800;
+    }
+    
+    
+    .alreadyHaveAnAccount {
+    
+    position: fixed;
+    width: 271px;
+    height: 31px;
+    left: 66%;
+    top: 85%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* or 23px */
+    
+    color: #000000;
+    }
+    
+    
+    .signUpWithEmail {
+    
+    position: absolute;
+    width: 161px;
+    height: 26px;
+    left: 66%;
+    top: 67%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* identical to box height, or 26px */
+    
+    color: #E9A800;
+    
+    }
+    
+    .or {
+    
+    position: fixed;
+    width: 17px;
+    height: 21px;
+    left: 66%;
+    top: 55%;
+    
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 21px;
+    /* identical to box height */
+    
+    color: #000000;
+    }
+    
+    
+    
+    .facebookCircle_512 {
+    
+    position: fixed;
+    width: 47px;
+    height: 47px;
+    right: 11.5%;
+    top: 39%;
+    
+    background: url("../../images/facebook_circle-512Fb.png");
+    }
+    
+    .google {
+    
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1195px;
+    top: 331px;
+    
+    }
+    
+    .ellipse {
+    
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1195px;
+    top: 331px;
+    
+    background: #FFFFFF;
+    
+    }
+    .newGoogleFavicon_512 {
+    
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    right: 12%;
+    top: 27%;
+    
+    background: url("../../images/new-google-favicon-512.png");
+    }
+
+    .sign-in-button {
+        font-weight: bold;
+        color: #E9A800;    
+    }
+    
