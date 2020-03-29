@@ -9,27 +9,20 @@ const Login = props => (
         </div>
         <div className="rectangleRight">
             
-            <div className = "rectangle_2">  
-                <div className = "logInWithGoogle">Log in with Google</div>
-                <div className = "newGoogleFavicon_512"/>
-            </div>
-            <div className = "facebookCircle_512"/>           
-            <div className = "logInWithFacebook">Log in with Facebook</div>
-            <div className = "or"> or </div>
-        
-            <div className = "rectangle_2_1 ">     
-            </div>
-            <div className = "logInWithEmail">Log in with Email</div>
-            <div className = "rectangle_2_2 "/>    
+            <button className = "rectangle_2">
+                Log in with Google
+                <img src={require("../images/new-google-favicon-512.png")}></img>
+            </button>
 
+            <div className = "or"> or </div>
+            <button className="rectangle_2_1">Log in with Facebook <div className = "facebookCircle_512"/></button>
             <div className="dontHaveAnAccount">
                 Don't have an account? <span className="sign-up-button">Sign Up</span>
             </div> 
         </div>
         <div className = "logInWithEmail">Log in with Email</div>
-        <div className = "rectangle_2_2 "/>    
-
-        <div className="dontHaveAnAccount">Don't have an account?  </div>
+        <div className = "rectangle_2_2 "/>
+        <a href = "./loginWithEmail"><button className="rectangle_2_2">Log in with e-mail</button></a>
     </div>
 );
 
