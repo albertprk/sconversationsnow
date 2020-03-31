@@ -5,25 +5,23 @@ import Login from './components/Login'
 import { Route, Switch } from 'react-router-dom';
 import Choice from "./components/Choice";
 import Signup from "./components/Signup";
-import logInWithEmail from './components/LoginWithEmail';
+import LoginWithEmail from './components/LoginWithEmail';
 import signUpWithEmail from './components/SignupWithEmail'
 
 class App extends Component {
     state = {
-        data: null
+        profiles: null
     };
 
     componentDidMount() {
         this.callAPI();
-        console.log(this.state);
     }
 
     callAPI() {
-        fetch("/express_backend")
-            .then(res => res.text())
+        fetch("/profiles")
+            .then(res => res.json())
             .then(res => {
-                this.setState({data: res});
-                console.log(this.state);
+                this.setState({profiles: res});
             })
     }
 
@@ -32,10 +30,10 @@ class App extends Component {
             <div>
                 <Switch>
                     <Route path="/" exact component={Landing}/>
-                    <Route path="/login" component={Login}/>
-                    <Route path="/choice" component={Choice}/>
+                    <Route path="/login" render={() => <Login profiles={this.state.profiles} />}/>
+                    <Route path="/choice" render={() => <Choice profiles={this.state.profiles} />}/>
                     <Route path="/signup" component={Signup}/>
-                    <Route path="/loginWithEmail" component={logInWithEmail}/>
+                    <Route path="/loginWithEmail" render={() => <LoginWithEmail profiles={this.state.profiles} />}/>
                     <Route path="/signUpWithEmail" component={signUpWithEmail}/>
                 </Switch>
             </div>

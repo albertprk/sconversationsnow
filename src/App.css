@@ -1,6 +1,5 @@
 body {
   background: url("./images/landingbg.png") repeat-x;
-  min-height:2300px;
 }
 
 .App {
@@ -47,6 +46,10 @@ body {
   text-align:center;
   font-weight:bold;
   padding-top:130px;
+}
+
+.landingbody {
+  min-height:2300px;
 }
 
 .landingbg {
