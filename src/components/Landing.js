@@ -1,7 +1,6 @@
 import React from "react";
 import InfoCard from "./InfoCard.js";
 import SubText from "./SubText";
-import Choice from "./Choice.js";
 import choosegroup from "../images/choosegroup.png"
 import talkstudents from "../images/talkstudents.png"
 import laptop from "../images/laptop.png"
@@ -14,8 +13,8 @@ const Landing = props => (
     <div className="landingbg">
         <button className="helpbutton">Help Now</button>
         <div className="landingtext">Connect to<br/> Your campus</div>
-        <img className="plant" src={plant} />
-        <img className="person" src={person} />
+        <img className="plant" src={plant} alt="Plant" />
+        <img className="person" src={person} alt="Person on Computer" />
         <div className="info">
             <p className="infotext">It's that simple</p>
             <InfoCard image={choosegroup}/> <InfoCard image={talkstudents} />

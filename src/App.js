@@ -9,25 +9,43 @@ import logInWithEmail from './components/LoginWithEmail';
 import signUpWithEmail from './components/SignupWithEmail'
 
 class App extends Component {
-  render() {
-    const App = () => (
-        <div>
-          <Switch>
-            <Route path="/" exact component={Landing} />
-            <Route path="/login" component={Login} />
-            <Route path="/choice" component={Choice} />
-            <Route path="/signup" component={Signup} />
-            <Route path="/loginWithEmail" component={logInWithEmail} />
-            <Route path="/signUpWithEmail" component={signUpWithEmail} />
-          </Switch>
-        </div>
-    );
-    return (
-        <Switch>
-          <App/>
-        </Switch>
-    );
-  }
+    state = {
+        data: null
+    };
+
+    componentDidMount() {
+        this.callAPI();
+        console.log(this.state);
+    }
+
+    callAPI() {
+        fetch("/express_backend")
+            .then(res => res.text())
+            .then(res => {
+                this.setState({data: res});
+                console.log(this.state);
+            })
+    }
+
+    render() {
+        const App = () => (
+            <div>
+                <Switch>
+                    <Route path="/" exact component={Landing}/>
+                    <Route path="/login" component={Login}/>
+                    <Route path="/choice" component={Choice}/>
+                    <Route path="/signup" component={Signup}/>
+                    <Route path="/loginWithEmail" component={logInWithEmail}/>
+                    <Route path="/signUpWithEmail" component={signUpWithEmail}/>
+                </Switch>
+            </div>
+        );
+        return (
+            <Switch>
+                <App/>
+            </Switch>
+        );
+    }
 }
 
 export default App;

@@ -10,7 +10,7 @@ const Login = props => (
         <div className="rectangleRight">
             <button className = "rectangle_2">
                 Log in with Google
-                <img src={require("../images/new-google-favicon-512.png")}></img>
+                <img src={require("../images/new-google-favicon-512.png")} alt="Google Favicon"></img>
             </button>
 
             <div className = "or"> or </div>
