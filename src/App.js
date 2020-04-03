@@ -10,11 +10,13 @@ import signUpWithEmail from './components/SignupWithEmail'
 
 class App extends Component {
     state = {
-        profiles: null
+        profiles: null,
+        userInfo: null
     };
 
     componentDidMount() {
         this.callAPI();
+        this.matchUserInfo();
     }
 
     callAPI() {
@@ -24,6 +26,17 @@ class App extends Component {
                 this.setState({profiles: res});
             })
     }
+
+    matchUserInfo() { //get the authentication data from the server
+        fetch("/example")
+            .then(res =>  {
+                this.setState({userInfo: res});
+        })
+    }
+
+    
+
+    
 
     render() {
         const App = () => (
