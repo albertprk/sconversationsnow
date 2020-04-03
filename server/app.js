@@ -1,6 +1,10 @@
 const express = require('express');
 const path = require('path');
 
+
+
+const bodyParser = require('body-parser'); //added
+
 const app = express();
 
 app.get('/profiles', (req, res) => {
@@ -49,7 +53,18 @@ app.get('/profiles', (req, res) => {
     res.send(profiles);
 });
 
+
+
+
 const port = process.env.PORT || 5000;
+app.use(bodyParser.urlencoded({ extended: true }));  //added
+
+app.post('/example', (req, res) => { //added
+    console.log(`Info! ${req.body.email} ${req.body.password}`);
+    let userInfo = `${req.body.email} ${req.body.password}`;
+    res.send(userInfo);
+
+  });
 
 app.listen(port, () => {
     console.log('Student Conversations Now is currently listening on port 5000!')
