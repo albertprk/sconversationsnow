@@ -2,10 +2,7 @@ import React from "react";
 import './css/LogInWithEmail.css';
 
 const logInWithEmail = (props) => {
-
-    handleSubmit((e) => {
-        e.preventDefault();
-    });
+    console.log(props);
 
     return (<div className="logInWithEmaill">
             <div className="rectangle">
@@ -14,15 +11,15 @@ const logInWithEmail = (props) => {
             <div className="rectangleRight">
                 <form action="#">
                     <div className="emailInput">
-                        <input type="email" placeholder="Email" name="email" required/>
+                        <input type="email" placeholder="Email" className="email" required/>
                     </div>
                     <div className="emailLine"/>
                     <div className="passwordInput">
-                        <input type="password" placeholder="Password" name="passcode" required/>
+                        <input type="password" placeholder="Password" className="passcode" required/>
                     </div>
                     <div className="passwordLine"/>
                     <div className="forgotYourPassword">Forgot your password?</div>
-                    <input type="submit" class="loginButton" value="Log in"/>
+                    <input type="submit" className="loginButton" value="Log in"/>
                 </form>
                 <div className="dontHaveAnAccount">
                     Don't have an account? <a href="./signup"><span className="sign-up-button">Sign Up</span></a>
