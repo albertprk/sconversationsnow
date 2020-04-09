@@ -12,19 +12,18 @@ app.use(cors());
 app.use(express.json());
 
 
-const uri = process.env.ATLAS_URI;
+const uri = process.env.ATLAS_URI; //This is the credentials to connect to the database
 mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 );
+
+//Checks if server is connected
 const connection = mongoose.connection;
 connection.once('open', () => {
   console.log("MongoDB database connection established successfully");
 })
 
 
-
-
-
-
+//To run server, change directory to backend, then type nodemon server to run the server
 
 app.listen(port, () => {
     console.log(`Server is running on port: ${port}`);
