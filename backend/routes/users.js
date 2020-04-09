@@ -31,6 +31,7 @@ router.route('/add').post((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+// Route for updating the user's information to the database
 router.route('/update/:id').post((req, res) => {
     User.findById(req.params.id)
         .then(user => {
@@ -46,6 +47,20 @@ router.route('/update/:id').post((req, res) => {
                 .catch(err => res.status(400).json('Error: ' + err));
         })
         .catch(err => res.status(400).json('Error: ' + err));
+});
+
+// Route for deleting the specified user
+router.route('/delete/:id').delete((req, res) => {
+    User.findByIdAndDelete(req.params.id)
+    .then(() => res.json('User deleted.')) 
+    .catch(err => res.status(400).json('Error: ' + err));
+});
+
+// Route for getting the specified user by using user id
+router.route('/getuser/:id').get((req, res) => {
+    User.findById(req.params.id)
+    .then(user => res.json(user))  //then return as json ; else return error
+    .catch(err => res.status(400).json('Error: ' + err));
 });
 
 
