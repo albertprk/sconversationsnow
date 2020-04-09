@@ -8,7 +8,7 @@ router.route('/').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err)); // if there's error - return a error 400 with the message
 });
 
-//handles incoming HTTP post request. 
+//handles incoming HTTP post request for registering a new user. 
 router.route('/add').post((req, res) => {
     const username = req.body.username; //we assign the username to variable, and create new instance of username
     const password = req.body.password;
@@ -16,9 +16,6 @@ router.route('/add').post((req, res) => {
     const email = req.body.email;
     const xp = Number(req.body.xp);
     const studentid = Number(req.body.studentid);
-    
-    
-    
     
     const newUser = new User({
         username,
@@ -32,6 +29,23 @@ router.route('/add').post((req, res) => {
     newUser.save() // save the new user to the databse
     .then(() => res.json('User added!')) // return prompt that user is added; else return error message
     .catch(err => res.status(400).json('Error: ' + err));
+});
+
+router.route('/update/:id').post((req, res) => {
+    User.findById(req.params.id)
+        .then(user => {
+            user.username = req.body.username;
+            user.password = req.body.password;
+            user.userType = req.body.userType;
+            user.email = req.body.email;
+            user.xp = Number(req.body.xp);
+            user.studentid = Number(req.body.studentid);
+
+            user.save()
+                .then(() => res.json('User updated!'))
+                .catch(err => res.status(400).json('Error: ' + err));
+        })
+        .catch(err => res.status(400).json('Error: ' + err));
 });
 
 
