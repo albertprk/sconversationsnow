@@ -2,7 +2,7 @@ const router = require('express').Router();
 let User = require('../models/users.model'); //requires mongoose module we created
 
 // the first route that handles incoming HTTP get requests from the /users path
-router.route('/login/getusers').get((req, res) => {
+router.route('/').get((req, res) => {
     User.find() //mongoose method that gets all the users from mongoose atlas database 
     .then(users => res.json(users)) //after it finds, get all users and returns the users in json format that we got from database
     .catch(err => res.status(400).json('Error: ' + err)); // if there's error - return a error 400 with the message
@@ -11,7 +11,23 @@ router.route('/login/getusers').get((req, res) => {
 //handles incoming HTTP post request. 
 router.route('/add').post((req, res) => {
     const username = req.body.username; //we assign the username to variable, and create new instance of username
-    const newUser = new User({username});
+    const password = req.body.password;
+    const userType = req.body.userType;
+    const email = req.body.email;
+    const xp = Number(req.body.xp);
+    const studentid = Number(req.body.studentid);
+    
+    
+    
+    
+    const newUser = new User({
+        username,
+        password,
+        userType,
+        email,
+        xp,
+        studentid
+    });
 
     newUser.save() // save the new user to the databse
     .then(() => res.json('User added!')) // return prompt that user is added; else return error message
