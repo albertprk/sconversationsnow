@@ -63,6 +63,19 @@ router.route('/getuser/:id').get((req, res) => {
     .catch(err => res.status(400).json('Error: ' + err));
 });
 
+// Returns true if password matches what is stored in the database
+// Requires a POST with email and password
+router.route('/authenticate').post((req, res) => {
+    const password = req.body.password;
+
+    let obj = User.findOne( {email: req.body.email} ).exec();
+    if (obj.password === password) {
+        res.json(true);
+    } else {
+        res.json(false);
+    }
+});
+
 
 //For all these router files, need to export router
 module.exports = router;
