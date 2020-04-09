@@ -23,6 +23,11 @@ connection.once('open', () => {
 })
 
 
+const usersRouter = require('./routes/users');
+app.use('/users', usersRouter);
+
+
+
 //To run server, change directory to backend, then type nodemon server to run the server
 
 app.listen(port, () => {

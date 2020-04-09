@@ -10,7 +10,6 @@ const userSchema = new Schema({
   password: {type: String, required: true, minlength: 5  },
   userType: { type: String, required: true },  //Admin, mentor or typical user
   email: {type: String, required: true, trim: true,},
-  mentor: { type: Boolean, required: true,},
   xp: { type: Number, required: true},
   studentid: { type: Number, required: true}
 }, {
