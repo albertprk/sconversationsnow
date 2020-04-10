@@ -1,5 +1,8 @@
+
+const Bcrypt = require('bcryptjs');
 const router = require('express').Router();
 let User = require('../models/users.model'); //requires mongoose module we created
+
 
 // the first route that handles incoming HTTP get requests from the /users path
 router.route('/').get((req, res) => {
@@ -9,9 +12,10 @@ router.route('/').get((req, res) => {
 });
 
 //handles incoming HTTP post request for registering a new user. 
-router.route('/add').post((req, res) => {
+router.route('/add').post(async (req, res) => {
+    const salt = 10;
     const username = req.body.username; //we assign the username to variable, and create new instance of username
-    const password = req.body.password;
+    const password = await Bcrypt.hash(req.body.password, salt);
     const userType = req.body.userType;
     const email = req.body.email;
     const xp = Number(req.body.xp);
@@ -30,6 +34,22 @@ router.route('/add').post((req, res) => {
     .then(() => res.json('User added!')) // return prompt that user is added; else return error message
     .catch(err => res.status(400).json('Error: ' + err));
 });
+
+
+router.route('/login').post(async (req, res) => {
+        
+    const obj = await User.findOne({email: req.body.email});  
+    
+    Bcrypt.compare(req.body.password, obj.password , function (err, result) {
+        if (result) {
+            console.log("logged in ");
+            res.json('LOGGED IN');
+        } else {
+            res.json('invalid password');
+        }
+    })
+});
+
 
 // Route for updating the user's information to the database
 router.route('/update/:id').post((req, res) => {
@@ -62,6 +82,7 @@ router.route('/getuser/:id').get((req, res) => {
     .then(user => res.json(user))  //then return as json ; else return error
     .catch(err => res.status(400).json('Error: ' + err));
 });
+
 
 
 //For all these router files, need to export router
