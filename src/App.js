@@ -12,11 +12,13 @@ import Dashboard from "./components/Dashboard";
 class App extends Component {
     state = {
         profiles: null,
-        chatRooms: null
+        chatRooms: null,
+        userInfo: null
     };
 
     componentDidMount() {
         this.callAPI();
+        this.matchUserInfo();
     }
 
     callAPI() {
@@ -25,6 +27,13 @@ class App extends Component {
             .then(res => {
                 this.setState({chatRooms: res});
             })
+    }
+
+    matchUserInfo() { //get the authentication data from the server
+        fetch("/example")
+            .then(res =>  {
+                this.setState({userInfo: res});
+        })
     }
 
     render() {
