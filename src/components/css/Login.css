@@ -1,6 +1,5 @@
 
 .logIn {
-
     position: fixed;
     right: 0;
     left: 0;
@@ -8,7 +7,7 @@
     top: 0;
     display: flex;
     background: #FFFFFF;
-    
+    overflow:hidden;
     }
     
     .rectangle {
@@ -56,118 +55,152 @@
 }
     
     .rectangle_2 {
-    position: absolute;
-    width: 26vw;
-    height: 4.5vw;
-    right: 10%;
-    top: 25%;
-    border: 3px solid #4200AD;
-    border-radius: 50px;
+        text-align:left;
+        padding-left:30px;
+        position: absolute;
+        width: 26vw;
+        height: 4.5vw;
+        right: 10%;
+        top: 25%;
+        color: #4200AD;
+        border: 3px solid #4200AD;
+        border-radius: 50px;
+        font-family: Roboto, arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5vw;
+        vertical-align: middle;
+        line-height:4.5vw;
     }
+
+    .rectangle_2 img {
+        padding-right:20px;
+        vertical-align: middle;
+        float:right;
+        max-height:70%;
+        max-width:70%;
+        padding-top:10px;
+    }
+
+    .rectangle_2:hover {
+        cursor:pointer;
+        background: #4200AD;
+        color:white;
+    }
+
     .rectangle_2_1 {
-    
-    position: fixed;
-    width: 26vw;
-    height: 4.5vw;
-    right: 10%;
-    top: 38%;
-    
-    border: 3px solid #4200AD;
-    border-radius: 50px;
+        padding-top:3px;
+        text-align:left;
+        padding-left:30px;
+        position: fixed;
+        width: 26vw;
+        height: 4.5vw;
+        right: 10%;
+        top: 38%;
+        border: 3px solid #4200AD;
+        border-radius: 50px;
+        color: #4200AD;
+        font-family: Roboto, arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5vw;
     }
-    
+
+    .rectangle_2_1:hover {
+        cursor:pointer;
+        background: #4200AD;
+        color:white;
+    }
+
     .rectangle_2_2 {
-    
-    position: fixed;
-    width: 26vw;
-    height: 4.5vw;
-    right: 10%;
-    top: 64%;
-    
-    border: 3px solid #4200AD;
-    border-radius: 50px;
-    
+        padding-top:3px;
+        padding-left:30px;
+        text-align:left;
+        position: fixed;
+        width: 26vw;
+        height: 4.5vw;
+        right: 10%;
+        top: 64%;
+        border: 3px solid #4200AD;
+        border-radius: 50px;
+        color:#4200AD;
+        font-family: Roboto, arial;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 1.5vw;
     }
+
+    .rectangle_2_2:hover {
+        cursor:pointer;
+        background: #4200AD;
+        color:white;
+    }
+
+    /*
     .logInWithGoogle {
-    
     position: fixed;
     width: 167px;
     height: 26px;
     left: 66%;
     top: 28%;
-
-    
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5vw;
     line-height: 130%;
-    /* identical to box height, or 26px */
-    
     color: #4200AD;
     }
     
     
     .logInWithFacebook {
-    
     position: fixed;
     width: 191px;
     height: 26px;
     left: 66%;
     top: 41%;
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5vw;
     line-height: 130%;
-    /* identical to box height, or 26px */
-    
     color: #4200AD;
     }
-    
-    
+    */
+
     .dontHaveAnAccount {
-    
     position: fixed;
     width: 271px;
     height: 31px;
     left: 66%;
     top: 85%;
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 1.5vw;
     line-height: 130%;
-    /* or 23px */
-    
     color: #000000;
     }
     
     
     .logInWithEmail {
-    
     position: absolute;
     width: 161px;
     height: 26px;
     left: 66%;
     top: 67%;
-    
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     font-size: 1.5vw;
     line-height: 130%;
-    /* identical to box height, or 26px */
-    
     color: #4200AD;
-    
+    }
+
+    .logInWithEmail:hover {
+        color:white;
     }
     
     .or {
-    
     position: fixed;
     width: 17px;
     height: 21px;
@@ -184,53 +217,44 @@
     color: #000000;
     }
     
-    
-    
     .facebookCircle_512 {
-    
     position: fixed;
     width: 47px;
     height: 47px;
     right: 11.5%;
     top: 39%;
-    
     background: url("../../images/facebook_circle-512Fb.png");
     }
     
     .google {
-    
     position: absolute;
     width: 47px;
     height: 47px;
     left: 1195px;
     top: 331px;
-    
     }
     
     .ellipse {
-    
     position: absolute;
     width: 47px;
     height: 47px;
     left: 1195px;
     top: 331px;
-    
     background: #FFFFFF;
-    
     }
+
     .newGoogleFavicon_512 {
-    
     position: fixed;
     width: 35px;
     height: 35px;
     right: 12%;
     top: 27%;
-    
     background: url("../../images/new-google-favicon-512.png");
     }
 
     .sign-up-button {
         font-weight: bold;
-        color: #4200AD;    
+        color: #4200AD;
+        width:50%;
     }
     
