@@ -65,7 +65,7 @@ app.get("/chatRooms", (req, res) => {
             "Users": ["Albert"],
         }, "Mental Health": {
             "Name": "Mental Health",
-            "Users": ["Andy", "Albert", "Alex", "Anthony", "Ben"],
+            "Users": ["Andy", "Albert", "Alex", "Anthony", "Ben", "Another", "Me"],
         }, "Substance Use": {
             "Name": "Substance Use",
             "Users": ["Farhud", "Desiree"]

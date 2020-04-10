@@ -71,7 +71,7 @@
     margin-bottom:10px;
 }
 
-.chat-users-panel-span {
-
-
+.chat-room-link-user-none {
+    font-weight:600;
+    color:#828282;
 }

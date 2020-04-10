@@ -1,5 +1,6 @@
 import React, {Component} from "react";
-import "./css/Sidebar.css"
+import "./css/Sidebar.css";
+
 
 
 export default class ChatRoomLink extends Component {
@@ -41,7 +42,9 @@ export default class ChatRoomLink extends Component {
                         {this.props.room}
                         <button className="chat-join-button">JOIN</button>
                         <br/>
-                        <div className="chat-users-panel">No active users</div>
+                        <div className="chat-users-panel">
+                            <div className="chat-room-link-user-none">No active users</div>
+                        </div>
                     </div>
                 )
             } else if (chatRoomUsers.length < 3) {

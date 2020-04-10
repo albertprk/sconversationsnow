@@ -37,7 +37,7 @@ class App extends Component {
                     <Route path="/signup" component={Signup}/>
                     <Route path="/loginWithEmail" component={LoginWithEmail}/>
                     <Route path="/signUpWithEmail" component={signUpWithEmail}/>
-                    <Route path="/dashboard" render={() => <Dashboard data={this.state.chatRooms}/>} />
+                    <Route path="/dashboard" component={Dashboard} />
                 </Switch>
             </div>
         );
