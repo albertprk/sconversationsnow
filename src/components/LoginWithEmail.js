@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import './css/LogInWithEmail.css';
 import axios from 'axios';
 
-
 export default class LoginWithEmail extends Component {
     constructor(props) {
         super(props);

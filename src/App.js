@@ -7,10 +7,12 @@ import Choice from "./components/Choice";
 import Signup from "./components/Signup";
 import LoginWithEmail from './components/LoginWithEmail';
 import signUpWithEmail from './components/SignupWithEmail'
+import Dashboard from "./components/Dashboard";
 
 class App extends Component {
     state = {
         profiles: null,
+        chatRooms: null,
         userInfo: null
     };
 
@@ -20,10 +22,10 @@ class App extends Component {
     }
 
     callAPI() {
-        fetch("/profiles")
+        fetch("/chatRooms")
             .then(res => res.json())
             .then(res => {
-                this.setState({profiles: res});
+                this.setState({chatRooms: res});
             })
     }
 
@@ -34,20 +36,17 @@ class App extends Component {
         })
     }
 
-    
-
-    
-
     render() {
         const App = () => (
             <div>
                 <Switch>
                     <Route path="/" exact component={Landing}/>
-                    <Route path="/login" render={() => <Login profiles={this.state.profiles} />}/>
-                    <Route path="/choice" render={() => <Choice profiles={this.state.profiles} />}/>
+                    <Route path="/login" component={Login} />
+                    <Route path="/choice" component={Choice}/>
                     <Route path="/signup" component={Signup}/>
-                    <Route path="/loginWithEmail" render={() => <LoginWithEmail profiles={this.state.profiles} />}/>
+                    <Route path="/loginWithEmail" component={LoginWithEmail}/>
                     <Route path="/signUpWithEmail" component={signUpWithEmail}/>
+                    <Route path="/dashboard" component={Dashboard} />
                 </Switch>
             </div>
         );
