@@ -12,22 +12,6 @@ export default class SideBar extends Component {
         };
     }
 
-    componentDidMount() {
-        this.callAPI();
-    }
-
-    callAPI() {
-        fetch("/chatRooms")
-            .then(res => res.json())
-            .then(res => {
-                console.log(res);
-                this.setState({
-                    fetching: false,
-                    chatRooms: res
-                });
-            })
-    }
-
     render() {
         let chatRoomsComponents = [];
         if (typeof this.state.chatRooms !== "undefined" && this.state.chatRooms !== null) {

@@ -6,46 +6,24 @@ import { Route, Switch } from 'react-router-dom';
 import Choice from "./components/Choice";
 import Signup from "./components/Signup";
 import LoginWithEmail from './components/LoginWithEmail';
-import signUpWithEmail from './components/SignupWithEmail'
-import Dashboard from "./components/Dashboard";
+import signUpWithEmail from './components/SignupWithEmail';
+import Dashboard from './components/Dashboard';
 
 class App extends Component {
     state = {
         profiles: null,
-        chatRooms: null,
         userInfo: null
     };
-
-    componentDidMount() {
-        this.callAPI();
-        this.matchUserInfo();
-    }
-
-    callAPI() {
-        fetch("/chatRooms")
-            .then(res => res.json())
-            .then(res => {
-                this.setState({chatRooms: res});
-            })
-    }
-
-    matchUserInfo() { //get the authentication data from the server
-        fetch("/example")
-            .then(res =>  {
-                this.setState({userInfo: res});
-        })
-    }
 
     render() {
         const App = () => (
             <div>
                 <Switch>
                     <Route path="/" exact component={Landing}/>
-                    <Route path="/login" component={Login} />
-                    <Route path="/choice" component={Choice}/>
+                    <Route path="/choice" render={() => <Choice profiles={this.state.profiles} />}/>
                     <Route path="/signup" component={Signup}/>
-                    <Route path="/loginWithEmail" component={LoginWithEmail}/>
-                    <Route path="/signUpWithEmail" component={signUpWithEmail}/>
+                    <Route path="/login" render={() => <LoginWithEmail profiles={this.state.profiles} />}/>
+                    <Route path="/signup" component={signUpWithEmail}/>
                     <Route path="/dashboard" component={Dashboard} />
                 </Switch>
             </div>

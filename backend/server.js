@@ -19,13 +19,12 @@ mongoose.connect(uri, { useNewUrlParser: true, useCreateIndex: true }
 //Checks if server is connected
 const connection = mongoose.connection;
 connection.once('open', () => {
-  console.log("MongoDB database connection established successfully");
+    console.log("MongoDB database connection established successfully");
 })
 
 
 const usersRouter = require('./routes/users');
 app.use('/users', usersRouter);
-
 
 
 //To run server, change directory to backend, then type nodemon server to run the server

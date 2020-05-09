@@ -10,7 +10,7 @@ export default class Dashboard extends Component {
             profile: {
                 username: "Desiree",
                 email: "example@mail.com",
-                avi: "019"
+                avi: "07"
             }
         };
     }
@@ -22,7 +22,8 @@ export default class Dashboard extends Component {
                     <button className="help-now"><img src={require("../images/helpicon.png")} alt="help button"/>
                     HELP NOW
                     </button>
-                    <img className="header-avi" src={require("../images/icons/" + this.state.profile.avi + ".png")} />
+                    <img alt="User Avatar" className="header-avi"
+                         src={require("../images/icons/" + this.state.profile.avi + ".png")} />
                 </div>
                 <Sidebar data={this.props}/>
 
@@ -32,17 +33,18 @@ export default class Dashboard extends Component {
                         <option value="mentor">MENTOR</option>
                     </select>
                     <button className="edit-avi">
-                        <img width="15px" height="15px" src={require("../images/editavi.png")}/>
+                        <img alt="Edit Avatar" width="15px" height="15px" src={require("../images/editavi.png")}/>
                     </button>
-                    <img className="img" src={require("../images/icons/" + this.state.profile.avi + ".png")} />
+                    <img alt="User Avatar" className="img"
+                         src={require("../images/icons/" + this.state.profile.avi + ".png")} />
                     <table className="profile-info-table">
                         <tr>
                             <td className="profile-field">Username</td>
-                            <td className="profile-field-entry">{this.state.profile.username}</td>
+                            <td className="profile-field-entry">{this.props.location.state.username}</td>
                         </tr>
                         <tr>
                             <td className="profile-field">Email</td>
-                            <td className="profile-field-entry">{this.state.profile.email}</td>
+                            <td className="profile-field-entry">{this.props.location.state.email}</td>
                         </tr>
                     </table>
                 </div>

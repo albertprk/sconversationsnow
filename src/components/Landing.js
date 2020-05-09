@@ -11,6 +11,10 @@ import person from "../images/person.svg"
 
 const Landing = props => (
     <div className="landingbody">
+        <div className="landingHeader">
+            <a href="./login">Login</a>
+            <a href="./signup">Sign Up</a>
+        </div>
         <div className="landingbg">
             <button className="helpbutton">Help Now</button>
             <div className="landingtext">Connect to<br/> Your campus</div>
@@ -26,7 +30,7 @@ const Landing = props => (
                 <SubText headertext={"Talk with other students \n" +
                 "\n"} subtext={"Each group has mentors who are trained to provide support"}/>
                 <br/>
-                <a href="./choice">
+                <a href="./login">
                     <button className="chatbutton">Let's Chat</button>
                 </a>
             </div>
