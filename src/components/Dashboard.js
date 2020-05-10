@@ -1,24 +1,34 @@
 import React, {Component} from "react";
 import "./css/Dashboard.css";
 import Sidebar from "./Sidebar";
+import Popup from './Popup';
 
 export default class Dashboard extends Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            profile: {
-                username: "Desiree",
-                email: "example@mail.com",
-            }
+            showPopUp: false
         };
+    }
+
+    togglePopup() {
+        console.log(this.state.showPopUp);
+        this.setState({
+            showPopup: !this.state.showPopUp
+        });
+    }
+
+    componentDidMount() {
+        console.log(this.state.showPopUp);
     }
 
     render() {
         return (
             <div className="dashboard">
                 <div className="dashboard-header">
-                    <button className="help-now"><img src={require("../images/helpicon.png")} alt="help button"/>
+                    <button className="help-now"><img src={require("../images/helpicon.png")} alt="help button"
+                    onClick={this.togglePopup.bind(this)}/>
                     HELP NOW
                     </button>
                     <img alt="User Avatar" className="header-avi"
@@ -50,6 +60,14 @@ export default class Dashboard extends Component {
                 <div className="dashboard-xp">
                     <div className="dashboard-xp-header">You Have {this.props.location.state.xp} XP Points!</div>
                 </div>
+
+                {this.state.showPopUp ?
+                    <Popup
+                        text='Click "Close Button" to hide popup'
+                        closePopup={this.togglePopup.bind(this)}
+                    />
+                    : null
+                }
             </div>
         )
     }

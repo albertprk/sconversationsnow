@@ -18,8 +18,9 @@
 }
 
 .backgroundimg {
-  margin:0 auto;
-  width:80%;
+  padding-top:55px;
+  margin:auto;
+  width:75%;
   max-width:1146px;
   height:auto;
   display:block;
@@ -50,12 +51,12 @@
 }
 
 .landingHeader {
+  position:fixed;
   width:100%;
   height:55px;
-  background:#fff;
+  background: rgba(255,255,255, 0.8);
   margin:auto;
   vertical-align:middle;
-  border-bottom: 1px solid #E2E5E6;
 }
 
 .landingHeader a {
@@ -112,7 +113,7 @@
   margin:auto;
   border-radius:15px;
   margin-right:13px;
-  color:white;
+  color:#4B4B4B;
   font-size:90%;
   margin-top:20px;
 }
@@ -139,7 +140,7 @@
 .infotext {
   margin-bottom:30px;
   font-size:25px;
-  color:white;
+  color: #4B4B4B;
   font-weight:bold;
 }
 
