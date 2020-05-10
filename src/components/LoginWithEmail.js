@@ -67,6 +67,7 @@ export default class LoginWithEmail extends Component {
             return (
                 <div className="logInWithEmaill">
                     <div className="rectangle">
+                        <a href="/" className="App-name-login">⬅ STUDENT CONVERSATIONS NOW</a>
                         <div className="welcomeBack">Welcome<br></br>Back</div>
                     </div>
                     <div className="rectangleRight">

@@ -12,6 +12,7 @@ import background from "../images/landingpagebg.png"
 const Landing = props => (
     <div className="landingbody">
         <div className="landingHeader">
+            <p className="App-name">STUDENT CONVERSATIONS NOW</p>
             <a href="./login">Login</a>
             <a href="./signup">Sign Up</a>
         </div>
