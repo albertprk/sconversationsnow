@@ -2,8 +2,6 @@ import React from "react";
 import './css/Login.css';
 
 export const Login = props => {
-    console.log(props);
-
     return (<div className="logIn">
             <div className="rectangle">
                 <div className="welcomeBack">Welcome<br></br>Back</div>

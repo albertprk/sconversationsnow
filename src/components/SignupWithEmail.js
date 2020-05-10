@@ -76,8 +76,8 @@ export default class SignupWithEmail extends Component {
     render() {
         return (
             <div className="signUp">
-
                 <div className="rectangleSignUp">
+                    <a href="/" className="App-name-login">⬅ STUDENT CONVERSATIONS NOW</a>
                     <div className="niceToMeetYou">Nice to<br></br>Meet You</div>
                 </div>
                 <div className="rectangleRight">

@@ -1,0 +1,217 @@
+.body {
+  background-color:#fbf8f9;
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.backgroundimg {
+  padding-top:95px;
+  margin:auto;
+  width:85%;
+  max-width:1146px;
+  height:auto;
+  display:block;
+  background-color:#fbf8f9;
+}
+
+.App-header {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.landingHeader {
+  position:fixed;
+  width:100%;
+  height:55px;
+  background: rgba(255,255,255, 0.8);
+  margin:auto;
+  vertical-align:middle;
+}
+
+.App-name {
+  float:left;
+  font-weight: 500;
+  font-size:80%;
+  margin-left:20px;
+  margin-top:20px;
+}
+
+.landingHeader a {
+  font-size:80%;
+  text-decoration: none;
+  font-weight: 500;
+  color: #373737;
+  vertical-align: middle;
+  margin-top:20px;
+  margin-right:20px;
+  padding-right:30px;
+  float:right;
+}
+
+.landingHeader a:hover {
+  color:#076DF2;
+}
+
+.landingtext {
+  font-size:70px;
+  color:white;
+  text-align:center;
+  font-weight:bold;
+  padding-top:130px;
+}
+
+.landingbody {
+  background-color:#fbf8f9;
+  min-height:2300px;
+}
+
+.landingbg {
+  background-color:#fbf8f9;
+  height:500px;
+  margin-bottom:500px;
+}
+
+.infocard {
+  display:inline-block;
+  width:250px;
+  height:250px;
+  background:white;
+  margin:auto;
+  border-radius: 15px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin-right:13px;
+}
+
+.infocardtext {
+  display:inline-block;
+  width:250px;
+  height:70px;
+  background:none;
+  margin:auto;
+  border-radius:15px;
+  margin-right:13px;
+  color:#4B4B4B;
+  font-size:90%;
+  margin-top:20px;
+}
+
+.infocardimg {
+  display: block;
+  padding-top:28px;
+  margin:auto;
+  width:200px;
+  height:200px;
+}
+
+.info {
+  margin-top:200px;
+  text-align:center;
+}
+
+.info2 {
+  margin-top:300px;
+  text-align:center;
+}
+
+
+.infotext {
+  margin-bottom:30px;
+  font-size:25px;
+  color: #4B4B4B;
+  font-weight:bold;
+}
+
+.chatbutton {
+  margin-top:28px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+}
+
+.chatbutton:hover {
+  cursor:pointer;
+}
+
+.helpbutton {
+  margin-top:35px;
+  margin-right:40px;
+  background-color:#E9A800;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+  float:right;
+}
+
+.helpbutton:hover {
+  cursor:pointer;
+}
+
+.mentorbutton {
+  margin-top:28px;
+  background-color:#4200AD;
+  border-radius: 30px;
+  height:45px;
+  width:105px;
+  border:none;
+  font-weight:bold;
+  color:white;
+  font-size:15px;
+}
+
+.mentorbutton:hover {
+  cursor:pointer;
+}
+
+.plant {
+  margin-top:-70px;
+  margin-left:-1px;
+  height:400px;
+  width:250px;
+}
+
+.person {
+  max-width:100%;
+  height:auto;
+  margin-top:-70px;
+  margin-left:200px;
+}

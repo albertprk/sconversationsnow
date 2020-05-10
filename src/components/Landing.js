@@ -7,15 +7,17 @@ import laptop from "../images/laptop.png"
 import check from "../images/check.png"
 import mentor from "../images/mentor.png"
 import plant from "../images/plant.svg"
-import person from "../images/person.svg"
+import background from "../images/landingpagebg.png"
 
 const Landing = props => (
     <div className="landingbody">
+        <div className="landingHeader">
+            <p className="App-name">STUDENT CONVERSATIONS NOW</p>
+            <a href="./login">Login</a>
+            <a href="./signup">Sign Up</a>
+        </div>
+        <img className="backgroundimg" src={background} alt="Welcome to Student Conversations Now"/>
         <div className="landingbg">
-            <button className="helpbutton">Help Now</button>
-            <div className="landingtext">Connect to<br/> Your campus</div>
-            <img className="plant" src={plant} alt="Plant"/>
-            <img className="person" src={person} alt="Person on Computer"/>
             <div className="info">
                 <p className="infotext">It's that simple</p>
                 <InfoCard image={choosegroup}/> <InfoCard image={talkstudents}/>
@@ -26,7 +28,7 @@ const Landing = props => (
                 <SubText headertext={"Talk with other students \n" +
                 "\n"} subtext={"Each group has mentors who are trained to provide support"}/>
                 <br/>
-                <a href="./choice">
+                <a href="./login">
                     <button className="chatbutton">Let's Chat</button>
                 </a>
             </div>

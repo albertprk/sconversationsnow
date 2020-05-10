@@ -8,31 +8,32 @@ export default class SideBar extends Component {
         super(props);
         this.state = {
             fetching: true,
-            chatRooms: {}
+            chatRooms: {
+                "Academics": {
+                    "Name": "Academics",
+                    "Users": [],
+                }, "Time Management": {
+                    "Name": "Time Management",
+                    "Users": ["Albert"],
+                }, "Mental Health": {
+                    "Name": "Mental Health",
+                    "Users": ["Andy", "Albert", "Alex", "Anthony", "Ben"],
+                }, "Substance Use": {
+                    "Name": "Substance Use",
+                    "Users": ["Farhud", "Desiree"]
+                }, "Nutrition": {
+                    "Name": "Nutrition",
+                    "Users": []
+                }
+            }
         };
-    }
-
-    componentDidMount() {
-        this.callAPI();
-    }
-
-    callAPI() {
-        fetch("/chatRooms")
-            .then(res => res.json())
-            .then(res => {
-                console.log(res);
-                this.setState({
-                    fetching: false,
-                    chatRooms: res
-                });
-            })
     }
 
     render() {
         let chatRoomsComponents = [];
         if (typeof this.state.chatRooms !== "undefined" && this.state.chatRooms !== null) {
             chatRoomsComponents = Object.keys(this.state.chatRooms).map((room, i) =>
-                <ChatRoomLink room={room} info={this.state.chatRooms.data} key={i}/>
+                <ChatRoomLink room={room} info={this.state.chatRooms} key={i}/>
             );
         }
         return (
