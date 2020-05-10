@@ -10,7 +10,6 @@ export default class Dashboard extends Component {
             profile: {
                 username: "Desiree",
                 email: "example@mail.com",
-                avi: "07"
             }
         };
     }
@@ -23,7 +22,7 @@ export default class Dashboard extends Component {
                     HELP NOW
                     </button>
                     <img alt="User Avatar" className="header-avi"
-                         src={require("../images/icons/" + this.state.profile.avi + ".png")} />
+                         src={require("../images/icons/" + this.props.location.state.avi + ".png")} />
                 </div>
                 <Sidebar data={this.props}/>
 
@@ -36,7 +35,7 @@ export default class Dashboard extends Component {
                         <img alt="Edit Avatar" width="15px" height="15px" src={require("../images/editavi.png")}/>
                     </button>
                     <img alt="User Avatar" className="img"
-                         src={require("../images/icons/" + this.state.profile.avi + ".png")} />
+                         src={require("../images/icons/" + this.props.location.state.avi + ".png")} />
                     <table className="profile-info-table">
                         <tr>
                             <td className="profile-field">Username</td>
@@ -47,6 +46,9 @@ export default class Dashboard extends Component {
                             <td className="profile-field-entry">{this.props.location.state.email}</td>
                         </tr>
                     </table>
+                </div>
+                <div className="dashboard-xp">
+                    <div className="dashboard-xp-header">You Have {this.props.location.state.xp} XP Points!</div>
                 </div>
             </div>
         )

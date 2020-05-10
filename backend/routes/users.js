@@ -19,6 +19,7 @@ router.route('/add').post(async (req, res) => {
     const email = req.body.email;
     const xp = Number(req.body.xp);
     const studentid = Number(req.body.studentid);
+    const avi = Number(req.body.avi);
 
     const newUser = new User({
         username,
@@ -26,7 +27,8 @@ router.route('/add').post(async (req, res) => {
         userType,
         email,
         xp,
-        studentid
+        studentid,
+        avi
     });
 
     newUser.save() // save the new user to the databse
@@ -61,6 +63,7 @@ router.route('/update/:id').post((req, res) => {
             user.email = req.body.email;
             user.xp = Number(req.body.xp);
             user.studentid = Number(req.body.studentid);
+            user.avi = Number(req.body.avi)
 
             user.save()
                 .then(() => res.json('User updated!'))

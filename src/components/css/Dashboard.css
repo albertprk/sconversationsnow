@@ -38,15 +38,38 @@
 }
 
 .dashboard-info {
+    position:absolute;
+    display:inline-block;
     background:#fff;
-    width:34%;
-    min-width:325px;
+    width:30%;
     margin-left:25%;
     height:304px;
     margin-top:60px;
     border-radius:10px;
     box-shadow: 0px 5px 2px #d4d4d4;
     padding-bottom:20px;
+}
+
+.dashboard-xp {
+    position:absolute;
+    display:inline-block;
+    background:#fff;
+    width:35%;
+    min-width:325px;
+    margin-left:60%;
+    margin-top:60px;
+    height:304px;
+    border-radius:10px;
+    box-shadow: 0px 5px 2px #d4d4d4;
+    padding-bottom:20px;
+}
+
+.dashboard-xp-header {
+    height:40px;
+    border-bottom:1px solid #EBEFF2;
+    line-height:40px;
+    padding-left:20px;
+    font-weight: 500;
 }
 
 .img {

@@ -1,5 +1,5 @@
-body {
-  background: url("./images/landingbg.png") repeat-x;
+.body {
+  background-color:#fbf8f9;
 }
 
 .App {
@@ -15,6 +15,15 @@ body {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
+}
+
+.backgroundimg {
+  margin:0 auto;
+  width:80%;
+  max-width:1146px;
+  height:auto;
+  display:block;
+  background-color:#fbf8f9;
 }
 
 .App-header {
@@ -74,11 +83,12 @@ body {
 }
 
 .landingbody {
+  background-color:#fbf8f9;
   min-height:2300px;
 }
 
 .landingbg {
-  background-color:#D3D4EF;
+  background-color:#fbf8f9;
   height:500px;
   margin-bottom:500px;
 }

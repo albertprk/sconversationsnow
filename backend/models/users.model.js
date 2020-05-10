@@ -10,7 +10,8 @@ const userSchema = new Schema({
   userType: { type: String},  //Admin, mentor or typical user
   email: {type: String, required: true, trim: true, unique: true},
   xp: { type: Number },
-  studentid: { type: Number}
+  studentid: { type: Number},
+  avi: { type: String }
 }, {
   timestamps: true,
 });
