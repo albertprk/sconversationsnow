@@ -7,6 +7,7 @@ import Landing from "./Landing";
 import Choice from "./Choice";
 import Signup from "./Signup";
 import signUpWithEmail from "./SignupWithEmail";
+import { Cookies } from "react-cookie";
 
 export default class LoginWithEmail extends Component {
     constructor(props) {
@@ -94,6 +95,9 @@ export default class LoginWithEmail extends Component {
                 </div>
             )
         } else {
+            let d = new Date();
+            d.setTime(d.getTime() + (60*1000));
+            Cookies.set("onboarded", true, {path: "/", expires: d});
             return (
                 <Redirect to={{
                     pathname: '/dashboard',

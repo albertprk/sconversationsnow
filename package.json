@@ -12,6 +12,7 @@
     "bcryptjs": "^2.4.3",
     "react": "^16.12.0",
     "react-burger-menu": "^2.6.13",
+    "react-cookie": "^4.0.3",
     "react-dom": "^16.12.0",
     "react-native": "^0.62.0",
     "react-scripts": "3.4.0",

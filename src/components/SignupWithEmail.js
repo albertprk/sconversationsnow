@@ -43,7 +43,7 @@ export default class SignupWithEmail extends Component {
             xp: 0,
             studentid: ''
         });
-        axios.post('http://localhost:5000/users/add', newUser)
+        axios.post('https://localhost:5000/users/add', newUser)
             .then(res => console.log(res.data));
         
             
