@@ -13,7 +13,8 @@ export default class SignupWithEmail extends Component {
             userType: 'mentee',
             email: '',
             xp: 0,
-            studentid: ''
+            studentid: '',
+            avi: '001'
         }
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
@@ -33,20 +34,20 @@ export default class SignupWithEmail extends Component {
             userType: this.state.userType,
             email: this.state.email,
             xp: this.state.xp,
-            studentid: this.state.studentid
-        }
+            studentid: this.state.studentid,
+            avi: this.state.avi
+        };
         this.setState({
             username: '',
             password: '',
             userType: 'mentee',
             email: '',
             xp: 0,
-            studentid: ''
+            studentid: '',
+            avi: '001'
         });
         axios.post('http://localhost:5000/users/add', newUser)
             .then(res => console.log(res.data));
-        
-            
     }
 
     onChangeUsername(e) {
