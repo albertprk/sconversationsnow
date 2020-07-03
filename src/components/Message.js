@@ -1,4 +1,6 @@
 import React from 'react';
+import './css/Message.css';
+import Avatar from '../images/icons/02.png';
 
 const Message = ({ message: { user, text }, name }) => {
     let isSentByCurrentUser = false;
@@ -13,17 +15,23 @@ const Message = ({ message: { user, text }, name }) => {
         isSentByCurrentUser
         ? (
             <div className="messageContainer">
-                <p className="sentText">{trimmedName}</p>
-                <div className="messageBox background">
+                <div className="identifier">
+                    <img className="avatar" src={Avatar} />
+                    <p className="sentText">{user}</p>
+                </div>
+                <div className="messageBox">
                     <p className="messageText">{text}</p>
                 </div>
             </div>
         )
         : (
-            <div className="messageContainer justifyEnd">
-                <p className="sentText pr-10">{trimmedName}</p>
-                <div className="messageBox backgroundLight">
-                    <p className="messageText pl-10">{text}</p>
+            <div className="recievingMessageContainer">
+                <div className="identifier">
+                    <img className="avatar" src={Avatar} />
+                    <p className="sentText">{user}</p>
+                </div>
+                <div className="messageBox">
+                    <p className="messageText">{text}</p>
                 </div>
             </div>
         )
