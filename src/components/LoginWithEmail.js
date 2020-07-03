@@ -23,6 +23,10 @@ export default class LoginWithEmail extends Component {
         this.onSubmit = this.onSubmit.bind(this);
     }
 
+    componentDidMount() {
+        console.log(localStorage.getItem('loggedIn'));
+    }
+
     onSubmit(e) {
         e.preventDefault();
 
@@ -39,7 +43,10 @@ export default class LoginWithEmail extends Component {
                 if (res.data === "invalid password") {
                     console.log(res);
                 } else {
-                    console.log(res);
+                    localStorage.setItem('loggedIn', true);
+                    localStorage.setItem('username', res.data.username);
+                    localStorage.setItem('email', res.data.email);
+                    localStorage.setItem('avi', res.data.avi);
                     this.setState((state, props) => {
                         return {
                             loggedIn: true,
@@ -64,7 +71,7 @@ export default class LoginWithEmail extends Component {
 
 
     render() {
-        if (this.state.loggedIn === false) {
+        if (localStorage.getItem("loggedIn") === null || localStorage.getItem("loggedIn") === "false") {
             return (
                 <div className="logInWithEmaill">
                     <div className="rectangle">
@@ -84,7 +91,6 @@ export default class LoginWithEmail extends Component {
                                        onChange={this.onChangePassword} value={this.state.password}/>
                             </div>
                             <div className="passwordLine"/>
-                            <div className="forgotYourPassword">Forgot your password?</div>
                             <input type="submit" className="loginButton" value="Log in"/>
                         </form>
                         <div className="dontHaveAnAccount">
