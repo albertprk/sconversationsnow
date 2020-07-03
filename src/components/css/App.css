@@ -17,6 +17,43 @@
   }
 }
 
+.logout {
+  float:right;
+  margin-top:19px;
+  font-weight: 500;
+  font-size:80%;
+  background:0;
+  border:0;
+  cursor:pointer;
+}
+
+.logoutDashboard {
+  float:right;
+  margin-top:24px;
+  margin-right:10px;
+  font-weight:500;
+  font-size:80%;
+  background:0;
+  border:0;
+  cursor:pointer;
+}
+
+.logout:hover {
+  color:#E9A800;
+}
+
+.logoutDashboard:hover {
+  color:#E9A800;
+}
+
+.welcome {
+  float: right;
+  margin-top: 20px;
+  margin-right: 60px;
+  font-weight: 500;
+  font-size: 80%;
+}
+
 .backgroundimg {
   padding-top:95px;
   margin:auto;
@@ -171,7 +208,7 @@
 .helpbutton {
   margin-top:35px;
   margin-right:40px;
-  background-color:#E9A800;
+  background-color: #e9a800;
   border-radius: 30px;
   height:45px;
   width:105px;

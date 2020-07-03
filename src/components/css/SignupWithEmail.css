@@ -16,6 +16,10 @@
     background: #4200AD;
 }
 
+.rectangleRight {
+    padding-top:60px;
+}
+
 .rectangleRightEmail {
     flex: 1;
     background: #FFFFFF;
@@ -171,7 +175,6 @@ input {
     font-weight: bold;
     color: #4200AD;
 }
-
 
 .nickLine {
     position: fixed;
