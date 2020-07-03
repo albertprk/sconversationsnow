@@ -14,7 +14,7 @@ export default class SignupWithEmail extends Component {
             email: '',
             xp: 0,
             studentid: '',
-            avi: '001'
+            avi: '01'
         }
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
@@ -44,7 +44,7 @@ export default class SignupWithEmail extends Component {
             email: '',
             xp: 0,
             studentid: '',
-            avi: '001'
+            avi: '01'
         });
         axios.post('http://localhost:5000/users/add', newUser)
             .then(res => console.log(res.data));
@@ -105,12 +105,6 @@ export default class SignupWithEmail extends Component {
                         </div>
                         <div className="passwordLine" />
 
-                        <div className="studentIdInput">
-
-                            <input type="text" pattern="\d+" placeholder="Student ID" name="StudentID" required onChange={this.onChangeStudentid} value={this.state.studentid}/>
-
-                        </div>
-                        <div className="studentIdLine" />
                         <input type="submit" className="signupButton" value="Sign up" />
 
                     </form>
