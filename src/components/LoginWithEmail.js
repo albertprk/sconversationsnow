@@ -90,7 +90,6 @@ export default class LoginWithEmail extends Component {
                                        onChange={this.onChangePassword} value={this.state.password}/>
                             </div>
                             <div className="passwordLine"/>
-                            <div className="forgotYourPassword">Forgot your password?</div>
                             <input type="submit" className="loginButton" value="Log in"/>
                         </form>
                         <div className="dontHaveAnAccount">

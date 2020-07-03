@@ -1,7 +1,7 @@
-
 import React, { Component } from "react";
 import './css/SignupWithEmail.css';
 import axios from 'axios';
+import {Redirect} from 'react-router-dom'
 
 export default class SignupWithEmail extends Component {
     constructor(props) {
@@ -75,47 +75,56 @@ export default class SignupWithEmail extends Component {
     }
 
     render() {
-        return (
-            <div className="signUp">
-                <div className="rectangleSignUp">
-                    <a href="/" className="App-name-login">⬅ STUDENT CONVERSATIONS NOW</a>
-                    <div className="niceToMeetYou">Nice to<br></br>Meet You</div>
-                </div>
-                <div className="rectangleRight">
-
-                    <form onSubmit={this.onSubmit}>
-                        <div className="nickInput">
-
-                            <input type="text" placeholder="Nickname" name="Nickname" required onChange={this.onChangeUsername} value={this.state.username}/>
-
-                        </div>
-                        <div className="nickLine" />
-
-                        <div className="emailInput">
-
-                            <input type="email" placeholder="Email" name="email" required onChange={this.onChangeEmail} value={this.state.email}/>
-
-                        </div>
-
-                        <div className="emailLine" />
-                        <div className="passwordInput">
-
-                            <input type="password" placeholder="Password" name="passcode" required onChange={this.onChangePassword} value={this.state.password}/>
-
-                        </div>
-                        <div className="passwordLine" />
-
-                        <input type="submit" className="signupButton" value="Sign up" />
-
-                    </form>
-
-                    <div className="alreadyHaveAnAccount">
-                        Already have an account? <a href="./login"><span className="sign-in-button">Log In</span></a>
+        if (localStorage.getItem("loggedIn") === null || localStorage.getItem("loggedIn") === "false") {
+            return (
+                <div className="signUp">
+                    <div className="rectangleSignUp">
+                        <a href="/" className="App-name-login">⬅ STUDENT CONVERSATIONS NOW</a>
+                        <div className="niceToMeetYou">Nice to<br></br>Meet You</div>
                     </div>
+                    <div className="rectangleRight">
+
+                        <form onSubmit={this.onSubmit}>
+                            <div className="nickInput">
+
+                                <input type="text" placeholder="Nickname" name="Nickname" required onChange={this.onChangeUsername} value={this.state.username}/>
+
+                            </div>
+                            <div className="nickLine" />
+
+                            <div className="emailInput">
+
+                                <input type="email" placeholder="Email" name="email" required onChange={this.onChangeEmail} value={this.state.email}/>
+
+                            </div>
+
+                            <div className="emailLine" />
+                            <div className="passwordInput">
+
+                                <input type="password" placeholder="Password" name="passcode" required onChange={this.onChangePassword} value={this.state.password}/>
+
+                            </div>
+                            <div className="passwordLine" />
+
+                            <input type="submit" className="signupButton" value="Sign up" />
+
+                        </form>
+
+                        <div className="alreadyHaveAnAccount">
+                            Already have an account? <a href="./login"><span className="sign-in-button">Log In</span></a>
+                        </div>
+                    </div>
+
+
                 </div>
+            );
+        } else {
+            return (
+                <Redirect to={{
+                    pathname: '/dashboard',
+                }}/>
+            )
+        }
 
-
-            </div>
-        );
     }
 }

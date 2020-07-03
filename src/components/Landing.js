@@ -8,6 +8,7 @@ import check from "../images/check.png"
 import mentor from "../images/mentor.png"
 import plant from "../images/plant.svg"
 import background from "../images/landingpagebg.png"
+import {Redirect} from 'react-router-dom'
 
 export default class Landing extends Component {
 
@@ -65,6 +66,13 @@ export default class Landing extends Component {
             )
         } else {
             return (
+                <Redirect to={{
+                    pathname: '/dashboard',
+                    state: this.state.profile
+                }}/>
+            )
+            /*
+            return (
                 <div className="landingbody">
                     <div className="landingHeader">
                         <p className="App-name">STUDENT CONVERSATIONS NOW</p>
@@ -99,7 +107,8 @@ export default class Landing extends Component {
                         </div>
                     </div>
                 </div>
-            )
+                )
+                */
         }
     }
 }
