@@ -1,6 +1,7 @@
 import React from 'react';
 import './css/Message.css';
 import Avatar from '../images/icons/02.png';
+import ReactEmoji from 'react-emoji';
 
 const Message = ({ message: { user, text }, name }) => {
     let isSentByCurrentUser = false;
@@ -20,7 +21,7 @@ const Message = ({ message: { user, text }, name }) => {
                     <p className="sentText">{user}</p>
                 </div>
                 <div className="messageBox">
-                    <p className="messageText">{text}</p>
+                    <p className="messageText">{ ReactEmoji.emojify(text) }</p>
                 </div>
             </div>
         )
@@ -31,7 +32,7 @@ const Message = ({ message: { user, text }, name }) => {
                     <p className="sentText">{user}</p>
                 </div>
                 <div className="messageBox">
-                    <p className="messageText">{text}</p>
+                    <p className="messageText">{ ReactEmoji.emojify(text) }</p>
                 </div>
             </div>
         )
