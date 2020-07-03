@@ -13,7 +13,7 @@ export default class SignupWithEmail extends Component {
             userType: 'mentee',
             email: '',
             xp: 0,
-            studentid: '',
+            studentid: 0,
             avi: '01'
         }
 
@@ -37,16 +37,18 @@ export default class SignupWithEmail extends Component {
             studentid: this.state.studentid,
             avi: this.state.avi
         };
+        console.log(newUser);
+        console.log(newUser.password);
         this.setState({
             username: '',
             password: '',
             userType: 'mentee',
             email: '',
             xp: 0,
-            studentid: '',
+            studentid: 0,
             avi: '01'
         });
-        axios.post('https://localhost:5000/users/add', newUser)
+        axios.post('http://localhost:5000/users/add', newUser)
             .then(res => console.log(res.data));
     }
 

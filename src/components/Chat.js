@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import queryString from "query-string";
+//import queryString from "query-string";
 import io from "socket.io-client";
 import InfoBar from "./infoBar";
 import Input from "./Input";
@@ -8,20 +8,20 @@ import './css/Chat.css';
 
 let socket;
 
-const Chat = ({ location }) => {
-  const [name, setName] = useState("");
-  const [room, setRoom] = useState("");
+const Chat = ({ theName, theRoom }) => {
+  const [name, setName] = useState(theName);
+  const [room, setRoom] = useState(theRoom);
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "localhost:5000";
 
   useEffect(() => {
-    const { name, room } = queryString.parse(location.search);
+    //const { name, room } = queryString.parse(location.search);
 
     socket = io(ENDPOINT);
 
-    setName(name);
-    setRoom(room);
+    //setName(name);
+    //setRoom(room);
 
     socket.emit("join", { name, room }, () => {}); // same as { name: name, room: room }
 
@@ -30,7 +30,7 @@ const Chat = ({ location }) => {
 
       socket.off();
     };
-  }, [ENDPOINT, location.search]); // use effect will only change if the values in the list change
+  }, [ENDPOINT, name, room]); // use effect will only change if the values in the list change
 
   useEffect(() => {
     socket.on("message", (message) => {

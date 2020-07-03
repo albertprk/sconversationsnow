@@ -26,7 +26,7 @@ export default class Landing extends Component {
     };
 
     render() {
-        if (localStorage.getItem("loggedIn") === "false") {
+        if (localStorage.getItem("loggedIn") === null || localStorage.getItem("loggedIn") === "false") {
             return (
                 <div className="landingbody">
                     <div className="landingHeader">

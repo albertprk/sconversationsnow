@@ -9,6 +9,7 @@ import SignupWithEmail from './components/SignupWithEmail';
 import Dashboard from './components/Dashboard';
 import Chat from './components/Chat';
 import Join from './components/Join';
+import OuterChatContainer from './components/OuterChatContainer';
 
 class App extends Component {
     state = {
@@ -27,6 +28,7 @@ class App extends Component {
                     <Route path="/theChat" component={Chat}/>
                     <Route path="/join" component={Join}/>
                     <Route path="/dashboard" component={Dashboard} />
+                    <Route path="/chatRoom" component={OuterChatContainer} />
                 </Switch>
             </div>
         );
