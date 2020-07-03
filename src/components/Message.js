@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Message.css';
-import Avatar from '../images/icons/02.png';
+import Avatar from '../images/02.png';
 import ReactEmoji from 'react-emoji';
 
 const Message = ({ message: { user, text }, name }) => {
