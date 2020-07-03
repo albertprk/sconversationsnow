@@ -11,6 +11,12 @@ export default class ChatRoomLink extends Component {
         }
     }
 
+    joinChat = (room) => {
+        console.log("TEST");
+        localStorage.setItem("chatroom", room);
+        this.setState(this.state);
+    }
+
     handleClick = () => {
         if (this.state.clicked) {
             this.setState({clicked: false});
@@ -24,7 +30,7 @@ export default class ChatRoomLink extends Component {
             return (
                 <div className="chat-room-link" onClick={this.handleClick}>
                     {this.props.room}
-                    <button className="chat-join-button">JOIN</button>
+                    <button className="chat-join-button" onClick={() => this.joinChat(this.props.room)}>JOIN</button>
                 </div>
             );
         } else {

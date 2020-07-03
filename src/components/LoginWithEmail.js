@@ -101,9 +101,6 @@ export default class LoginWithEmail extends Component {
                 </div>
             )
         } else {
-            let d = new Date();
-            d.setTime(d.getTime() + (60*1000));
-            Cookies.set("onboarded", true, {path: "/", expires: d});
             return (
                 <Redirect to={{
                     pathname: '/dashboard',
