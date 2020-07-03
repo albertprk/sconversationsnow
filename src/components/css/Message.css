@@ -1,0 +1,44 @@
+.messageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 100%;
+}
+
+.recievingMessageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF4D9;
+    min-width: 100%;
+}
+.avatar {
+    height: 50px;
+    float: left;
+    display: inline;
+}
+
+.sentText {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 130%;
+    float: left;
+    display: inline;
+}
+
+.identifer {
+    float: left;
+    display: inline;
+}
+
+.messageText {
+    font-family: Roboto;
+    font-size: 18px;
+    line-height: 130%;
+}
+
+.messageBox {
+    padding-left: 50px;
+    padding-right: 15px;
+}
+
