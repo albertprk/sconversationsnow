@@ -1,0 +1,19 @@
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100%;
+}
+.heading {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+}
