@@ -27,7 +27,6 @@ const Chat = ({ theName, theRoom }) => {
 
     return () => {
       socket.emit("disconnect");
-
       socket.off();
     };
   }, [ENDPOINT, name, room]); // use effect will only change if the values in the list change

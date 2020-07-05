@@ -13,7 +13,7 @@ export default class Dashboard extends Component {
     };
   }
 
-  logout = (e) => {
+  logout = () => {
     console.log("Test");
     localStorage.setItem("loggedIn", "false");
     this.setState(this.state);
@@ -28,7 +28,7 @@ export default class Dashboard extends Component {
           }}
         />
       );
-    } else if (localStorage.getItem("chatroom") === null) {
+    } else if (localStorage.getItem("chatroom") === "none") {
         return (
           <div className="dashboard">
             <DashboardHeader logout={this.logout} />
