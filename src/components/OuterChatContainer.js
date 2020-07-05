@@ -3,25 +3,41 @@ import Sidebar from "./Sidebar";
 import {Redirect} from 'react-router-dom'
 import DashboardHeader from "./DashboardHeader";
 import Chat from "./Chat";
+import "./css/ChatRoom.css";
 
 export default class OuterChatContainer extends Component {
     constructor(props) {
         super(props);
     }
 
-    logout = (e) =>  {
-        console.log("Test");
+    disconnect = () => {
+        localStorage.setItem("chatroom", "none");
+        window.location.reload();
+    }
+
+    logout = (e) => {
         localStorage.setItem("loggedIn", "false");
-        this.setState(this.state);
+        window.location.reload();
     };
 
     render() {
-        return (
-            <div className="outerContainer">
-                <Sidebar />
-                <DashboardHeader logout={this.logout} />
-                <Chat theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatroom")} />
-            </div>
-        )
+        if (localStorage.getItem("chatroom") === "none") {
+            return (
+                <Redirect to={{
+                    pathname: '/dashboard',
+                }}/>
+            )
+        } else {
+            return (
+                <div>
+                    <DashboardHeader />
+                    <Sidebar />
+                    <div className="outerContainer">
+                        <button onClick={this.disconnect}>Disconnect</button>
+                        <Chat className="chatRoom" theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatroom")} />
+                    </div>
+                </div>
+            )
+        }
     }
 }

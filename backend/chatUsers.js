@@ -1,3 +1,5 @@
+let useColorScheme = require("mongoose");
+
 const chatUsers = [];
 
 const addUser = ({ id, name, room }) => {
@@ -16,17 +18,17 @@ const addUser = ({ id, name, room }) => {
     chatUsers.push(user);
     return { user };
 }
-
+/*
 const removeUser = (id) => {
     const index = chatUsers.findIndex((user) => user.id === id);
-
     if (index !== -1) {
         return useColorScheme.splice(index, 1)[0];
     }
 }
+*/
 
 const getUser = (id) => chatUsers.find((user) => user.id === id);
 
 const getUsersInRoom = (room) => chatUsers.filter((user) => user.room === room);
 
-module.exports = { addUser, removeUser, getUser, getUsersInRoom };
+module.exports = { addUser, getUser, getUsersInRoom };

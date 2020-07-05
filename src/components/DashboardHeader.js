@@ -6,6 +6,13 @@ export default class DashboardHeader extends Component {
   constructor(props) {
     super(props);
   }
+
+  logout = () => {
+      console.log("Test");
+      localStorage.setItem("loggedIn", "false");
+      this.setState(this.state);
+  };
+
   render() {
     return (
       <div className="dashboard-header">
@@ -20,7 +27,7 @@ export default class DashboardHeader extends Component {
             localStorage.getItem("avi") +
             ".png")}
         />
-        <button className="logoutDashboard" onClick={this.props.logout}>
+        <button className="logoutDashboard" onClick={this.logout}>
           Logout
         </button>
       </div>
