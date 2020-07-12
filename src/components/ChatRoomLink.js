@@ -1,8 +1,6 @@
 import React, {Component} from "react";
 import "./css/Sidebar.css";
 
-
-
 export default class ChatRoomLink extends Component {
     constructor(props) {
         super(props);
@@ -11,10 +9,9 @@ export default class ChatRoomLink extends Component {
         }
     }
 
-    joinChat = (room) => {
-        console.log("TEST");
-        localStorage.setItem("chatroom", room);
-        this.setState(this.state);
+    joinChat = () => {
+        localStorage.setItem("chatroom", this.props.room);
+        window.location.reload();
     }
 
     handleClick = () => {
@@ -30,7 +27,7 @@ export default class ChatRoomLink extends Component {
             return (
                 <div className="chat-room-link" onClick={this.handleClick}>
                     {this.props.room}
-                    <button className="chat-join-button" onClick={() => this.joinChat(this.props.room)}>JOIN</button>
+                    <button className="chat-join-button" onClick={this.joinChat}>JOIN</button>
                 </div>
             );
         } else {
