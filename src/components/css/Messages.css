@@ -1,0 +1,6 @@
+.messages {
+    flex: auto;
+    overflow: auto;
+    min-width: 70%;
+    max-width: 80%;
+}

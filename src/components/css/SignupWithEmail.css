@@ -1,0 +1,254 @@
+
+.logInWithEmaill {
+
+    position: fixed;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    display: flex;
+    background: #FFFFFF;
+
+}
+
+.rectangleEmail {
+    flex: 1;
+    background: #4200AD;
+}
+
+.rectangleRight {
+    padding-top:60px;
+}
+
+.rectangleRightEmail {
+    flex: 1;
+    background: #FFFFFF;
+}
+
+.rectangleChoiceRight {
+    flex: 1;
+    background: #E9A800;
+}
+
+.welcomeBackEmail {
+    position: absolute;
+    left: 0%;
+    top: 25%;
+    width: 50%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10vw;
+    line-height: 130%;
+    color: #FFFFFF;
+}
+
+.dontHaveAnAccountEmail {
+
+    position: fixed;
+    width: 271px;
+    height: 31px;
+    left: 66%;
+    top: 85%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.5vw;
+    line-height: 130%;
+    /* or 23px */
+
+    color: #000000;
+}
+
+.ellipse {
+
+    position: absolute;
+    width: 47px;
+    height: 47px;
+    left: 1195px;
+    top: 331px;
+
+    background: #FFFFFF;
+
+}
+
+.emailLine {
+
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 40%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+}
+
+.passwordInput {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 47%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #8D8D8D;
+}
+
+
+.emailInput {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 35%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #8D8D8D;
+}
+
+
+.nickInput {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 23%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #8D8D8D;
+}
+
+.studentIdInput {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 59%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 130%;
+
+    color: #8D8D8D;
+}
+
+
+input {
+    border: none;
+    background: transparent;
+    font-size: 2vw;
+    color: black;
+}
+
+.passwordLine {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 52%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+}
+
+.sign-up-button {
+    font-weight: bold;
+    color: #4200AD;
+}
+
+.nickLine {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 28%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+}
+
+
+.studentIdLine {
+    position: fixed;
+    width: 26vw;
+    height: 0px;
+    right: 10%;
+    top: 64%;
+
+    border: 1px solid #000000;
+    transform: rotate(0.19deg);
+}
+
+
+.signupButton {
+    position: absolute;
+    width: 10vw;
+    height: 38px;
+    right: 10%;
+    top: 67%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.8vw;
+    color: white;
+    text-align: center;
+    line-height: 140%;
+
+    background: #E9A800;
+    border-radius: 50px;
+}
+
+.landingHeader-login {
+    position: fixed;
+    width: 100%;
+    height: 55px;
+    background: white;
+    margin: auto;
+    vertical-align: middle;
+    box-shadow: 0px -1px 5px #888888;
+}
+
+.rectangleSignUp a {
+    font-size:80%;
+    text-decoration: none;
+    font-weight: 500;
+    color: white;
+    vertical-align: middle;
+    margin-top:20px;
+    margin-right:20px;
+    padding-right:30px;
+    float:left;
+}
+
+.rectangleSignUp a:hover {
+    color:#F5E7E7;
+}
+
+.App-name-login {
+    float:left;
+    font-weight: 500;
+    font-size:80%;
+    margin-left:20px;
+    margin-top:20px;
+}

@@ -1,0 +1,21 @@
+.outerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:90%;
+    margin:auto;
+    float:right;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 100%;
+}
+.heading {
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 24px;
+    color: #000000;
+}
