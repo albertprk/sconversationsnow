@@ -56,8 +56,9 @@ io.on('connection', (socket) => {
 
         callback();
     })
-    /*
+    
     socket.on('disconnect', () => {
+        console.log("user disconnecting");
         const user = removeUser(socket.id);
 
         if (user) {
@@ -65,7 +66,7 @@ io.on('connection', (socket) => {
             io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
         }
     });
-    */
+    
 
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id);
