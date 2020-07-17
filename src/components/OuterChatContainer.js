@@ -10,18 +10,13 @@ export default class OuterChatContainer extends Component {
         super(props);
     }
 
-    disconnect = () => {
-        localStorage.setItem("chatroom", "none");
-        window.location.reload();
-    }
-
     logout = (e) => {
         localStorage.setItem("loggedIn", "false");
         window.location.reload();
     };
 
     render() {
-        if (localStorage.getItem("chatroom") === "none") {
+        if (localStorage.getItem("chatRoom") === "false") {
             return (
                 <Redirect to={{
                     pathname: '/dashboard',
@@ -33,7 +28,7 @@ export default class OuterChatContainer extends Component {
                     <DashboardHeader />
                     <Sidebar />
                     <div className="outerContainer">
-                        <button onClick={this.disconnect}>Disconnect</button>
+                        <br />
                         <Chat className="chatRoom" theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatroom")} />
                     </div>
                 </div>
