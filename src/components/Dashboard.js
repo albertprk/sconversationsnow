@@ -28,7 +28,7 @@ export default class Dashboard extends Component {
           }}
         />
       );
-    } else if (localStorage.getItem("chatRoom") === "false") {
+    } else if (localStorage.getItem("chatRoom") === null || localStorage.getItem("chatRoom") === "false") {
         return (
           <div className="dashboard">
             <DashboardHeader logout={this.logout} />

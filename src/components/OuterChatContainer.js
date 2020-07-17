@@ -29,7 +29,7 @@ export default class OuterChatContainer extends Component {
                     <Sidebar />
                     <div className="outerContainer">
                         <br />
-                        <Chat className="chatRoom" theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatroom")} />
+                        <Chat className="chatRoom" theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatRoom")} />
                     </div>
                 </div>
             )
