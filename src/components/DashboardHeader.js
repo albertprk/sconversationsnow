@@ -10,7 +10,7 @@ export default class DashboardHeader extends Component {
   logout = () => {
       console.log("Test");
       localStorage.setItem("loggedIn", "false");
-      this.setState(this.state);
+      window.location.reload();
   };
 
   render() {

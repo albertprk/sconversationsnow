@@ -10,9 +10,9 @@ export default class ChatRoomLink extends Component {
     }
 
     joinChat = () => {
-        localStorage.setItem("chatroom", this.props.room);
+        localStorage.setItem("chatRoom", this.props.room);
         window.location.reload();
-    }
+    };
 
     handleClick = () => {
         if (this.state.clicked) {
