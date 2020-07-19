@@ -2,8 +2,8 @@
     display: flex;
     flex-direction: column;
     background-color: white;
-    min-width: 80%;
-    max-width:90%;
+    min-width: 100%;
+    padding: 10px 40px;
 }
 
 .recievingMessageContainer {
@@ -11,9 +11,28 @@
     flex-direction: column;
     background-color: #FFF4D9;
     min-width: 100%;
+    padding: 10px 40px;
 }
+
+.messageContainerSame {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-width: 100%;
+    padding: 0 40px;
+}
+
+.receivingMessageContainerSame {
+    display: flex;
+    flex-direction: column;
+    background-color: #FFF4D9;
+    min-width: 100%;
+    padding: 0 40px;
+}
+
 .avatar {
-    height: 50px;
+    height: 35px;
+    width: 35px;
     float: left;
     display: inline;
 }
@@ -21,10 +40,12 @@
 .sentText {
     font-family: Roboto;
     font-weight: bold;
-    font-size: 18px;
-    line-height: 130%;
+    font-size: 16px;
+    line-height: 70%;
+    padding-bottom: 3px;
     float: left;
     display: inline;
+    margin-left: 5px;
 }
 
 .identifer {
@@ -38,8 +59,9 @@
     line-height: 130%;
 }
 
+
 .messageBox {
-    padding-left: 50px;
+    padding-left: 15px;
     padding-right: 15px;
 }
 
