@@ -39,7 +39,7 @@ const Chat = ({ theName, theRoom }) => {
       setUsers(users);
       console.log(users);
     });
-  }, []);
+  }, [messages, users]);
 
 
   const sendMessage = (event) => {
