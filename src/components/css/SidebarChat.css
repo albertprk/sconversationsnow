@@ -1,12 +1,10 @@
 .sidebar-body {
-    z-index: 1;
     background:#fff;
     width:20%;
     height:auto;
     min-height:100%;
     position: fixed;
-    box-shadow: 6px 0px 6px rgba(0, 0, 0, 0.06);
-    margin-top: 66px;
+    box-shadow: 6px 0px 5px #f5f5f5;
 }
 
 .sidebar-title {

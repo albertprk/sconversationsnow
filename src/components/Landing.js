@@ -30,7 +30,7 @@ export default class Landing extends Component {
             return (
                 <div className="landingbody">
                     <div className="landingHeader">
-                        <p className="App-name">STUDENT CONVERSATIONS NOW</p>
+                        <p className="App-name">BUILDING BLOCKS</p >
                         <a href="./login">Login</a>
                         <a href="./signup">Sign Up</a>
                     </div>

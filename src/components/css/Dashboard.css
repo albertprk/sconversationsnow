@@ -27,6 +27,8 @@
     background:#fff;
     height:65px;
     border-bottom: 1px solid #E2E5E6;
+    position: fixed;
+    width: 100%;
 }
 
 .header-avi {
@@ -44,7 +46,7 @@
     width:30%;
     margin-left:25%;
     height:304px;
-    margin-top:60px;
+    margin-top:125px;
     border-radius:10px;
     box-shadow: 0px 5px 2px #d4d4d4;
     padding-bottom:20px;
@@ -57,7 +59,7 @@
     width:35%;
     min-width:325px;
     margin-left:60%;
-    margin-top:60px;
+    margin-top:125px;
     height:304px;
     border-radius:10px;
     box-shadow: 0px 5px 2px #d4d4d4;
