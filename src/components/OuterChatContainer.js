@@ -12,6 +12,7 @@ export default class OuterChatContainer extends Component {
 
     logout = (e) => {
         localStorage.setItem("loggedIn", "false");
+        localStorage.setItem("chatroom", "none");
         window.location.reload();
     };
 

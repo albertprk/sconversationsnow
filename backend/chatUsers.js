@@ -5,6 +5,7 @@ const addUser = ({ id, name, room }) => {
     room = room.trim().toLowerCase();
 
     // checks to see if the user is already present in the room
+    // TODO: Need to refactor this so it uses the user's email address
     const existingUser = chatUsers.find((User) => User.room === room && User.name === name); 
 
     if (existingUser) {

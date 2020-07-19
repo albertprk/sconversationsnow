@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-//import queryString from "query-string";
 import io from "socket.io-client";
 import InfoBar from "./infoBar";
 import Input from "./Input";
 import Messages from "./Messages";
+import Message from './Message';
 import './css/Chat.css';
 
 let socket;
@@ -11,31 +11,36 @@ let socket;
 const Chat = ({ theName, theRoom }) => {
   const [name, setName] = useState(theName);
   const [room, setRoom] = useState(theRoom);
+  const [users, setUsers] = useState('');
   const [message, setMessage] = useState("");
+  // Stores a list of Message components
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "localhost:5000";
 
   useEffect(() => {
-    //const { name, room } = queryString.parse(location.search);
 
     socket = io(ENDPOINT);
 
-    //setName(name);
-    //setRoom(room);
-
     socket.emit("join", { name, room }, () => {}); // same as { name: name, room: room }
 
+    // return function for when the user disconnects from the socket
     return () => {
       socket.emit("disconnect");
       socket.off();
     };
-  }, [ENDPOINT, name, room]); // use effect will only change if the values in the list change
+  }, [ENDPOINT, name, room]); 
 
   useEffect(() => {
     socket.on("message", (message) => {
-      setMessages([...messages, message]);
+      setMessages([...messages, <Message message={message} name={name} />]);
     });
-  }, [messages]);
+
+    socket.on("roomData", ({ users }) => {
+      setUsers(users);
+      console.log(users);
+    });
+  }, []);
+
 
   const sendMessage = (event) => {
     event.preventDefault();
@@ -45,19 +50,18 @@ const Chat = ({ theName, theRoom }) => {
     }
   };
 
-  console.log(message, messages);
-
   return (
     <div className="outerContainer">
       <div className="container">
         <InfoBar room={room} />
-        <Messages messages={messages} name={name}/>
+        <Messages messages={messages} />
         <Input
           message={message}
           setMessage={setMessage}
           sendMessage={sendMessage}
         />
       </div>
+      {/* <TextContainer users={ users }/> */}
     </div>
   );
 };

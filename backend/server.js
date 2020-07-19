@@ -40,7 +40,6 @@ const { useCallback } = require('react');
 const io = socketio(server);
 
 io.on('connection', (socket) => {
-    console.log('We have a new connection!!');
 
     socket.on('join', ({ name, room }, callback) => {
         const { error, user } = addUser({ id: socket.id, name, room });
