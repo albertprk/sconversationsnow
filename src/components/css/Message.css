@@ -6,6 +6,15 @@
     padding: 10px 40px;
 }
 
+.adminMessageContainer {
+    display: flex;
+    flex-direction: column;
+    background-color: #e8e8e8;
+    min-width: 100%;
+    padding: 0px 40px;
+    margin: 5px -5px;
+}
+
 .recievingMessageContainer {
     display: flex;
     flex-direction: column;

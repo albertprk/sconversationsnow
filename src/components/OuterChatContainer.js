@@ -1,7 +1,7 @@
 import React, {Component} from "react";
 import SidebarChat from "./SidebarChat";
 import {Redirect} from 'react-router-dom'
-import DashboardHeader from "./DashboardHeader";
+import DashboardHeaderChat from "./DashboardHeaderChat";
 import Chat from "./Chat";
 import "./css/ChatRoom.css";
 
@@ -25,7 +25,7 @@ export default class OuterChatContainer extends Component {
         } else {
             return (
                 <div>
-                    <DashboardHeader />
+                    <DashboardHeaderChat />
                     <SidebarChat />
                     <div className="outerContainer">
                         <br />

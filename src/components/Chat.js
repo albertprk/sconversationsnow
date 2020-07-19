@@ -50,7 +50,6 @@ const Chat = ({ theName, theRoom }) => {
   return (
     <div className="outerContainer">
       <div className="container">
-        <InfoBar room={room} />
         <Messages messages={messages} name={name}/>
         <Input
           message={message}

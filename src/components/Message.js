@@ -11,7 +11,6 @@ const Message = ({ message: { user, text }, name }) => {
     if(user === trimmedName) {
         isSentByCurrentUser = true;
     }
-    console.log("User: " + localStorage.getItem("lastUser"));
 
     if (localStorage.getItem("lastUser") === "admin" || localStorage.getItem("lastUser") === null ||
         localStorage.getItem("lastUser") !== user) {
