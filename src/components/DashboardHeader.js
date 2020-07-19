@@ -23,9 +23,7 @@ export default class DashboardHeader extends Component {
         <img
           alt="User Avatar"
           className="header-avi"
-          src={require("../images/icons/" +
-            localStorage.getItem("avi") +
-            ".png")}
+          src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}
         />
         <button className="logoutDashboard" onClick={this.logout}>
           Logout

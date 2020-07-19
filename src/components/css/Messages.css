@@ -1,6 +1,25 @@
 .messages {
     flex: auto;
-    overflow: auto;
-    min-width: 70%;
-    max-width: 80%;
+    width: 90%;
+    max-height: 450px;
+    margin-right: 100px;
+    overflow-x: hidden;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    overflow-x: hidden;
+}
+
+.sentText {
+    margin-bottom: -15px;
+}
+
+.messageText {
+    font-size: 90%;
 }
