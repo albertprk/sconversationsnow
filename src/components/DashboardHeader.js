@@ -10,6 +10,7 @@ export default class DashboardHeader extends Component {
   logout = () => {
       console.log("Test");
       localStorage.setItem("loggedIn", "false");
+      localStorage.setItem("chatRoom", "false");
       window.location.reload();
   };
 
