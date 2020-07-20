@@ -48,7 +48,7 @@ export default class SignupWithEmail extends Component {
             studentid: 0,
             avi: '01'
         });
-        axios.post('http://localhost:5000/users/add', newUser)
+        axios.post('https://sconversationsnow.herokuapp.com/users/add', newUser)
             .then(res => console.log(res.data));
     }
 
