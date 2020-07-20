@@ -1,0 +1,23 @@
+.messages {
+    width: 90%;
+    min-height: 450px;
+    max-height: 450px;
+    margin-right: 100px;
+}
+
+.messages::-webkit-scrollbar {
+    display: none;
+}
+
+.messages {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.sentText {
+    margin-bottom: -15px;
+}
+
+.messageText {
+    font-size: 90%;
+}

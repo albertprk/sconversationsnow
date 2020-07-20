@@ -1,0 +1,28 @@
+.infoBar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    min-width: 100%;
+  }
+  
+  .leftInnerContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5%;
+    color: black;
+    min-width: 100%;
+  }
+  
+  .rightInnerContainer {
+    display: flex;
+    flex: 0.5;
+    justify-content: flex-end;
+    margin-right: 5%;
+    min-width: 100%;
+  }
+
+  .heading {
+      margin-right: 25%;
+  }
