@@ -13,8 +13,7 @@ export default class DashboardInfo extends Component {
                             <button className="edit-avi">
                                 <img alt="Edit Avatar" width="15px" height="15px" src={require("../images/editavi.png")}/>
                             </button>
-                            <img alt="User Avatar" className="img"
-                                src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}/>
+                            <img alt="User Avatar" className="img" src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}/>
                             <table className="profile-info-table">
                                 <tr>
                                     <td className="profile-field">Username</td>

@@ -1,10 +1,15 @@
 .outerContainer {
+    z-index: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    width:90%;
-    margin:auto;
+    min-width:95%;
+    min-height: 90%;
+    max-height: 100%;
     float:right;
+    margin-top:4%;
+    margin-left: 6%;
+    max-width: 95%;
 }
 
 .container {
@@ -12,10 +17,51 @@
     flex-direction: column;
     justify-content: center;
     min-width: 100%;
+    margin-left: 20%;
 }
-.heading {
-    font-family: Roboto;
+
+.form {
+    margin-right: 20%;
+}
+
+.input {
+    line-height: 30px;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 18%;
+    background-color: #e8e8e8;
+    border-radius: 10px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.input:focus {
+    outline: 0;
+}
+
+.sendButton {
+    margin-right: 5px;
+    margin-left: 10px;
+    width: 25px;
+    height: 25px;
+    background-color: darkgray;
+    border: 0;
+    border-radius: 50px;
     font-weight: bold;
-    font-size: 24px;
-    color: #000000;
+    color: white;
+    padding-bottom: 2px;
+    cursor: pointer;
+}
+
+.leaveButton {
+    margin-right: 5px;
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
+    background-color: indianred;
+    border: 0;
+    border-radius: 50px;
+    color: white;
+    padding-bottom: 2px;
+    cursor: pointer;
 }

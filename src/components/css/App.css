@@ -99,13 +99,13 @@
 .App-name {
   float:left;
   font-weight: 500;
-  font-size:80%;
+  font-size:100%;
   margin-left:20px;
-  margin-top:20px;
+  margin-top:19px;
 }
 
 .landingHeader a {
-  font-size:80%;
+  font-size:90%;
   text-decoration: none;
   font-weight: 500;
   color: #373737;
@@ -129,8 +129,7 @@
 }
 
 .landingbody {
-  background-color:#fbf8f9;
-  min-height:2300px;
+  background-color:#FBF8F8;
 }
 
 .landingbg {
