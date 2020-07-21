@@ -50,8 +50,9 @@ io.on('connection', (socket) => {
         socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined!` });
 
         socket.join(user.room);
-
-        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) })
+        console.log("user has joined!");
+        io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
+        socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
 
         callback();
     });
@@ -63,7 +64,7 @@ io.on('connection', (socket) => {
         if (user) {
             io.to(user.room).emit('message', {user: 'admin', text: `${user.name} has left.`});
             io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
-            io.emit('roomDataGloabl', { room: user.room, users: getUsersInRoom(user.room) });
+            socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
         }
     });
     
@@ -73,7 +74,7 @@ io.on('connection', (socket) => {
 
         io.to(user.room).emit('message', { user: user.name, text: message });
         io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
-        io.emit('roomDataGlobal', { room: user.room, users: getUsersInRoom(user.room) });
+        socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
         
 
         callback();
@@ -83,11 +84,13 @@ io.on('connection', (socket) => {
     socket.on('getRooms', (chatRooms) => {
         let rooms = [];
         for (let i = 0; i < chatRooms.length; i++) {
-            let roomName = chatRooms[i].name;
+            let roomName = chatRooms[i].name.trim().toLowerCase();
+            console.log(roomName);
             let roomUsers = getUsersInRoom(roomName);
             rooms.push(roomUsers);
         }
-        socket.emit('allRooms', { rooms });
+        console.log(rooms);
+        socket.emit('allRooms', rooms);
     })
 
 });

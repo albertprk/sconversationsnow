@@ -1,81 +1,74 @@
-import React, {Component} from "react";
+import React, { useState, useEffect } from "react";
 import './css/Sidebar.css';
 import ChatRoomLink from "./ChatRoomLink";
 import io from "socket.io-client";
-import Chat from "./Chat";
+
+class ChatRoom {
+  constructor(name) {
+    this.name = name;
+    this.users = [];
+  }
+}
+
+
 
 let socket;
 
-class ChatRoom {
-    constructor(name) {
-        this.name = name;
-        this.users = [];
-    }
+const SideBar = (props) => {
+  const academics = new ChatRoom("Academics");
+  const timeManagement = new ChatRoom("Time Management");
+  const mentalHealth = new ChatRoom("Mental Health");
+  const substanceUse = new ChatRoom("Substance Use");
+  const nutrition = new ChatRoom("Nutrition");
+  const [chatRooms, setChatRooms]
+    = useState([academics, timeManagement, mentalHealth, substanceUse, nutrition]);
+  const ENDPOINT = "localhost:5000";
+
+  useEffect(() => {
+    socket = io(ENDPOINT);
+
+    socket.emit("getRooms", [ ...chatRooms ]);
+  }, [ENDPOINT]);
+
+  useEffect(() => {
+
+    socket.on("allRooms", ( rooms ) => {
+      {console.log(rooms)}
+      const theRooms = [ ...chatRooms ];
+      for (let i = 0; i < theRooms.length; i++) {
+        theRooms[i] = { ...theRooms[i], users: rooms[i] };
+      }
+      setChatRooms(theRooms);
+    });
+  }, [chatRooms]);
+
+  useEffect(() => {
+    socket.on("roomDataGlobal", ({ room, newUsers }) => {
+      {console.log("these are the new users: ")}
+      {console.log(newUsers)};
+      let rooms = [...chatRooms];
+      const elementIndex = chatRooms.findIndex(element => element.name === room);
+      if (elementIndex > -1) {
+        rooms[elementIndex] = { ...rooms[elementIndex], users: newUsers };
+        setChatRooms(rooms);
+      }
+    });
+  }, [chatRooms]);
+
+  let chatRoomsComponents = [];
+  if (typeof chatRooms !== "undefined" && chatRooms !== null) {
+    chatRoomsComponents = chatRooms.map((room, i) =>
+      <ChatRoomLink roomName={room.name} users={room.users} key={i} />
+    );
+  }
+
+  return (
+    <div className="sidebar-body">
+      <p className="sidebar-title">Chat Rooms</p>
+      {console.log(chatRoomsComponents)}
+      <div className="chat-room-panel">{chatRoomsComponents}</div>
+    </div>
+  )
 }
 
-export default class SideBar extends Component {
-
-    constructor(props) {
-        super(props);
-        const academics = new ChatRoom("Academics");
-        const timeManagement = new ChatRoom("Time Management");
-        const mentalHealth = new ChatRoom("Mental Health");
-        const substanceUse = new ChatRoom("Substance Use");
-        const nutrition = new ChatRoom("Nutrition");
-        this.state = {
-            fetching: true,
-            chatRooms: [academics, timeManagement, mentalHealth, substanceUse, nutrition]
-        };
-        
-    }
-
-    componentWillMount() {
-        socket = io("localhost:5000");
-
-        socket.emit("getRooms", { ...this.state.chatRooms });
-    }
-
-    componentWillReceiveProps() {
-        {console.log("its props")}
-    }
-
-    componentDidUpdate() {
-        {console.log("its updating")}
-        socket.on("roomDataGlobal", ({ room, newUsers }) => {
-            let rooms = [...this.state.chatRooms];
-            const elementIndex = this.state.chatRooms.findIndex(element => element.name === room);
-            if (elementIndex > -1) {
-                rooms[elementIndex] = {...rooms[elementIndex], users: newUsers};
-                this.setState({
-                    chatRooms: rooms
-                });
-            }
-        });
-
-        socket.on("allRooms", ({ rooms }) => {
-            const theRooms = {...this.state.chatRooms};
-            for (let i = 0; i < theRooms.length; i++) {
-                theRooms[i] = {...theRooms[i], users: rooms[i]};                
-            }
-            this.setState({
-                chatRooms: theRooms
-            });
-        })
-    }
-
-    render() {
-        let chatRoomsComponents = [];
-        if (typeof this.state.chatRooms !== "undefined" && this.state.chatRooms !== null) {
-            chatRoomsComponents = this.state.chatRooms.map((room, i) =>
-                <ChatRoomLink roomName={room.name} users={room.users} key={i}/>
-            );
-        }
-        return (
-            <div className="sidebar-body">
-                <p className="sidebar-title">Chat Rooms</p>
-                {console.log(chatRoomsComponents)}
-                <div className="chat-room-panel">{chatRoomsComponents}</div>
-            </div>
-        )
-    }
-};
+export default SideBar;
