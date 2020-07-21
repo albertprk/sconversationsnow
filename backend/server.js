@@ -94,7 +94,7 @@ io.on('connection', (socket) => {
     });
     socket.on('getRoom', (roomName) => {
         console.log(roomName);
-        socket.emit('roomDataGlobal', { room: roomName, newUsers: getUsersInRoom(roomName.trim().toLowerCase()) });
+        io.emit('roomDataGlobal', { room: roomName, newUsers: getUsersInRoom(roomName.trim().toLowerCase()) });
     })
 
 });
