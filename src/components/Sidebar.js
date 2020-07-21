@@ -26,9 +26,27 @@ const SideBar = (props) => {
 
   useEffect(() => {
     socket = io(ENDPOINT);
+    socket.emit("getRooms", [...chatRooms]);
 
-    socket.emit("getRooms", [ ...chatRooms ]);
+    // chatRooms.forEach((chat) => {
+    //   socket.emit("getRoom", chat.name);
+    // })
   }, [ENDPOINT]);
+
+  useEffect(() => {
+
+    socket.on("roomDataGlobal", ({ room, newUsers }) => {
+      {console.log("these are the new " + room + " users: ")}
+      {console.log(newUsers)};
+      let rooms = [...chatRooms];
+      const elementIndex = chatRooms.findIndex(element => element.name.trim().toLowerCase() == room);
+      {console.log(elementIndex)};
+      if (elementIndex > -1) {
+        rooms[elementIndex] = { ...rooms[elementIndex], users: newUsers };
+        setChatRooms(rooms);
+      }
+    });
+  }, [chatRooms]);
 
   useEffect(() => {
 
@@ -40,20 +58,11 @@ const SideBar = (props) => {
       }
       setChatRooms(theRooms);
     });
+
   }, [chatRooms]);
 
-  useEffect(() => {
-    socket.on("roomDataGlobal", ({ room, newUsers }) => {
-      {console.log("these are the new users: ")}
-      {console.log(newUsers)};
-      let rooms = [...chatRooms];
-      const elementIndex = chatRooms.findIndex(element => element.name === room);
-      if (elementIndex > -1) {
-        rooms[elementIndex] = { ...rooms[elementIndex], users: newUsers };
-        setChatRooms(rooms);
-      }
-    });
-  }, [chatRooms]);
+
+  
 
   let chatRoomsComponents = [];
   if (typeof chatRooms !== "undefined" && chatRooms !== null) {
@@ -68,7 +77,7 @@ const SideBar = (props) => {
       {console.log(chatRoomsComponents)}
       <div className="chat-room-panel">{chatRoomsComponents}</div>
     </div>
-  )
+  );
 }
 
 export default SideBar;

@@ -30,4 +30,9 @@ const getUser = (id) => chatUsers.find((user) => user.id === id);
 
 const getUsersInRoom = (room) => chatUsers.filter((user) => user.room === room);
 
-module.exports = { addUser, removeUser, getUser, getUsersInRoom };
+const getUserNamesInRoom = (room) => {
+    let temp = getUsersInRoom(room);
+    return temp.map((user) => user.name);
+}
+
+module.exports = { addUser, removeUser, getUser, getUsersInRoom, getUserNamesInRoom };

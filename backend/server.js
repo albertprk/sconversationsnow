@@ -3,7 +3,7 @@ const cors = require('cors');
 const mongoose = require('mongoose');
 const socketio = require('socket.io');
 
-const { addUser, removeUser, getUser, getUsersInRoom } = require('./chatUsers');
+const { addUser, removeUser, getUser, getUsersInRoom, getUserNamesInRoom } = require('./chatUsers');
 
 
 require('dotenv').config();
@@ -52,7 +52,7 @@ io.on('connection', (socket) => {
         socket.join(user.room);
         console.log("user has joined!");
         io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
-        socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
+        io.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
 
         callback();
     });
@@ -64,7 +64,7 @@ io.on('connection', (socket) => {
         if (user) {
             io.to(user.room).emit('message', {user: 'admin', text: `${user.name} has left.`});
             io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
-            socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
+            io.emit('roomDataGlobal', { room: user.room, newUsers: getUserNamesInRoom(user.room) });
         }
     });
     
@@ -74,7 +74,7 @@ io.on('connection', (socket) => {
 
         io.to(user.room).emit('message', { user: user.name, text: message });
         io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
-        socket.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
+        io.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
         
 
         callback();
@@ -90,7 +90,11 @@ io.on('connection', (socket) => {
             rooms.push(roomUsers);
         }
         console.log(rooms);
-        socket.emit('allRooms', rooms);
+        io.emit('allRooms', rooms);
+    });
+    socket.on('getRoom', (roomName) => {
+        console.log(roomName);
+        socket.emit('roomDataGlobal', { room: roomName, newUsers: getUsersInRoom(roomName.trim().toLowerCase()) });
     })
 
 });
