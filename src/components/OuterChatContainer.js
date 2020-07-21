@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import SidebarChat from "./SidebarChat";
+import Sidebar from "./Sidebar";
 import {Redirect} from 'react-router-dom'
 import DashboardHeader from "./DashboardHeader";
 import Chat from "./Chat";
@@ -27,7 +27,7 @@ export default class OuterChatContainer extends Component {
             return (
                 <div>
                     <DashboardHeader />
-                    <SidebarChat />
+                    <Sidebar />
                     <div className="outerContainer">
                         <br />
                         <Chat className="chatRoom" theName={localStorage.getItem("username")} theRoom={localStorage.getItem("chatRoom")} />

@@ -32,15 +32,7 @@ export default class SideBar extends Component {
     componentWillMount() {
         socket = io("localhost:5000");
 
-        socket.emit("getRooms", { ...this.state.chatRooms }, listOfRoomsAndUsers => {
-            const theRooms = {...this.state.chatRooms};
-            for (let i = 0; i < theRooms.length; i++) {
-                theRooms[i] = {...theRooms[i], users: listOfRoomsAndUsers[i]};                
-            }
-            this.setState({
-                chatRooms: theRooms
-            });
-        });
+        socket.emit("getRooms", { ...this.state.chatRooms });
     }
 
     componentWillReceiveProps() {
@@ -49,7 +41,7 @@ export default class SideBar extends Component {
 
     componentDidUpdate() {
         {console.log("its updating")}
-        socket.on("roomData", ({ room, newUsers }) => {
+        socket.on("roomDataGlobal", ({ room, newUsers }) => {
             let rooms = [...this.state.chatRooms];
             const elementIndex = this.state.chatRooms.findIndex(element => element.name === room);
             if (elementIndex > -1) {
@@ -59,6 +51,16 @@ export default class SideBar extends Component {
                 });
             }
         });
+
+        socket.on("allRooms", ({ rooms }) => {
+            const theRooms = {...this.state.chatRooms};
+            for (let i = 0; i < theRooms.length; i++) {
+                theRooms[i] = {...theRooms[i], users: rooms[i]};                
+            }
+            this.setState({
+                chatRooms: theRooms
+            });
+        })
     }
 
     render() {
