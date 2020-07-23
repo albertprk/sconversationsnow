@@ -4,11 +4,12 @@
     justify-content: center;
     align-items: center;
     min-width:95%;
-    height: 90%;
+    min-height: 90%;
     max-height: 100%;
     float:right;
-    margin-top: 40px;
+    margin-top:4%;
     margin-left: 6%;
+    max-width: 95%;
 }
 
 .container {
@@ -19,13 +20,6 @@
     margin-left: 20%;
 }
 
-.heading {
-    font-family: Roboto;
-    font-weight: bold;
-    font-size: 24px;
-    color: #000000;
-}
-
 .form {
     margin-right: 20%;
 }
@@ -34,7 +28,7 @@
     line-height: 30px;
     width: 70%;
     margin-top: 20px;
-    margin-left: 10%;
+    margin-left: 18%;
     background-color: #e8e8e8;
     border-radius: 10px;
     padding-left: 10px;
