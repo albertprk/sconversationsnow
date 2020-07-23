@@ -10,7 +10,7 @@ export default class ChatRoomLink extends Component {
     }
 
     joinChat = () => {
-        localStorage.setItem("chatRoom", this.props.room);
+        localStorage.setItem("chatRoom", this.props.roomName);
         window.location.reload();
     };
 
@@ -23,26 +23,28 @@ export default class ChatRoomLink extends Component {
     }
 
     render() {
+        {console.log(this.props)}
         if (this.state.clicked === false) {
             return (
                 <div className="chat-room-link" onClick={this.handleClick}>
-                    {this.props.room}
+                    {this.props.roomName}
                     <button className="chat-join-button" onClick={this.joinChat}>JOIN</button>
                 </div>
             );
         } else {
-            let chatRoomUsers = this.props.info[this.props.room].Users.map((user, i) => {
+            let chatRoomUsers = this.props.users.map((user, i) => {
                 if (i !== 2) {
-                    return (<div className="chat-room-link-user">{user}</div>)
+                    return (<div className="chat-room-link-user">{user.name}</div>)
                 } else {
-                    return (<div className="chat-room-link-user">{user} +
-                         {this.props.info[this.props.room].Users.length - 3} others</div>)
+                    return (<div className="chat-room-link-user">{user.name} +
+                         {this.props.users.length - 3} others</div>)
                 }
             });
             if (chatRoomUsers.length === 0) {
                 return (
                     <div className="chat-room-link-clicked" onClick={this.handleClick}>
-                        {this.props.room}
+                        {console.log(this.props.roomName)}
+                        {this.props.roomName}
                         <button className="chat-join-button">JOIN</button>
                         <br/>
                         <div className="chat-users-panel">
@@ -53,7 +55,7 @@ export default class ChatRoomLink extends Component {
             } else if (chatRoomUsers.length < 3) {
                 return (
                     <div className="chat-room-link-clicked" onClick={this.handleClick}>
-                        {this.props.room}
+                        {this.props.roomName}
                         <button className="chat-join-button">JOIN</button>
                         <br/>
                         <div className="chat-users-panel">{chatRoomUsers}</div>
@@ -62,7 +64,7 @@ export default class ChatRoomLink extends Component {
             } else {
                 return (
                     <div className="chat-room-link-clicked" onClick={this.handleClick}>
-                        {this.props.room}
+                        {this.props.roomName}
                         <button className="chat-join-button">JOIN</button>
                         <br/>
                         <div className="chat-users-panel">{chatRoomUsers[0]}</div>

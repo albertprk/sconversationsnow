@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import './css/SignupWithEmail.css';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
+import { useAlert } from 'react-alert';
+
 
 export default class SignupWithEmail extends Component {
     constructor(props) {
@@ -48,8 +50,15 @@ export default class SignupWithEmail extends Component {
             studentid: 0,
             avi: '01'
         });
-        axios.post('https://sconversationsnow.herokuapp.com/users/add', newUser)
-            .then(res => console.log(res.data));
+        axios.post('http://localhost:5000/users/add', newUser)
+            .then(res => {
+                if (res.data === 'User added!') {
+                    console.log(res.data);
+                } else {
+                    useAlert("Sorry, can you please try again?");
+                    console.log(res.data);
+                }
+            });
     }
 
     onChangeUsername(e) {

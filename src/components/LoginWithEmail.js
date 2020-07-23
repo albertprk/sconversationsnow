@@ -8,6 +8,7 @@ import Choice from "./Choice";
 import Signup from "./Signup";
 import signUpWithEmail from "./SignupWithEmail";
 import { Cookies } from "react-cookie";
+import { useAlert } from 'react-alert';
 
 export default class LoginWithEmail extends Component {
     constructor(props) {
@@ -41,13 +42,14 @@ export default class LoginWithEmail extends Component {
         axios.post('https://sconversationsnow.herokuapp.com/users/login', userCredentials)
             .then(res => {
                 if (res.data === "invalid password") {
+                    useAlert("Sorry can you please check your credentials and try again?");
                     console.log(res);
                 } else {
                     localStorage.setItem('loggedIn', true);
                     localStorage.setItem('username', res.data.username);
                     localStorage.setItem('email', res.data.email);
                     localStorage.setItem('avi', res.data.avi);
-                    localStorage.setItem("chatroom", "none")
+                    localStorage.setItem("chatroom", "none");
                     this.setState((state, props) => {
                         return {
                             loggedIn: true,

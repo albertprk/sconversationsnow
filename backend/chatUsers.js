@@ -5,6 +5,7 @@ const addUser = ({ id, name, room }) => {
     room = room.trim().toLowerCase();
 
     // checks to see if the user is already present in the room
+    // TODO: Need to refactor this so it uses the user's email address
     const existingUser = chatUsers.find((User) => User.room === room && User.name === name); 
 
     if (existingUser) {
@@ -29,4 +30,9 @@ const getUser = (id) => chatUsers.find((user) => user.id === id);
 
 const getUsersInRoom = (room) => chatUsers.filter((user) => user.room === room);
 
-module.exports = { addUser, removeUser, getUser, getUsersInRoom };
+const getUserNamesInRoom = (room) => {
+    let temp = getUsersInRoom(room);
+    return temp.map((user) => user.name);
+}
+
+module.exports = { addUser, removeUser, getUser, getUsersInRoom, getUserNamesInRoom };
