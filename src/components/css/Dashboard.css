@@ -1,3 +1,7 @@
+.body {
+    overflow: hidden;
+}
+
 .dashboard {
     background:#DBDBDB;
     height:100vh;
@@ -17,6 +21,17 @@
     font-weight:500;
     box-shadow: 0px 2px 2px #d4d4d4;
     cursor:pointer;
+}
+
+.popup {
+    z-index: 2;
+    background-color:rgba(252, 252, 252, 0.95)!important;
+    max-height: 80%;
+    max-width: 70%;
+    color: black;
+    border-radius: 30px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.06);
+    overflow: hidden!important;
 }
 
 .dashboard-version:focus {
