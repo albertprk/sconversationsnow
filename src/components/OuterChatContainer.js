@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import SidebarChat from "./SidebarChat";
+import Sidebar from "./Sidebar";
 import {Redirect} from 'react-router-dom'
 import DashboardHeaderChat from "./DashboardHeaderChat";
 import Chat from "./Chat";
@@ -12,6 +12,7 @@ export default class OuterChatContainer extends Component {
 
     logout = (e) => {
         localStorage.setItem("loggedIn", "false");
+        localStorage.setItem("chatroom", "none");
         window.location.reload();
     };
 

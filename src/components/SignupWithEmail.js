@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import './css/SignupWithEmail.css';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
+import {Redirect} from 'react-router-dom';
+import { useAlert } from 'react-alert';
+
 
 export default class SignupWithEmail extends Component {
     constructor(props) {
@@ -49,7 +51,14 @@ export default class SignupWithEmail extends Component {
             avi: '01'
         });
         axios.post('http://localhost:5000/users/add', newUser)
-            .then(res => console.log(res.data));
+            .then(res => {
+                if (res.data === 'User added!') {
+                    console.log(res.data);
+                } else {
+                    useAlert("Sorry, can you please try again?");
+                    console.log(res.data);
+                }
+            });
     }
 
     onChangeUsername(e) {
