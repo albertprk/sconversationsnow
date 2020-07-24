@@ -48,7 +48,7 @@ io.on('connection', (socket) => {
 
         if (error) return useCallback(error);
 
-        socket.emit('message', { user: 'admin', text: `${user.name}, welcome to the room, ${user.room}` });
+        socket.emit('message', { user: {id: "111111", name: 'admin', room: "adminRoom", email: "admin@admin.com", avi: "1" }, text: `${user.name}, welcome to the room, ${user.room}` });
         socket.broadcast.to(user.room).emit('message', { user: 'admin', text: `${user.name} has joined!` });
 
         socket.join(user.room);
@@ -64,7 +64,7 @@ io.on('connection', (socket) => {
         const user = removeUser(socket.id);
 
         if (user) {
-            io.to(user.room).emit('message', {user: 'admin', text: `${user.name} has left.`});
+            io.to(user.room).emit('message', {user: {id: "111111", name: 'admin', room: "adminRoom", email: "admin@admin.com", avi: "1" }, text: `${user.name} has left.`});
             io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
             io.emit('roomDataGlobal', { room: user.room, newUsers: getUserNamesInRoom(user.room) });
         }
@@ -74,7 +74,7 @@ io.on('connection', (socket) => {
     socket.on('sendMessage', (message, callback) => {
         const user = getUser(socket.id);
 
-        io.to(user.room).emit('message', { user: user.name, text: message });
+        io.to(user.room).emit('message', { user: user, text: message });
         io.to(user.room).emit('roomData', { room: user.room, users: getUsersInRoom(user.room) });
         io.emit('roomDataGlobal', { room: user.room, newUsers: getUsersInRoom(user.room) });
         
