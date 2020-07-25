@@ -10,7 +10,7 @@ class Avatars extends Component {
     }
 
     componentWillMount() {
-        for (let i = 0; i < 60; i++) {
+        for (let i = 2; i < 60; i++) {
             this.state.avis.push(i.toString());
         }
     }
@@ -19,7 +19,7 @@ class Avatars extends Component {
         return (
             <div className='avatars'>
                 {this.state.avis.map((avi) => (
-                    <img src={"./../images/icons/" + "0" + avi + ".png"} />
+                    <img src={require("../images/icons/" + "0" + avi + ".png")} />
                 ))}
             </div>
         );

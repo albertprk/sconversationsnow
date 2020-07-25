@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-import Sidebar from "./Sidebar";
+import SidebarChat from "./SidebarChat";
 import {Redirect} from 'react-router-dom'
 import DashboardHeaderChat from "./DashboardHeaderChat";
 import Chat from "./Chat";
