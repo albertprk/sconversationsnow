@@ -1,6 +1,6 @@
 const Bcrypt = require('bcryptjs');
 const router = require('express').Router();
-let User = require('../models/users.model');
+let {User, userSchema} = require('../models/users.model');
 
 router.route('/').get((req, res) => {
     User.find()
@@ -13,20 +13,19 @@ router.route('/add').post(async (req, res) => {
     const salt = 10;
     const username = req.body.username;
     const password = await Bcrypt.hash(req.body.password, salt);
-    const userType = req.body.userType;
+    //const userType = req.body.userType;
     const email = req.body.email;
-    const xp = Number(req.body.xp);
-    const studentid = Number(req.body.studentid);
+    //const xp = Number(req.body.xp);
+    //const studentid = Number(req.body.studentid);
     const avi = Number(req.body.avi);
+    const chatrooms = req.body.chatrooms;
 
     const newUser = new User({
         username,
         password,
-        userType,
         email,
-        xp,
-        studentid,
-        avi
+        avi,
+        chatrooms
     });
 
     newUser.save()
@@ -51,11 +50,12 @@ router.route('/update/:id').post((req, res) => {
         .then(user => {
             user.username = req.body.username;
             user.password = req.body.password;
-            user.userType = req.body.userType;
+            //user.userType = req.body.userType;
             user.email = req.body.email;
-            user.xp = Number(req.body.xp);
-            user.studentid = Number(req.body.studentid);
-            user.avi = Number(req.body.avi)
+            //user.xp = Number(req.body.xp);
+            //user.studentid = Number(req.body.studentid);
+            user.avi = Number(req.body.avi);
+            user.chatrooms = req.body.chatrooms;
 
             user.save()
                 .then(() => res.json('User updated!'))
