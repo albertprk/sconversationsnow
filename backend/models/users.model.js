@@ -3,22 +3,17 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-
-
-
-
-
 // A model for the each user
 
 const userSchema = new Schema({
-  username: {type: String, unique: true, minlength: 3},
+  username: {type: String, unique: false, minlength: 3},
   password: {type: String, required: true, minlength: 5  },
   //userType: { type: String},  //Admin, mentor or typical user
-  email: {type: String, required: true, trim: true, unique: true},
+  email: {type: String, required: true, trim: true, unique: false},
   //xp: { type: Number },
   //studentid: { type: Number},
   avi: { type: String },
-  chatrooms: [Schema.Types.ObjectId]
+  chatrooms: [String]
 }, {
   timestamps: true,
 });
@@ -31,9 +26,9 @@ const messageSchema = new Schema({
 
 const chatroomSchema = new Schema({
   name: {type: String, unique: false},
-  users: [userSchema],
-  admin: {userSchema},
-  mentors: [userSchema],
+  users: [String],
+  admin: {type: String},
+  mentors: [String],
   messages: [messageSchema]
 });
 
@@ -45,4 +40,4 @@ const Message = mongoose.model('Message', messageSchema);
 
 
 
-module.exports = { User, userSchema, Chatroom, Message };
+module.exports = { User, Chatroom, Message };
