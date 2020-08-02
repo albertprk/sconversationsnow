@@ -1,4 +1,6 @@
 import React, {Component} from "react";
+import "./css/Avatars.css";
+import axios from 'axios';
 
 class Avatars extends Component {
 
@@ -10,7 +12,7 @@ class Avatars extends Component {
     }
 
     componentWillMount() {
-        for (let i = 2; i < 60; i++) {
+        for (let i = 1; i < 60; i++) {
             this.state.avis.push(i.toString());
         }
     }
@@ -18,8 +20,14 @@ class Avatars extends Component {
     render() {
         return (
             <div className='avatars'>
+                <p className="chooseAvatar">Choose a new avatar</p>
                 {this.state.avis.map((avi) => (
-                    <img src={require("../images/icons/" + "0" + avi + ".png")} />
+                    <img
+                        height="7%"
+                        width="7%"
+                        src={require("../images/icons/" + avi + ".png")}
+                        className="avatarImage"
+                    />
                 ))}
             </div>
         );

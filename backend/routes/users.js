@@ -55,7 +55,7 @@ router.route('/update/:id').post((req, res) => {
             user.email = req.body.email;
             user.xp = Number(req.body.xp);
             user.studentid = Number(req.body.studentid);
-            user.avi = Number(req.body.avi)
+            user.avi = Number(req.body.avi);
 
             user.save()
                 .then(() => res.json('User updated!'))

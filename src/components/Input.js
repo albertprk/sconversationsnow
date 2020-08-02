@@ -1,6 +1,7 @@
 import React from 'react';
 
 const disconnect = () => {
+    localStorage.setItem("lastUser", null);
     localStorage.setItem("chatRoom", "false");
     window.location.reload();
 };

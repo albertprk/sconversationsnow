@@ -3,16 +3,17 @@
     min-height: 450px;
     max-height: 450px;
     margin-right: 100px;
-    overflow: scroll;
+    overflow-x: hidden!important;
+    overflow-y: scroll;
 }
 
 .messages::-webkit-scrollbar {
-    display: none;
+    display: none!important;
 }
 
 .messages {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
+    -ms-overflow-style: none!important;
+    scrollbar-width: none!important;
 }
 
 .sentText {

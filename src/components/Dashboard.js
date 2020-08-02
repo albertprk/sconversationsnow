@@ -15,6 +15,11 @@ export default class Dashboard extends Component {
 
   logout = () => {
     console.log("Test");
+    localStorage.setItem('loggedIn', null);
+    localStorage.setItem('username', null);
+    localStorage.setItem('email', null);
+    localStorage.setItem('avi', null);
+    localStorage.setItem('type',  null);
     localStorage.setItem("loggedIn", "false");
     window.location.reload();
   };

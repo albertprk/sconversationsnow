@@ -5,6 +5,7 @@ import Input from "./Input";
 import Messages from "./Messages";
 import Message from './Message';
 import './css/Chat.css';
+import TextContainer from './TextContainer';
 
 let socket;
 
@@ -16,6 +17,8 @@ const Chat = ({ theName, theRoom }) => {
   // Stores a list of Message components
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "localhost:5000";
+  let date = new Date();
+  let curDate = date.getHours() + ":" + date.getMinutes();
 
   useEffect(() => {
 
@@ -49,11 +52,12 @@ const Chat = ({ theName, theRoom }) => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
-
   return (
     <div className="outerContainer">
+      <TextContainer users={ users }/>
       <div className="container">
         <InfoBar room={room} />
+        <p className="curDate">{curDate}</p>
         <Messages messages={messages} />
         <Input
           message={message}
@@ -61,7 +65,6 @@ const Chat = ({ theName, theRoom }) => {
           sendMessage={sendMessage}
         />
       </div>
-      {/* <TextContainer users={ users }/> */}
     </div>
   );
 };
