@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-import InfoBar from "./infoBar";
 import Input from "./Input";
 import Messages from "./Messages";
 import Message from './Message';
@@ -14,19 +13,13 @@ const Chat = ({ theName, theRoom }) => {
   const [room, setRoom] = useState(theRoom);
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState("");
-  // Stores a list of Message components
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "localhost:5000";
-  let date = new Date();
-  let curDate = date.getHours() + ":" + date.getMinutes();
 
   useEffect(() => {
-
     socket = io(ENDPOINT);
-
     socket.emit("join", { name, room }, () => {}); // same as { name: name, room: room }
 
-    // return function for when the user disconnects from the socket
     return () => {
       socket.emit("disconnect");
       socket.off();
@@ -44,7 +37,6 @@ const Chat = ({ theName, theRoom }) => {
     });
   }, [messages, users]);
 
-
   const sendMessage = (event) => {
     event.preventDefault();
 
@@ -52,12 +44,11 @@ const Chat = ({ theName, theRoom }) => {
       socket.emit("sendMessage", message, () => setMessage(""));
     }
   };
+
   return (
     <div className="outerContainer">
       <TextContainer users={ users }/>
       <div className="container">
-        <InfoBar room={room} />
-        <p className="curDate">{curDate}</p>
         <Messages messages={messages} />
         <Input
           message={message}

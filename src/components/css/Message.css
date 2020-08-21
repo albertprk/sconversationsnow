@@ -4,6 +4,7 @@
     flex-direction: column;
     background-color: white;
     padding: 10px 40px;
+    overflow-x: hidden!important;
 }
 
 .adminMessageContainer {
@@ -12,6 +13,7 @@
     background-color: #e8e8e8;
     padding: 0px 40px;
     margin: 5px -5px;
+    overflow-x: hidden!important;
 }
 
 .recievingMessageContainer {

@@ -11,9 +11,10 @@ const Message = ({message: {user, text}, name}) => {
     if (user === trimmedName) {
         isSentByCurrentUser = true;
     }
-    if (localStorage.getItem("lastUser") === "admin" || localStorage.getItem("lastUser") === null ||
+
+    /*if (localStorage.getItem("lastUser") === "admin" || localStorage.getItem("lastUser") === null ||
         localStorage.getItem("lastUser") !== user) {
-        localStorage.setItem("lastUser", user);
+        localStorage.setItem("lastUser", user);*/
         return (
             isSentByCurrentUser
                 ? (
@@ -40,7 +41,7 @@ const Message = ({message: {user, text}, name}) => {
                     </div>
                 )
         );
-    } else {
+    /*} else {
         localStorage.setItem("lastUser", user);
         return (
             isSentByCurrentUser
@@ -59,7 +60,7 @@ const Message = ({message: {user, text}, name}) => {
                     </div>
                 )
         );
-    }
+    }*/
 };
 
 export default Message;

@@ -54,6 +54,7 @@
 }
 
 .dashboard-header {
+    z-index: 0;
     background:#fff;
     height:65px;
     border-bottom: 1px solid #E2E5E6;

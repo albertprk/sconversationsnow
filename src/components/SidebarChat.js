@@ -74,7 +74,6 @@ const SideBarChat = (props) => {
     return (
         <div className="sidebar-body">
             <p className="sidebar-title">Chat Rooms</p>
-            {console.log(chatRoomsComponents)}
             <div className="chat-room-panel">{chatRoomsComponents}</div>
         </div>
     );
