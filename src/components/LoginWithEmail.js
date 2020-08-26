@@ -52,6 +52,7 @@ export default class LoginWithEmail extends Component {
                     localStorage.setItem('type',  res.data.userType);
                     localStorage.setItem("chatroom", "none");
                     localStorage.setItem("lastUser", null);
+                    localStorage.setItem("id", res.data._id);
                     this.setState((state, props) => {
                         return {
                             loggedIn: true,
