@@ -27,10 +27,6 @@ const SideBar = (props) => {
   useEffect(() => {
     socket = io(ENDPOINT);
     socket.emit("getRooms", [...chatRooms]);
-
-    // chatRooms.forEach((chat) => {
-    //   socket.emit("getRoom", chat.name);
-    // })
   }, [ENDPOINT]);
 
   useEffect(() => {

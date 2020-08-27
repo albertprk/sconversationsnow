@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import io from "socket.io-client";
-import InfoBar from "./infoBar";
 import Input from "./Input";
 import Messages from "./Messages";
 import Message from './Message';
 import './css/Chat.css';
+import TextContainer from './TextContainer';
 
 let socket;
 
@@ -15,17 +15,14 @@ const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
   const [avi, setAvi] = useState(theAvi);
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState("");
-  // Stores a list of Message components
   const [messages, setMessages] = useState([]);
   const ENDPOINT = "localhost:5000";
 
   useEffect(() => {
-
     socket = io(ENDPOINT);
 
     socket.emit("join", { name, room, email, avi }, () => {}); // same as { name: name, room: room }
 
-    // return function for when the user disconnects from the socket
     return () => {
       socket.emit("disconnect");
       socket.off();
@@ -43,7 +40,6 @@ const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
     });
   }, [messages, users]);
 
-
   const sendMessage = (event) => {
     event.preventDefault();
 
@@ -54,8 +50,8 @@ const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
 
   return (
     <div className="outerContainer">
+      <TextContainer users={ users }/>
       <div className="container">
-        <InfoBar room={room} />
         <Messages messages={messages} />
         <Input
           message={message}
@@ -63,7 +59,6 @@ const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
           sendMessage={sendMessage}
         />
       </div>
-      {/* <TextContainer users={ users }/> */}
     </div>
   );
 };

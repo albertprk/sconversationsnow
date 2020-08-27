@@ -1,3 +1,7 @@
+.body {
+    overflow: hidden;
+}
+
 .dashboard {
     background:#DBDBDB;
     height:100vh;
@@ -6,8 +10,23 @@
     left: 0;
 }
 
+.userType {
+    color: #E9A800;
+    font-weight: 500;
+    font-size: 100%;
+    float: right;
+    margin-right: 35px;
+    margin-top: 35px;
+    height: 25px;
+    border: 1px solid #E9A800;
+    padding: 8px;
+    padding-top: 7px;
+    padding-bottom: 3px;
+    border-radius: 8px;
+}
+
 .dashboard-version {
-    background:#E9A800;
+    background: #E9A800;
     float:right;
     margin-top:35px;
     margin-right:35px;
@@ -19,11 +38,23 @@
     cursor:pointer;
 }
 
+.popup {
+    z-index: 2;
+    background-color:rgba(252, 252, 252, 0.98)!important;
+    max-height: 80%;
+    max-width: 75%;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.06);
+    margin-right: 2%!important;
+}
+
 .dashboard-version:focus {
     outline:0;
 }
 
 .dashboard-header {
+    z-index: 0;
     background:#fff;
     height:65px;
     border-bottom: 1px solid #E2E5E6;

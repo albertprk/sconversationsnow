@@ -1,0 +1,23 @@
+.avatars {
+    align-content: center;
+    margin-top: 7%;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.chooseAvatar {
+    font-size: 120%;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-bottom: 35px;
+}
+
+.avatarImage {
+    opacity: 0.75;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.avatarImage:hover {
+    opacity: 1;
+}

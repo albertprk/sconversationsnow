@@ -1,19 +1,22 @@
-import React from 'React';
+import React from 'react';
 
-
-const TextContainer = ({ users }) = (
-    <div>
-        <h1>People Currently Chatting:</h1>
-        <div className="currentChatting">
-            <h2>
-                {user.map(({name}) => (
-                    <div key={ name } className="user">
-                        { name }
-                    </div>
-                ))}
-            </h2>
+const TextContainer = ({ users }) => {
+    const usersArray = Array.from(users);
+    console.log(usersArray);
+    return (
+        <div className="textContainer">
+            <h1 className="activeList">Currently Active Users</h1>
+            <div className="currentChatting">
+                <h2>
+                    {usersArray.map(({name}) => (
+                        <div key={name} className="userName">
+                            {name}
+                        </div>
+                    ))}
+                </h2>
+            </div>
         </div>
-    </div>
-);
+    );
+};
 
 export default TextContainer;

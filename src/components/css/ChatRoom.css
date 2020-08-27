@@ -1,11 +1,15 @@
 .outerContainer {
     position:relative;
-    width:80%;
-    overflow-x: hidden!important;
+    width:70%;
+    min-height: 80%;
+    overflow-x:hidden!important;
 }
 
 .chatRoom {
     margin-top:120px;
     position:absolute;
-    overflow-x: hidden!important;
+    overflow-x:hidden!important;
+}
+
+.outoutContainer {
 }

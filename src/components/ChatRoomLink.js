@@ -20,7 +20,7 @@ export default class ChatRoomLink extends Component {
         } else {
             this.setState({clicked: true});
         }
-    }
+    };
 
     render() {
         {console.log(this.props)}
@@ -59,6 +59,17 @@ export default class ChatRoomLink extends Component {
                         <button className="chat-join-button">JOIN</button>
                         <br/>
                         <div className="chat-users-panel">{chatRoomUsers}</div>
+                    </div>
+                )
+            } else if (localStorage.getItem("chatRoom" === this.props.roomName)) {
+                return (
+                    <div className="chat-room-link-clicked" onClick={this.handleClick}>
+                        {this.props.roomName}
+                        <button className="chat-join-button">DISCONNECT</button>
+                        <br/>
+                        <div className="chat-users-panel">{chatRoomUsers[0]}</div>
+                        <div className="chat-users-panel">{chatRoomUsers[1]}</div>
+                        <div className="chat-users-panel">{chatRoomUsers[2]}</div>
                     </div>
                 )
             } else {

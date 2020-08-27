@@ -33,7 +33,7 @@ export default class LoginWithEmail extends Component {
             email: '',
             password: ''
         });
-        axios.post('https://sconversationsnow.herokuapp.com/users/login', userCredentials)
+        axios.post('http://localhost:5000/users/login', userCredentials)
             .then(res => {
                 if (res.data === "invalid password") {
                     useAlert("Sorry can you please check your credentials and try again?");
@@ -43,6 +43,7 @@ export default class LoginWithEmail extends Component {
                     localStorage.setItem('username', res.data.username);
                     localStorage.setItem('email', res.data.email);
                     localStorage.setItem('avi', res.data.avi);
+                    localStorage.setItem('type',  res.data.userType);
                     localStorage.setItem("chatroom", "none");
                     localStorage.setItem("_id", res.data._id);
                     this.setState((state, props) => {

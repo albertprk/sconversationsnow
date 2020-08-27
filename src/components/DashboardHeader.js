@@ -11,6 +11,7 @@ export default class DashboardHeader extends Component {
       console.log("Test");
       localStorage.setItem("loggedIn", "false");
       localStorage.setItem("chatRoom", "false");
+      localStorage.setItem("lastUser", null);
       window.location.reload();
   };
 
