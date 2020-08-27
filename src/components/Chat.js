@@ -8,9 +8,11 @@ import TextContainer from './TextContainer';
 
 let socket;
 
-const Chat = ({ theName, theRoom }) => {
+const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
   const [name, setName] = useState(theName);
   const [room, setRoom] = useState(theRoom);
+  const [email, setEmail] = useState(theEmail);
+  const [avi, setAvi] = useState(theAvi);
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState("");
   const [messages, setMessages] = useState([]);
@@ -18,13 +20,14 @@ const Chat = ({ theName, theRoom }) => {
 
   useEffect(() => {
     socket = io(ENDPOINT);
-    socket.emit("join", { name, room }, () => {}); // same as { name: name, room: room }
+
+    socket.emit("join", { name, room, email, avi }, () => {}); // same as { name: name, room: room }
 
     return () => {
       socket.emit("disconnect");
       socket.off();
     };
-  }, [ENDPOINT, name, room]); 
+  }, [ENDPOINT, name, room, email, avi]); 
 
   useEffect(() => {
     socket.on("message", (message) => {

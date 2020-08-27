@@ -1,10 +1,12 @@
 const chatUsers = [];
 
-const addUser = ({ id, name, room }) => {
+const addUser = ({ id, name, room, email, avi }) => {
     name = name.trim().toLowerCase();
     room = room.trim().toLowerCase();
 
     // checks to see if the user is already present in the room
+    // TODO: I actually don't think we need this. Need to handle double accounts on the
+    // server side when accounts are created
     // TODO: Need to refactor this so it uses the user's email address
     const existingUser = chatUsers.find((User) => User.room === room && User.name === name); 
 
@@ -12,7 +14,7 @@ const addUser = ({ id, name, room }) => {
         return { error: 'Username is taken' };
     }
 
-    const user = { id, name, room };
+    const user = { id, name, room, email, avi };
 
     chatUsers.push(user);
     return { user };

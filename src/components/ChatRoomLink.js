@@ -34,7 +34,7 @@ export default class ChatRoomLink extends Component {
         } else {
             let chatRoomUsers = this.props.users.map((user, i) => {
                 if (i !== 2) {
-                    return (<div className="chat-room-link-user">{user.name}</div>)
+                    return (<div key={i} className="chat-room-link-user">{user.name}</div>)
                 } else {
                     return (<div className="chat-room-link-user">{user.name} +
                          {this.props.users.length - 3} others</div>)
