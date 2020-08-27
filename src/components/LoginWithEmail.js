@@ -1,13 +1,7 @@
 import React, { Component } from "react";
 import './css/LogInWithEmail.css';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
-import Login from "./Login";
-import Landing from "./Landing";
-import Choice from "./Choice";
-import Signup from "./Signup";
-import signUpWithEmail from "./SignupWithEmail";
-import { Cookies } from "react-cookie";
+import {Redirect} from 'react-router-dom';
 import { useAlert } from 'react-alert';
 
 export default class LoginWithEmail extends Component {
@@ -50,6 +44,7 @@ export default class LoginWithEmail extends Component {
                     localStorage.setItem('email', res.data.email);
                     localStorage.setItem('avi', res.data.avi);
                     localStorage.setItem("chatroom", "none");
+                    localStorage.setItem("_id", res.data._id);
                     this.setState((state, props) => {
                         return {
                             loggedIn: true,

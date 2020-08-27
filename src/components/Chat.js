@@ -8,9 +8,11 @@ import './css/Chat.css';
 
 let socket;
 
-const Chat = ({ theName, theRoom }) => {
+const Chat = ({ theName, theRoom, theEmail, theAvi }) => {
   const [name, setName] = useState(theName);
   const [room, setRoom] = useState(theRoom);
+  const [email, setEmail] = useState(theEmail);
+  const [avi, setAvi] = useState(theAvi);
   const [users, setUsers] = useState('');
   const [message, setMessage] = useState("");
   // Stores a list of Message components
@@ -21,14 +23,14 @@ const Chat = ({ theName, theRoom }) => {
 
     socket = io(ENDPOINT);
 
-    socket.emit("join", { name, room }, () => {}); // same as { name: name, room: room }
+    socket.emit("join", { name, room, email, avi }, () => {}); // same as { name: name, room: room }
 
     // return function for when the user disconnects from the socket
     return () => {
       socket.emit("disconnect");
       socket.off();
     };
-  }, [ENDPOINT, name, room]); 
+  }, [ENDPOINT, name, room, email, avi]); 
 
   useEffect(() => {
     socket.on("message", (message) => {
