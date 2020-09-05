@@ -13,20 +13,19 @@ router.route("/add").post(async (req, res) => {
   const salt = 10;
   const username = req.body.username;
   const password = await Bcrypt.hash(req.body.password, salt);
-  //const userType = req.body.userType;
   const email = req.body.email;
-  //const xp = Number(req.body.xp);
-  //const studentid = Number(req.body.studentid);
   const avi = Number(req.body.avi);
   const chatrooms = req.body.chatrooms;
+    const bio = req.body.bio;
 
-  const newUser = new User({
-    username,
-    password,
-    email,
-    avi,
-    chatrooms,
-  });
+    const newUser = new User({
+        username,
+        password,
+        email,
+        avi,
+        chatrooms,
+        bio
+    });
 
   newUser
     .save()
@@ -47,23 +46,21 @@ router.route("/login").post(async (req, res) => {
 });
 
 router.route("/update/:id").post((req, res) => {
-  User.findById(req.params.id)
-    .then((user) => {
-      user.username = req.body.username;
-      user.password = req.body.password;
-      //user.userType = req.body.userType;
-      user.email = req.body.email;
-      //user.xp = Number(req.body.xp);
-      //user.studentid = Number(req.body.studentid);
-      user.avi = Number(req.body.avi);
-      user.chatrooms = req.body.chatrooms;
+    User.findById(req.params.id)
+        .then((user) => {
+            user.username = req.body.username;
+            user.password = req.body.password;
+            user.email = req.body.email;
+            user.avi = Number(req.body.avi);
+            user.chatrooms = req.body.chatrooms;
+            user.bio = req.body.bio;
 
-      user
-        .save()
-        .then(() => res.json("User updated!"))
+            user
+                .save()
+                .then(() => res.json("User updated!"))
+                .catch((err) => res.status(400).json("Error: " + err));
+        })
         .catch((err) => res.status(400).json("Error: " + err));
-    })
-    .catch((err) => res.status(400).json("Error: " + err));
 });
 
 router.route("/delete/:id").delete((req, res) => {

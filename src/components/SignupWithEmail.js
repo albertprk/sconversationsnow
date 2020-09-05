@@ -1,8 +1,9 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import './css/SignupWithEmail.css';
+import './css/Signup.css';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
-import { useAlert } from 'react-alert';
+import {useAlert} from 'react-alert';
 
 
 export default class SignupWithEmail extends Component {
@@ -12,12 +13,10 @@ export default class SignupWithEmail extends Component {
         this.state = {
             username: '',
             password: '',
-            userType: 'mentee',
             email: '',
-            xp: 0,
-            studentid: 0,
-            avi: '01'
-        }
+            avi: '01',
+            bio: '',
+        };
 
         this.onChangeUsername = this.onChangeUsername.bind(this);
         this.onChangeEmail = this.onChangeEmail.bind(this);
@@ -33,22 +32,18 @@ export default class SignupWithEmail extends Component {
         const newUser = {
             username: this.state.username,
             password: this.state.password,
-            userType: this.state.userType,
             email: this.state.email,
-            xp: this.state.xp,
-            studentid: this.state.studentid,
-            avi: this.state.avi
+            avi: this.state.avi,
+            bio: this.state.bio
         };
         console.log(newUser);
         console.log(newUser.password);
         this.setState({
             username: '',
             password: '',
-            userType: 'mentee',
             email: '',
-            xp: 0,
-            studentid: 0,
-            avi: '01'
+            avi: '01',
+            bio: '',
         });
         axios.post('http://localhost:5000/users/add', newUser)
             .then(res => {
@@ -97,32 +92,41 @@ export default class SignupWithEmail extends Component {
 
                         <form onSubmit={this.onSubmit}>
                             <div className="nickInput">
-
-                                <input type="text" placeholder="Nickname" name="Nickname" required onChange={this.onChangeUsername} value={this.state.username}/>
-
+                                <input className="nickInputForm"
+                                       type="text"
+                                       placeholder="Nickname"
+                                       name="Nickname"
+                                       required onChange={this.onChangeUsername}
+                                       value={this.state.username}
+                                />
                             </div>
-                            <div className="nickLine" />
-
+                            <div className="nickLine"/>
                             <div className="emailInput">
-
-                                <input type="email" placeholder="Email" name="email" required onChange={this.onChangeEmail} value={this.state.email}/>
-
+                                <input className="emailInputForm"
+                                       type="email"
+                                       placeholder="Email"
+                                       name="email"
+                                       required onChange={this.onChangeEmail}
+                                       value={this.state.email}
+                                />
                             </div>
-
-                            <div className="emailLine" />
+                            <div className="emailLine"/>
                             <div className="passwordInput">
-
-                                <input type="password" placeholder="Password" name="passcode" required onChange={this.onChangePassword} value={this.state.password}/>
-
+                                <input className="passInputForm"
+                                       type="password"
+                                       placeholder="Password"
+                                       name="passcode"
+                                       required onChange={this.onChangePassword}
+                                       value={this.state.password}
+                                />
                             </div>
-                            <div className="passwordLine" />
-
-                            <input type="submit" className="signupButton" value="Sign up" />
-
+                            <div className="passwordLine"/>
+                            <input type="submit" className="signupButton" value="Sign up"/>
                         </form>
 
                         <div className="alreadyHaveAnAccount">
-                            Already have an account? <a href="./login"><span className="sign-in-button">Log In</span></a>
+                            Already have an account? <a href="./login"><span
+                            className="sign-in-button">Log In</span></a>
                         </div>
                     </div>
 

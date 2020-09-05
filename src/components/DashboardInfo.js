@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { Button, Popup } from 'semantic-ui-react';
 import Avatars from './Avatars';
+import edit from "../images/edit.png";
 
 export default class DashboardInfo extends Component {
 
@@ -12,7 +13,14 @@ export default class DashboardInfo extends Component {
         return (
             <div>
                 <div className="dashboard-info">
-                    <p className="userType">{localStorage.getItem("type")}</p>
+                    <button type="button" className="editProfile">
+                        <img className="editImage"
+                             src={edit}
+                             height="11px"
+                             width="13px"
+                        />
+                        Edit
+                    </button>
                     <Popup
                         content={<Avatars/>}
                         on='click'
@@ -31,7 +39,8 @@ export default class DashboardInfo extends Component {
                     />
 
                     <img alt="User Avatar" className="img"
-                         src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}/>
+                         src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}
+                    />
                     <table className="profile-info-table">
                         <tr>
                             <td className="profile-field">Username</td>
@@ -40,6 +49,11 @@ export default class DashboardInfo extends Component {
                         <tr>
                             <td className="profile-field">Email</td>
                             <td className="profile-field-entry">{localStorage.getItem("email")}</td>
+                        </tr>
+                    </table>
+                    <table className="profile-info-table">
+                        <tr>
+                            <td className="profile-field-entry">{localStorage.getItem("bio")}</td>
                         </tr>
                     </table>
                 </div>

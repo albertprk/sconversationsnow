@@ -8,7 +8,7 @@ class Avatars extends Component {
         super();
         this.state = {
             avis: []
-        }
+        };
         this.onAvatarClick = this.onAvatarClick.bind(this);
     }
 
@@ -30,8 +30,6 @@ class Avatars extends Component {
                 const newXp = res.data.xp;
                 const newStudentId = res.data.studentid;
                 const newAvi = this.state.avis[index];
-                
-
                 const user = {
                     username: newUsername,
                     password: newPassword,
@@ -40,16 +38,15 @@ class Avatars extends Component {
                     xp: newXp,
                     studentid: newStudentId,
                     avi: newAvi
-                }
+                };
                 localStorage.setItem("avi", user.avi);
-
                 axios.post('http://localhost:5000/users/update/' + localStorage.getItem('id'), user)
                     .then(res => {
                         console.log(res.data);
                         window.location.reload();
                     });
             });
-        
+
     }
 
     render() {
