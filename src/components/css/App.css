@@ -1,5 +1,5 @@
 .body {
-  background-color:#fbf8f9;
+  background-color:#FFFDFD;
 }
 
 .App {
@@ -55,13 +55,58 @@
 }
 
 .backgroundimg {
-  padding-top:95px;
+  z-index: 2;
+  padding-top:50px;
   margin:auto;
-  width:85%;
+  width:80vw;
   max-width:1146px;
   height:auto;
   display:block;
-  background-color:#fbf8f9;
+  background-color:#FFFDFD;
+}
+
+.slogan {
+  position: absolute;
+  z-index: 1;
+  font-size: 5vw;
+  font-weight: 300;
+  text-align: center;
+  top: 20vh;
+  left: 37%;
+  margin-left: -28px;
+  margin-top: -25px;
+}
+
+.slogansub {
+  margin-top: 15px;
+  font-size: 1.4vw;
+  font-weight: 400;
+}
+
+.getStarted {
+  border: 0;
+  width: 8vw;
+  height: 2.35vw;
+  left: 626px;
+  top: 419px;
+  background: #FFBA16;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16%;
+  line-height: 2.35vw;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.getStarted:hover {
+  background: #ffc236;
+}
+
+.introGraphic {
+  text-align:center;
 }
 
 .App-header {
@@ -90,10 +135,18 @@
 .landingHeader {
   position:fixed;
   width:100%;
-  height:55px;
+  height:3.8vw;
   background: rgba(255,255,255, 0.8);
   margin:auto;
-  vertical-align:middle;
+  font-size: 1.2vw;
+    border: 1px solid #f0f3f4;
+}
+
+.logo {
+    margin-top: 0.8vw;
+    margin-left: 1vw;
+    height: 2.2vw;
+    width: 14vw;
 }
 
 .App-name {
@@ -109,10 +162,10 @@
   text-decoration: none;
   font-weight: 500;
   color: #373737;
-  vertical-align: middle;
-  margin-top:20px;
-  margin-right:20px;
-  padding-right:30px;
+  margin-top:0.8vw;
+  margin-right:1.3vw;
+  padding-right:1.5vw;
+    padding-top: 0.8vh;
   float:right;
 }
 
@@ -129,11 +182,11 @@
 }
 
 .landingbody {
-  background-color:#FBF8F8;
+  background-color:#FFFDFD;
 }
 
 .landingbg {
-  background-color:#fbf8f9;
+  background-color:#FFFDFD;
   height:500px;
   margin-bottom:500px;
 }

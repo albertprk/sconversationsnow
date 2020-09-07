@@ -1,46 +1,79 @@
-import React, {Component} from "react";
+import React, { useState, useEffect } from "react";
 import './css/Sidebar.css';
 import ChatRoomLink from "./ChatRoomLink";
+import io from "socket.io-client";
 
-export default class SideBar extends Component {
+class ChatRoom {
+  constructor(name) {
+    this.name = name;
+    this.users = [];
+  }
+}
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            fetching: true,
-            chatRooms: {
-                "Academics": {
-                    "Name": "Academics",
-                    "Users": [],
-                }, "Time Management": {
-                    "Name": "Time Management",
-                    "Users": ["Albert"],
-                }, "Mental Health": {
-                    "Name": "Mental Health",
-                    "Users": ["Andy", "Albert", "Alex", "Anthony", "Ben"],
-                }, "Substance Use": {
-                    "Name": "Substance Use",
-                    "Users": ["Farhud", "Desiree"]
-                }, "Nutrition": {
-                    "Name": "Nutrition",
-                    "Users": []
-                }
-            }
-        };
-    }
 
-    render() {
-        let chatRoomsComponents = [];
-        if (typeof this.state.chatRooms !== "undefined" && this.state.chatRooms !== null) {
-            chatRoomsComponents = Object.keys(this.state.chatRooms).map((room, i) =>
-                <ChatRoomLink room={room} info={this.state.chatRooms} key={i}/>
-            );
-        }
-        return (
-            <div className="sidebar-body">
-                <p className="sidebar-title">Chat Rooms</p>
-                <div className="chat-room-panel">{chatRoomsComponents}</div>
-            </div>
-        )
-    }
-};
+
+let socket;
+
+const SideBar = (props) => {
+  const academics = new ChatRoom("Academics");
+  const timeManagement = new ChatRoom("Time Management");
+  const mentalHealth = new ChatRoom("Mental Health");
+  const substanceUse = new ChatRoom("Substance Use");
+  const nutrition = new ChatRoom("Nutrition");
+  const [chatRooms, setChatRooms]
+    = useState([academics, timeManagement, mentalHealth, substanceUse, nutrition]);
+  const ENDPOINT = "localhost:5000";
+
+  useEffect(() => {
+    socket = io(ENDPOINT);
+    socket.emit("getRooms", [...chatRooms]);
+  }, [ENDPOINT]);
+
+  useEffect(() => {
+
+    socket.on("roomDataGlobal", ({ room, newUsers }) => {
+      {console.log("these are the new " + room + " users: ")}
+      {console.log(newUsers)};
+      let rooms = [...chatRooms];
+      const elementIndex = chatRooms.findIndex(element => element.name.trim().toLowerCase() == room);
+      {console.log(elementIndex)};
+      if (elementIndex > -1) {
+        rooms[elementIndex] = { ...rooms[elementIndex], users: newUsers };
+        setChatRooms(rooms);
+      }
+    });
+  }, [chatRooms]);
+
+  useEffect(() => {
+
+    socket.on("allRooms", ( rooms ) => {
+      {console.log(rooms)}
+      const theRooms = [ ...chatRooms ];
+      for (let i = 0; i < theRooms.length; i++) {
+        theRooms[i] = { ...theRooms[i], users: rooms[i] };
+      }
+      setChatRooms(theRooms);
+    });
+
+  }, [chatRooms]);
+
+
+  
+
+  let chatRoomsComponents = [];
+  if (typeof chatRooms !== "undefined" && chatRooms !== null) {
+    chatRoomsComponents = chatRooms.map((room, i) =>
+      <ChatRoomLink roomName={room.name} users={room.users} key={i} />
+    );
+  }
+
+  return (
+    <div className="sidebar-body">
+      <p className="sidebar-title">Chat Rooms</p>
+      {console.log(chatRoomsComponents)}
+      <div className="chat-room-panel">{chatRoomsComponents}</div>
+    </div>
+  );
+}
+
+export default SideBar;

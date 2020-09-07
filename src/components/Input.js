@@ -1,6 +1,7 @@
 import React from 'react';
 
 const disconnect = () => {
+    localStorage.setItem("lastUser", null);
     localStorage.setItem("chatRoom", "false");
     window.location.reload();
 };
@@ -8,15 +9,15 @@ const disconnect = () => {
 const Input = ({ message, setMessage, sendMessage }) => (
     <form className="form">
         <input
-        id = "input"
-        className="input"
-        type="text"
-        placeholder="Type a message"
-        value={message}
-        onChange={(event) => setMessage(event.target.value)}
-        onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
-        autoComplete="off"
-        />
+            id = "input"
+            className="input"
+            type="text"
+            placeholder="Type a message"
+            value={message}
+            onChange={(event) => setMessage(event.target.value)}
+            onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
+            autoComplete="off">
+        </input>
         <button className="sendButton" onClick={(event) => sendMessage(event)} alt="Send your message">↑</button>
         <button className="leaveButton" onClick={disconnect} alt="Leave this Chat">x</button>
     </form>

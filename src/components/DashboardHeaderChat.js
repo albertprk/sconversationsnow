@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./css/Dashboard.css";
 import "./css/Chat.css";
+import logo from "../images/minlogo.png";
 
 
 export default class DashboardHeaderChat extends Component {
@@ -14,22 +15,22 @@ export default class DashboardHeaderChat extends Component {
       window.location.reload();
   };
 
-  render() {
-    return (
-      <div className="dashboard-header">
-        <button className="help-now">
-          <img src={require("../images/helpicon.png")} alt="help button" />
-          HELP NOW
-        </button>
-        <img
-          alt="User Avatar"
-          className="header-avi"
-          src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}
-        />
-        <button className="logoutDashboard" onClick={this.logout}>
-          Logout
-        </button>
-      </div>
+    render() {
+        return (
+            <div className="dashboard-header">
+                <img src={logo}
+                     className="minlogo"
+                />
+                <img
+                    alt="User Avatar"
+                    className="header-avi"
+                    src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}
+                />
+                <button className="logoutDashboard" onClick={this.logout}>
+                    Logout
+                </button>
+                <p className="chatRoomName">{localStorage.getItem("chatRoom")}</p>
+            </div>
     );
   }
 }

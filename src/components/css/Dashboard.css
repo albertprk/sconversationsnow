@@ -1,3 +1,7 @@
+.body {
+    overflow: hidden;
+}
+
 .dashboard {
     background:#DBDBDB;
     height:100vh;
@@ -6,8 +10,72 @@
     left: 0;
 }
 
+.minlogo {
+    margin-top: 0.6vw;
+    margin-left: 1vw;
+    height: 2.8vw;
+    width: 2.8vw;
+}
+
+.editProfile {
+    padding-right: 8px;
+    color: white;
+    font-weight: 500;
+    font-size: 100%;
+    float: right;
+    margin-right: 35px;
+    margin-top: 35px;
+    width: 63px;
+    height: 29px;
+    left: 548px;
+    top: 543px;
+    background: #E9A800;
+    border: 0;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.12), 0px 2px 2px rgba(0, 0, 0, 0.24);
+    border-radius: 4px;
+    text-align:right;
+    cursor: pointer;
+}
+
+.editProfile:hover {
+    background: #e9b00d;
+}
+
+.editProfile:focus {
+    outline: 0;
+}
+
+.changeLabelInstructions {
+    font-size: 100%;
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.changeLabel {
+    font-size: 90%;
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.changeItem {
+    height: 2vw;
+    width: 25vw;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+.changeItem:focus {
+    outline: 0;
+}
+
+.editImage {
+    float: left;
+    margin-top: 4px;
+    margin-left: 3px;
+}
+
 .dashboard-version {
-    background:#E9A800;
+    background: #E9A800;
     float:right;
     margin-top:35px;
     margin-right:35px;
@@ -19,16 +87,57 @@
     cursor:pointer;
 }
 
+.popup {
+    z-index: 2;
+    background-color:rgba(252, 252, 252, 0.98)!important;
+    max-height: 80%;
+    max-width: 75%;
+    color: black;
+    border-radius: 12px;
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.06);
+    margin-right: 2%!important;
+}
+
 .dashboard-version:focus {
     outline:0;
 }
 
 .dashboard-header {
+    z-index: 0;
     background:#fff;
     height:65px;
     border-bottom: 1px solid #E2E5E6;
     position: fixed;
     width: 100%;
+}
+
+.dashboard-header-edit {
+    margin-top: -109px;
+    z-index: 0;
+    background:#fff;
+    height:65px;
+    border-bottom: 1px solid #E2E5E6;
+    margin-bottom: 20vh;
+    position: fixed;
+    width: 100%;
+}
+
+.modifySelection {
+    background: #ececec;
+    height: auto;
+    width: 40vw;
+    padding: 2vw;
+    cursor: pointer;
+}
+
+.modifySelection:hover {
+    background: #459de2;
+    color: white;
+}
+
+.editsFrame {
+    width: 50%;
+    margin-left: 28vw;
 }
 
 .heading {
@@ -54,7 +163,7 @@
     background:#fff;
     width:30%;
     margin-left:25%;
-    height:304px;
+    height:auto;
     margin-top:125px;
     border-radius:10px;
     box-shadow: 0px 5px 2px #d4d4d4;
@@ -92,8 +201,7 @@
 }
 
 .profile-info-table {
-    margin-top:-10px;
-    margin-left:15px;
+    margin-left:25px;
 }
 
 .profile-field {
@@ -174,7 +282,7 @@
     margin: auto;
     background-color: rgba(0,0,0, 0.5);
 }
-.popup\_inner {
+.popup_inner {
     position: absolute;
     left: 25%;
     right: 25%;

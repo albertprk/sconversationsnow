@@ -9,6 +9,7 @@ import mentor from "../images/mentor.png"
 import plant from "../images/plant.svg"
 import background from "../images/landingpagebg.png"
 import {Redirect} from 'react-router-dom'
+import logo from "../images/bblogo.png"
 
 export default class Landing extends Component {
 
@@ -30,11 +31,25 @@ export default class Landing extends Component {
             return (
                 <div className="landingbody">
                     <div className="landingHeader">
-                        <p className="App-name">BUILDING BLOCKS</p >
-                        <a href="./login">Login</a>
-                        <a href="./signup">Sign Up</a>
+                        <img className="logo"
+                             src={logo}
+                             alt="Welcome to Building Blocks!"
+                        />
+                        <a className="loginSignin" href="./login">Login</a>
+                        <a className="loginSignin" href="./signup">Sign Up</a>
                     </div>
-                    <img className="backgroundimg" src={background} alt="Welcome to Student Conversations Now"/>
+                    <div className="introGraphic">
+                        <div className="slogan">
+                            Connect to <br/> your campus <br/>
+                            <div className="slogansub">Online peer mentoring for university students</div>
+                            <a href="./signup">
+                                <button className="getStarted">
+                                    Get Started
+                                </button>
+                            </a>
+                        </div>
+                        <img className="backgroundimg" src={background} alt="Welcome to Student Conversations Now"/>
+                    </div>
                 </div>
             )
         } else {

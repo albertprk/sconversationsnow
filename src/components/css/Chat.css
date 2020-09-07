@@ -3,13 +3,52 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width:95%;
+    min-width:96%;
     min-height: 90%;
     max-height: 100%;
     float:right;
     margin-top:4%;
-    margin-left: 6%;
+    margin-left: 8%;
     max-width: 95%;
+    overflow-x: hidden!important;
+}
+
+.textContainer {
+    margin-top: 11px;
+    background: white;
+    width: 17%;
+    float: right!important;
+    height: 100%;
+    position: fixed;
+    top: 55px;
+    right: 0;
+    z-index: 2;
+    padding-left: 20px;
+    box-shadow: -6px 0px 5px rgba(0, 0, 0, 0.06);
+    overflow-x:hidden!important;
+}
+
+.chatRoomName {
+    font-size: 120%;
+    text-align: center;
+    font-weight: 500;
+    z-index: 3;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.activeList {
+    margin-top: 40px;
+    font-weight: 400;
+    font-size: 105%;
+    border-bottom: 1px solid #E0E0E0;
+    padding-bottom: 4px;
+}
+
+.userName {
+    font-size: 65%;
+    font-weight: 400;
+    margin-bottom: 10px;
 }
 
 .container {
@@ -18,6 +57,7 @@
     justify-content: center;
     min-width: 100%;
     margin-left: 20%;
+    overflow-x: hidden!important;
 }
 
 .form {
@@ -28,11 +68,17 @@
     line-height: 30px;
     width: 70%;
     margin-top: 20px;
-    margin-left: 18%;
+    margin-left: 5%;
     background-color: #e8e8e8;
     border-radius: 10px;
     padding-left: 10px;
     font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.curDate {
+    text-align:center;
+    margin-right: 20%;
 }
 
 .input:focus {
