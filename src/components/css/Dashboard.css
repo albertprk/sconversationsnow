@@ -45,6 +45,29 @@
     outline: 0;
 }
 
+.changeLabelInstructions {
+    font-size: 100%;
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.changeLabel {
+    font-size: 90%;
+    font-weight: 500;
+    margin-left: 2px;
+}
+
+.changeItem {
+    height: 2vw;
+    width: 25vw;
+    font-size: 90%;
+    font-weight: 500;
+}
+
+.changeItem:focus {
+    outline: 0;
+}
+
 .editImage {
     float: left;
     margin-top: 4px;
@@ -86,6 +109,35 @@
     border-bottom: 1px solid #E2E5E6;
     position: fixed;
     width: 100%;
+}
+
+.dashboard-header-edit {
+    margin-top: -109px;
+    z-index: 0;
+    background:#fff;
+    height:65px;
+    border-bottom: 1px solid #E2E5E6;
+    margin-bottom: 20vh;
+    position: fixed;
+    width: 100%;
+}
+
+.modifySelection {
+    background: #ececec;
+    height: auto;
+    width: 40vw;
+    padding: 2vw;
+    cursor: pointer;
+}
+
+.modifySelection:hover {
+    background: #459de2;
+    color: white;
+}
+
+.editsFrame {
+    width: 50%;
+    margin-left: 28vw;
 }
 
 .heading {
@@ -230,7 +282,7 @@
     margin: auto;
     background-color: rgba(0,0,0, 0.5);
 }
-.popup\_inner {
+.popup_inner {
     position: absolute;
     left: 25%;
     right: 25%;

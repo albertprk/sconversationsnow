@@ -1,23 +1,24 @@
 import React, { Component } from "react";
 import "./css/Dashboard.css";
-import "./css/Chat.css";
 import logo from "../images/minlogo.png";
 
 
-export default class DashboardHeaderChat extends Component {
-  constructor(props) {
-    super(props);
-  }
+export default class DashboardHeaderEdit extends Component {
+    constructor(props) {
+        super(props);
+    }
 
-  logout = () => {
-      console.log("Test");
-      localStorage.setItem("loggedIn", "false");
-      window.location.reload();
-  };
+    logout = () => {
+        console.log("Test");
+        localStorage.setItem("loggedIn", "false");
+        localStorage.setItem("chatRoom", "false");
+        localStorage.setItem("lastUser", null);
+        window.location.reload();
+    };
 
     render() {
         return (
-            <div className="dashboard-header">
+            <div className="dashboard-header-edit">
                 <img src={logo}
                      className="minlogo"
                 />
@@ -29,8 +30,7 @@ export default class DashboardHeaderChat extends Component {
                 <button className="logoutDashboard" onClick={this.logout}>
                     Logout
                 </button>
-                <p className="chatRoomName">{localStorage.getItem("chatRoom")}</p>
             </div>
-    );
-  }
+        );
+    }
 }
