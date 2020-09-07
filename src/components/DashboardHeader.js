@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./css/Dashboard.css";
+import logo from "../images/minlogo.png";
 
 
 export default class DashboardHeader extends Component {
@@ -18,10 +19,9 @@ export default class DashboardHeader extends Component {
   render() {
     return (
       <div className="dashboard-header">
-        <button className="help-now">
-          <img src={require("../images/helpicon.png")} alt="help button" />
-          HELP NOW
-        </button>
+        <img src={logo}
+             className="minlogo"
+        />
         <img
           alt="User Avatar"
           className="header-avi"

@@ -1,6 +1,4 @@
-
-.logInWithEmaill {
-
+.logInWithEmail {
     position: fixed;
     right: 0;
     left: 0;
@@ -45,13 +43,11 @@
 }
 
 .dontHaveAnAccountEmail {
-
     position: fixed;
     width: 271px;
     height: 31px;
     left: 66%;
     top: 85%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -63,27 +59,26 @@
 }
 
 .ellipse {
-
     position: absolute;
     width: 47px;
     height: 47px;
     left: 1195px;
     top: 331px;
-
     background: #FFFFFF;
-
 }
 
 .emailLine {
-
     position: fixed;
     width: 26vw;
     height: 0px;
     right: 10%;
     top: 40%;
-
     border: 1px solid #000000;
     transform: rotate(0.19deg);
+}
+
+.emailInputForm:focus {
+    outline: none;
 }
 
 .passwordInput {
@@ -92,16 +87,17 @@
     height: 0px;
     right: 10%;
     top: 47%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 130%;
-
     color: #8D8D8D;
 }
 
+.passInputForm:focus {
+    outline: none;
+}
 
 .emailInput {
     position: fixed;
@@ -109,16 +105,17 @@
     height: 0px;
     right: 10%;
     top: 35%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 130%;
-
     color: #8D8D8D;
 }
 
+.emailInput:focus {
+    outline: none;
+}
 
 .nickInput {
     position: fixed;
@@ -126,15 +123,18 @@
     height: 0px;
     right: 10%;
     top: 23%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 130%;
-
     color: #8D8D8D;
 }
+
+.nickInputForm:focus {
+    outline: none;
+}
+
 
 .studentIdInput {
     position: fixed;
@@ -142,7 +142,6 @@
     height: 0px;
     right: 10%;
     top: 59%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -182,7 +181,6 @@ input {
     height: 0px;
     right: 10%;
     top: 28%;
-
     border: 1px solid #000000;
     transform: rotate(0.19deg);
 }
@@ -194,7 +192,6 @@ input {
     height: 0px;
     right: 10%;
     top: 64%;
-
     border: 1px solid #000000;
     transform: rotate(0.19deg);
 }
@@ -206,7 +203,6 @@ input {
     height: 38px;
     right: 10%;
     top: 67%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
@@ -214,7 +210,6 @@ input {
     color: white;
     text-align: center;
     line-height: 140%;
-
     background: #E9A800;
     border-radius: 50px;
 }

@@ -8,7 +8,7 @@ class Avatars extends Component {
         super();
         this.state = {
             avis: []
-        }
+        };
         this.onAvatarClick = this.onAvatarClick.bind(this);
     }
 
@@ -20,36 +20,29 @@ class Avatars extends Component {
 
     onAvatarClick(e, index) {
         e.preventDefault();
-        console.log(localStorage.getItem("id"));
-        axios.get('http://localhost:5000/users/getuser/' + localStorage.getItem('id'))
+        console.log(localStorage.getItem("_id"));
+        axios.get('http://localhost:5000/users/getuser/' + localStorage.getItem('_id'))
             .then(res => {
                 const newUsername = res.data.username;
                 const newPassword = res.data.password;
-                const newUserType = res.data.usertype;
                 const newEmail = res.data.email;
-                const newXp = res.data.xp;
-                const newStudentId = res.data.studentid;
                 const newAvi = this.state.avis[index];
-                
-
+                const newBio = res.data.bio;
                 const user = {
                     username: newUsername,
                     password: newPassword,
-                    userType: newUserType,
                     email: newEmail,
-                    xp: newXp,
-                    studentid: newStudentId,
-                    avi: newAvi
-                }
+                    avi: newAvi,
+                    bio: newBio,
+                };
                 localStorage.setItem("avi", user.avi);
-
-                axios.post('http://localhost:5000/users/update/' + localStorage.getItem('id'), user)
+                axios.post('http://localhost:5000/users/update/' + localStorage.getItem('_id'), user)
                     .then(res => {
                         console.log(res.data);
                         window.location.reload();
                     });
             });
-        
+
     }
 
     render() {

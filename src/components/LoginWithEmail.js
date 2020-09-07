@@ -1,8 +1,8 @@
-import React, { Component } from "react";
+import React, {Component} from "react";
 import './css/LogInWithEmail.css';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom';
-import { useAlert } from 'react-alert';
+import {useAlert} from 'react-alert';
 
 export default class LoginWithEmail extends Component {
     constructor(props) {
@@ -42,10 +42,8 @@ export default class LoginWithEmail extends Component {
                     localStorage.setItem('loggedIn', true);
                     localStorage.setItem('username', res.data.username);
                     localStorage.setItem('email', res.data.email);
-                    localStorage.setItem('avi', res.data.avi);
-                    localStorage.setItem('type',  res.data.userType);
-                    localStorage.setItem("chatroom", "none");
                     localStorage.setItem("_id", res.data._id);
+                    localStorage.setItem("bio", res.data.bio);
                     this.setState((state, props) => {
                         return {
                             loggedIn: true,
@@ -74,20 +72,34 @@ export default class LoginWithEmail extends Component {
             return (
                 <div className="logInWithEmaill">
                     <div className="rectangle">
-                        <a href="/" className="App-name-login">⬅ STUDENT CONVERSATIONS NOW</a>
-                        <div className="welcomeBack">Welcome<br></br>Back</div>
+                        <a href="/"
+                           className="App-name-login">
+                            ⬅ STUDENT CONVERSATIONS NOW
+                        </a>
+                        <div className="welcomeBack">
+                            Welcome<br></br>Back
+                        </div>
                     </div>
                     <div className="rectangleRight">
                         <form onSubmit={this.onSubmit}>
                             <div className="emailInput">
-                                <input type="email" placeholder="Email" name="email" required
-                                       onChange={this.onChangeEmail}
-                                       value={this.state.email}/>
+                                <input className="emailInputForm"
+                                       type="email"
+                                       placeholder="Email"
+                                       name="email"
+                                       required onChange={this.onChangeEmail}
+                                       value={this.state.email}
+                                />
                             </div>
                             <div className="emailLine"/>
                             <div className="passwordInput">
-                                <input type="password" placeholder="Password" name="password" required
-                                       onChange={this.onChangePassword} value={this.state.password}/>
+                                <input className="passwordInputForm"
+                                       type="password"
+                                       placeholder="Password"
+                                       name="password"
+                                       required onChange={this.onChangePassword}
+                                       value={this.state.password}
+                                />
                             </div>
                             <div className="passwordLine"/>
                             <input type="submit" className="loginButton" value="Log in"/>

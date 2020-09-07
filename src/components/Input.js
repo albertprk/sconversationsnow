@@ -16,8 +16,8 @@ const Input = ({ message, setMessage, sendMessage }) => (
             value={message}
             onChange={(event) => setMessage(event.target.value)}
             onKeyPress={event => event.key === 'Enter' ? sendMessage(event) : null}
-            autoComplete="off"
-        />
+            autoComplete="off">
+        </input>
         <button className="sendButton" onClick={(event) => sendMessage(event)} alt="Send your message">↑</button>
         <button className="leaveButton" onClick={disconnect} alt="Leave this Chat">x</button>
     </form>

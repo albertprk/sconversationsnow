@@ -8,12 +8,10 @@ const Schema = mongoose.Schema;
 const userSchema = new Schema({
   username: {type: String, unique: false, minlength: 3},
   password: {type: String, required: true, minlength: 5  },
-  //userType: { type: String},  //Admin, mentor or typical user
   email: {type: String, required: true, trim: true, unique: false},
-  //xp: { type: Number },
-  //studentid: { type: Number},
   avi: { type: String },
-  chatrooms: [String]
+  chatrooms: [String],
+  bio: { type: String }
 }, {
   timestamps: true,
 });

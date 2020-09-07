@@ -55,16 +55,15 @@
 }
 
 .dontHaveAnAccountEmail {
-
     position: fixed;
-    width: 271px;
+    width: 100%;
     height: 31px;
     left: 66%;
     top: 85%;
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 1.5vw;
+    font-size: 1vw;
     line-height: 130%;
     /* or 23px */
     color: #000000;
@@ -83,14 +82,12 @@
 }
 
 .emailLine {
-
     position: fixed;
     width: 26vw;
     height: 0px;
     right: 10%;
     top: 38%;
-
-    border: 1px solid #000000;
+    border: 0.5vw solid #000000;
     transform: rotate(0.19deg);
 }
 
@@ -101,19 +98,20 @@
     height: 38px;
     right: 10%;
     top: 60%;
-
     font-family: Roboto;
     font-style: normal;
-    font-weight: normal;
-    font-size: 1.8vw;
+    font-weight: 500;
+    font-size: 1.4vw;
     color: white;
     text-align: center;
     line-height: 140%;
-
     background: #F26A4B;
     border-radius: 50px;
-    padding-top: 2px;
     cursor: pointer;
+}
+
+.loginButton:hover {
+    background: #f9694b;
 }
 
 .passwordInput {
@@ -122,16 +120,17 @@
     height: 0px;
     right: 10%;
     top: 45%;
-
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
     font-size: 18px;
     line-height: 130%;
-
     color: #8D8D8D;
 }
 
+.passwordInputForm:focus {
+    outline:none;
+}
 
 .emailInput {
     position: fixed;
@@ -145,6 +144,10 @@
     font-size: 18px;
     line-height: 130%;
     color: #8D8D8D;
+}
+
+.emailInputForm:focus {
+    outline:none;
 }
 
 input {
