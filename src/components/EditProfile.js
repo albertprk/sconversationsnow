@@ -2,21 +2,16 @@ import React, {Component} from "react";
 import "./css/Dashboard.css";
 import axios from 'axios';
 import DashboardHeaderEdit from "./DashboardHeaderEdit";
+import { Redirect } from "react-router-dom";
 
 export default class EditProfile extends Component {
 
     constructor(props) {
         super();
         this.state = {
-            avis: []
+            returnToDashboard: false,
         };
         this.onAvatarClick = this.onAvatarClick.bind(this);
-    }
-
-    componentWillMount() {
-        for (let i = 1; i < 60; i++) {
-            this.state.avis.push(i.toString());
-        }
     }
 
     onAvatarClick(e, index) {
@@ -46,36 +41,57 @@ export default class EditProfile extends Component {
 
     }
 
+    _returnToDashboard = () => {
+        this.setState({
+            returnToDashboard: true,
+        });
+    };
+
     render() {
-        return (
-            <div>
-                <DashboardHeaderEdit />
-                <div className='avatars'>
-                    <div className='editsFrame'>
-                        <p className="changeLabelInstructions">What would you like to modify?</p>
-                        <br/>
-                        <div className="modifySelection">
-                            <b>Change Username</b><br/><br/>
-                            Your name that will be shown to others on BuildingBlocks
-                        </div>
-                        <br/>
-                        <div className="modifySelection">
-                            <b>Change Email</b><br/><br/>
-                            The email associated with your BuildingBlocks account
-                        </div>
-                        <br/>
-                        <div className="modifySelection">
-                            <b>Change Password</b><br/><br/>
-                            The password you use to log-in to your BuildingBlocks account
-                        </div>
-                        <br/>
-                        <div className="modifySelection">
-                            <b>Change Bio</b><br/><br/>
-                            A summary of yourself that will help others get to know you on BuildingBlocks
+        if (this.state.returnToDashboard === false) {
+            return (
+                <div>
+                    <DashboardHeaderEdit/>
+                    <div className='avatars'>
+                        <div className='editsFrame'>
+                            <p className="changeLabelInstructions">What would you like to modify?</p>
+                            <br/>
+                            <div className="modifySelection">
+                                <b>Change Username</b><br/><br/>
+                                Your name that will be shown to others on BuildingBlocks
+                            </div>
+                            <br/>
+                            <div className="modifySelection">
+                                <b>Change Email</b><br/><br/>
+                                The email associated with your BuildingBlocks account
+                            </div>
+                            <br/>
+                            <div className="modifySelection">
+                                <b>Change Password</b><br/><br/>
+                                The password you use to log-in to your BuildingBlocks account
+                            </div>
+                            <br/>
+                            <div className="modifySelection">
+                                <b>Change Bio</b><br/><br/>
+                                A summary of yourself that will help others get to know you on BuildingBlocks
+                            </div>
+                            <br/>
+                            <span className="buttonContainer">
+                            <button className="returnButton"
+                                    onClick={this._returnToDashboard}>
+                                Cancel
+                            </button>
+                        </span>
                         </div>
                     </div>
                 </div>
-            </div>
-        );
+            )
+        } else {
+            return (
+                <Redirect to={{
+                    pathname: '/dashboard',
+                }}/>
+            )
+        }
     }
 }

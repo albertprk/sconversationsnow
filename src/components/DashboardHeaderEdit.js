@@ -8,14 +8,6 @@ export default class DashboardHeaderEdit extends Component {
         super(props);
     }
 
-    logout = () => {
-        console.log("Test");
-        localStorage.setItem("loggedIn", "false");
-        localStorage.setItem("chatRoom", "false");
-        localStorage.setItem("lastUser", null);
-        window.location.reload();
-    };
-
     render() {
         return (
             <div className="dashboard-header-edit">
@@ -27,9 +19,6 @@ export default class DashboardHeaderEdit extends Component {
                     className="header-avi"
                     src={require("../images/icons/" + localStorage.getItem("avi") + ".png")}
                 />
-                <button className="logoutDashboard" onClick={this.logout}>
-                    Logout
-                </button>
             </div>
         );
     }

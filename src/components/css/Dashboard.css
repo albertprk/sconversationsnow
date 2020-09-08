@@ -125,9 +125,10 @@
 .modifySelection {
     background: #ececec;
     height: auto;
-    width: 40vw;
+    width: 90%;
     padding: 2vw;
     cursor: pointer;
+    border-radius: 7px;
 }
 
 .modifySelection:hover {
@@ -137,8 +138,56 @@
 
 .editsFrame {
     width: 50%;
-    margin-left: 28vw;
+    margin-left: 26vw;
 }
+
+.buttonContainer {
+    width: 100%;
+}
+
+.returnButton {
+    font-size: 1vw;
+    background: 0;
+    margin-top: 10px;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    color: rgba(0, 0, 0, 0.81);
+    font-weight: 500;
+    border: 1px solid #d1d1d1;
+    border-radius: 3px;
+}
+
+.returnButton:hover {
+    margin-top: 10px;
+    background-color: #ff1a00;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    border: 0;
+}
+
+.submitButton {
+    font-size: 0.9vw;
+    border: 0;
+    background: 0;
+    margin-top: 10px;
+    width: 80px;
+    padding: 10px;
+    text-align: center;
+    line-height: 20px;
+    cursor: pointer;
+    color: #459DE2;
+    font-weight: 600;
+    float: right;
+}
+
 
 .heading {
     padding-bottom: 15px;
